@@ -5017,7 +5017,7 @@ NbTokenService = __decorate([
  * Licensed under the MIT License. See License.txt in the project root for license information.
  */ var environment = {
     production: false,
-    apiUrl: 'http://dev.yofferz.com:3000/frontend/api/v1/'
+    apiUrl: 'http://35.186.188.164:3000/frontend/api/v1/'
 };
 //# sourceMappingURL=environment.js.map
 
