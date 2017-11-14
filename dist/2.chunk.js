@@ -1,78 +1,105 @@
 webpackJsonp([2],{
 
-/***/ "../../../../../src/app/home/home-menu.ts":
+/***/ "../../../../../src/app/_guards/auth.guard.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MENU_ITEMS; });
-var MENU_ITEMS = [
-    {
-        title: 'Home',
-        icon: 'nb-home',
-        link: '/home/index',
-        home: true,
-    },
-];
-//# sourceMappingURL=home-menu.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/home/home-routing.module.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__homedashboard_homedashboard_component__ = __webpack_require__("../../../../../src/app/home/homedashboard/homedashboard.component.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeRoutingModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__auth__ = __webpack_require__("../../../../../src/app/auth/index.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthGuard; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
 
 
 
-var routes = [{
-        path: '',
-        component: __WEBPACK_IMPORTED_MODULE_2__home_component__["a" /* HomeComponent */],
-        children: [{
-                path: 'index',
-                component: __WEBPACK_IMPORTED_MODULE_3__homedashboard_homedashboard_component__["a" /* HomeDashboardComponent */]
-            },
-            {
-                path: '',
-                redirectTo: 'index',
-                pathMatch: 'full',
+var AuthGuard = (function () {
+    function AuthGuard(router, nbAuthService, tokenService) {
+        this.router = router;
+        this.nbAuthService = nbAuthService;
+        this.tokenService = tokenService;
+    }
+    AuthGuard.prototype.canActivate = function (route, state) {
+        var _this = this;
+        return this.nbAuthService.isAuthenticated()
+            .map(function (result) {
+            console.log("logged-in with result", result);
+            if (result) {
+                return true;
             }
-        ],
-    }];
-var HomeRoutingModule = (function () {
-    function HomeRoutingModule() {
-    }
-    return HomeRoutingModule;
+            else {
+                _this.router.navigate(['/auth/login']);
+            }
+        }).catch(function () {
+            _this.router.navigate(['/auth/login']);
+            console.log("not yet logged-in");
+            return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].of(false);
+        });
+    };
+    return AuthGuard;
 }());
-HomeRoutingModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
-        imports: [__WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* RouterModule */].forChild(routes)],
-        exports: [__WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* RouterModule */]],
-    })
-], HomeRoutingModule);
+AuthGuard = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__auth__["f" /* NbAuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__auth__["f" /* NbAuthService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__auth__["g" /* NbTokenService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__auth__["g" /* NbTokenService */]) === "function" && _c || Object])
+], AuthGuard);
 
-//# sourceMappingURL=home-routing.module.js.map
+var _a, _b, _c;
+//# sourceMappingURL=auth.guard.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/home/home.component.ts":
+/***/ "../../../../../src/app/_guards/index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__auth_guard__ = __webpack_require__("../../../../../src/app/_guards/auth.guard.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__auth_guard__["a"]; });
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/merchants/dashboard/dashboard.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-xxxl-4 col-md-4\">\r\n    <ngx-status-card title=\"Current Balance (Rs)\" value=\"2,000\" type=\"primary\">\r\n      <i class=\"fa fa-inr\"></i>\r\n    </ngx-status-card>\r\n  </div>\r\n\r\n  <div class=\"col-xxxl-4 col-md-4\">\r\n    <ngx-status-card title=\"Total Deals\" value=\"200\" type=\"success\">\r\n      <i class=\"fa fa-briefcase\"></i>\r\n    </ngx-status-card>\r\n  </div>\r\n\r\n  <div class=\"col-xxxl-4 col-md-4\">\r\n    <ngx-status-card title=\"Total Dowloads\" value=\"20,000\" type=\"info\">\r\n      <i class=\"fa fa-download\"></i>\r\n    </ngx-status-card>\r\n  </div>  \r\n</div>\r\n\r\n<div class=\"row\">\r\n  <div class=\"col-xxxl-4 col-xxl-4 col-lg-5 col-md-6\">\r\n    <ngx-dealsummary></ngx-dealsummary>\r\n  </div>\r\n\r\n  <div class=\"col-xxxl-8 col-xxl-8 col-lg-7 col-md-6\">\r\n    <ngx-downloadgraph></ngx-downloadgraph>\r\n  </div>\r\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/merchants/dashboard/dashboard.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This is a starting point where we declare the maps of themes and globally available functions/mixins\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n:host-context(.nb-theme-default) .solar-card nb-card-header {\n  border: none;\n  padding-bottom: 0; }\n\n@media (max-width: 767px) {\n  :host-context(.nb-theme-default) ngx-traffic {\n    display: none; } }\n\n@media (max-width: 575px) {\n  :host-context(.nb-theme-default) /deep/ nb-card.large-card {\n    height: 456px; } }\n\n:host-context(.nb-theme-cosmic) .solar-card nb-card-header {\n  border: none;\n  padding-bottom: 0; }\n\n@media (max-width: 767px) {\n  :host-context(.nb-theme-cosmic) ngx-traffic {\n    display: none; } }\n\n@media (max-width: 575px) {\n  :host-context(.nb-theme-cosmic) /deep/ nb-card.large-card {\n    height: 456px; } }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/merchants/dashboard/dashboard.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_menu__ = __webpack_require__("../../../../../src/app/home/home-menu.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -80,36 +107,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-
-var HomeComponent = (function () {
-    function HomeComponent() {
-        this.menu = __WEBPACK_IMPORTED_MODULE_1__home_menu__["a" /* MENU_ITEMS */];
+var DashboardComponent = (function () {
+    function DashboardComponent() {
     }
-    return HomeComponent;
+    return DashboardComponent;
 }());
-HomeComponent = __decorate([
+DashboardComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'ngx-home',
-        template: "\n    <ngx-home-layout>\n      <nb-menu [items]=\"menu\"></nb-menu>\n      <router-outlet></router-outlet>\n    </ngx-home-layout>\n  ",
+        selector: 'ngx-dashboard',
+        styles: [__webpack_require__("../../../../../src/app/merchants/dashboard/dashboard.component.scss")],
+        template: __webpack_require__("../../../../../src/app/merchants/dashboard/dashboard.component.html"),
     })
-], HomeComponent);
+], DashboardComponent);
 
-//# sourceMappingURL=home.component.js.map
+//# sourceMappingURL=dashboard.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/home/home.module.ts":
+/***/ "../../../../../src/app/merchants/dashboard/dashboard.module.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__homedashboard_homedashboard_module__ = __webpack_require__("../../../../../src/app/home/homedashboard/homedashboard.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_routing_module__ = __webpack_require__("../../../../../src/app/home/home-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ngx_echarts__ = __webpack_require__("../../../../ngx-echarts/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__swimlane_ngx_charts__ = __webpack_require__("../../../../@swimlane/ngx-charts/release/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__swimlane_ngx_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__swimlane_ngx_charts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_chartjs__ = __webpack_require__("../../../../angular2-chartjs/dist/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_chartjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_chartjs__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__theme_theme_module__ = __webpack_require__("../../../../../src/app/@theme/theme.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ng_bootstrap_ng_bootstrap__ = __webpack_require__("../../../../@ng-bootstrap/ng-bootstrap/index.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeModule", function() { return HomeModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__dashboard_component__ = __webpack_require__("../../../../../src/app/merchants/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__status_card_status_card_component__ = __webpack_require__("../../../../../src/app/merchants/dashboard/status-card/status-card.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__dealsummary_dealsummary_component__ = __webpack_require__("../../../../../src/app/merchants/dashboard/dealsummary/dealsummary.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__dealsummary_dealsummary_chart_dealsummary_chart_component__ = __webpack_require__("../../../../../src/app/merchants/dashboard/dealsummary/dealsummary-chart/dealsummary-chart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__downloadgraph_downloadgraph_component__ = __webpack_require__("../../../../../src/app/merchants/dashboard/downloadgraph/downloadgraph.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__downloadgraph_downloadgraph_chart_downloadgraph_chart_component__ = __webpack_require__("../../../../../src/app/merchants/dashboard/downloadgraph/downloadgraph-chart/downloadgraph-chart.component.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -122,35 +154,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var HOME_COMPONENTS = [
-    __WEBPACK_IMPORTED_MODULE_1__home_component__["a" /* HomeComponent */],
-];
-var HomeModule = (function () {
-    function HomeModule() {
+
+
+
+
+
+var DashboardModule = (function () {
+    function DashboardModule() {
     }
-    return HomeModule;
+    return DashboardModule;
 }());
-HomeModule = __decorate([
+DashboardModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         imports: [
-            __WEBPACK_IMPORTED_MODULE_3__home_routing_module__["a" /* HomeRoutingModule */],
             __WEBPACK_IMPORTED_MODULE_4__theme_theme_module__["a" /* ThemeModule */],
-            __WEBPACK_IMPORTED_MODULE_2__homedashboard_homedashboard_module__["a" /* HomeDashboardModule */],
-            __WEBPACK_IMPORTED_MODULE_5__ng_bootstrap_ng_bootstrap__["b" /* NgbCarouselModule */].forRoot(),
-            __WEBPACK_IMPORTED_MODULE_5__ng_bootstrap_ng_bootstrap__["c" /* NgbAlertModule */].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_1_ngx_echarts__["a" /* AngularEchartsModule */],
+            __WEBPACK_IMPORTED_MODULE_2__swimlane_ngx_charts__["NgxChartsModule"],
+            __WEBPACK_IMPORTED_MODULE_3_angular2_chartjs__["ChartModule"],
         ],
         declarations: [
-            HOME_COMPONENTS,
+            __WEBPACK_IMPORTED_MODULE_5__dashboard_component__["a" /* DashboardComponent */],
+            __WEBPACK_IMPORTED_MODULE_6__status_card_status_card_component__["a" /* StatusCardComponent */],
+            __WEBPACK_IMPORTED_MODULE_7__dealsummary_dealsummary_component__["a" /* DealSummaryComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__downloadgraph_downloadgraph_component__["a" /* DownloadGraphComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__downloadgraph_downloadgraph_chart_downloadgraph_chart_component__["a" /* DownloadGraphChartComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__dealsummary_dealsummary_chart_dealsummary_chart_component__["a" /* DealSummarychartsPieComponent */],
         ],
-        providers: []
     })
-], HomeModule);
+], DashboardModule);
 
-//# sourceMappingURL=home.module.js.map
+//# sourceMappingURL=dashboard.module.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/home/homedashboard/dealsummary/dealsummary-chart/dealsummary-chart.component.ts":
+/***/ "../../../../../src/app/merchants/dashboard/dealsummary/dealsummary-chart/dealsummary-chart.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -229,14 +266,14 @@ var _a;
 
 /***/ }),
 
-/***/ "../../../../../src/app/home/homedashboard/dealsummary/dealsummary.component.html":
+/***/ "../../../../../src/app/merchants/dashboard/dealsummary/dealsummary.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<nb-card size=\"large\">\r\n  <nb-tabset fullWidth>\r\n    <nb-tab tabTitle=\"Deals Details\">\r\n        <ngx-chartjs-pie></ngx-chartjs-pie>  \r\n    </nb-tab>       \r\n  </nb-tabset>\r\n</nb-card>\r\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/home/homedashboard/dealsummary/dealsummary.component.scss":
+/***/ "../../../../../src/app/merchants/dashboard/dealsummary/dealsummary.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -254,7 +291,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/home/homedashboard/dealsummary/dealsummary.component.ts":
+/***/ "../../../../../src/app/merchants/dashboard/dealsummary/dealsummary.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -294,8 +331,8 @@ var DealSummaryComponent = (function () {
 DealSummaryComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'ngx-dealsummary',
-        styles: [__webpack_require__("../../../../../src/app/home/homedashboard/dealsummary/dealsummary.component.scss")],
-        template: __webpack_require__("../../../../../src/app/home/homedashboard/dealsummary/dealsummary.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/merchants/dashboard/dealsummary/dealsummary.component.scss")],
+        template: __webpack_require__("../../../../../src/app/merchants/dashboard/dealsummary/dealsummary.component.html"),
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["a" /* NbThemeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["a" /* NbThemeService */]) === "function" && _a || Object])
 ], DealSummaryComponent);
@@ -305,7 +342,7 @@ var _a;
 
 /***/ }),
 
-/***/ "../../../../../src/app/home/homedashboard/downloadgraph/downloadgraph-chart/downloadgraph-chart.component.scss":
+/***/ "../../../../../src/app/merchants/dashboard/downloadgraph/downloadgraph-chart/downloadgraph-chart.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -323,7 +360,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/home/homedashboard/downloadgraph/downloadgraph-chart/downloadgraph-chart.component.ts":
+/***/ "../../../../../src/app/merchants/dashboard/downloadgraph/downloadgraph-chart/downloadgraph-chart.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -514,7 +551,7 @@ var DownloadGraphChartComponent = (function () {
 DownloadGraphChartComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'ngx-downloadgraph-chart',
-        styles: [__webpack_require__("../../../../../src/app/home/homedashboard/downloadgraph/downloadgraph-chart/downloadgraph-chart.component.scss")],
+        styles: [__webpack_require__("../../../../../src/app/merchants/dashboard/downloadgraph/downloadgraph-chart/downloadgraph-chart.component.scss")],
         template: "\n    <div echarts [options]=\"option\" class=\"echart\"></div>\n  ",
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["a" /* NbThemeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["a" /* NbThemeService */]) === "function" && _a || Object])
@@ -525,14 +562,14 @@ var _a;
 
 /***/ }),
 
-/***/ "../../../../../src/app/home/homedashboard/downloadgraph/downloadgraph.component.html":
+/***/ "../../../../../src/app/merchants/dashboard/downloadgraph/downloadgraph.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<nb-card size=\"large\">\r\n<!--   <div class=\"consumption-table\">\r\n    <div class=\"table-header\">\r\n      <div>Deals</div>\r\n      <div class=\"subtitle\">Download</div>\r\n    </div>\r\n\r\n    <nb-tabset fullWidth>\r\n      <nb-tab *ngFor=\"let year of data\" [tabTitle]=\"year.title\" [active]=\"year.active\">\r\n        <div class=\"stats-month\" *ngFor=\"let month of year.months\">\r\n          <div>\r\n            <span class=\"month\">{{ month.month }}</span>\r\n            <span class=\"delta\" [ngClass]=\"{ 'down': month.down }\">{{ month.delta }}</span>\r\n          </div>\r\n          <div class=\"results\">\r\n            <b>{{ month.kWatts }}</b> RS / <b>{{ month.cost }}</b> RS\r\n          </div>\r\n        </div>\r\n      </nb-tab>\r\n    </nb-tabset>\r\n  </div> -->\r\n\r\n  <div class=\"chart-container\">\r\n    <div class=\"chart-header\">\r\n      <div class=\"header-stats\">\r\n        \r\n\r\n        <div class=\"stats-block\">\r\n          <div class=\"subtitle\">Total Amount </div>\r\n          <div>\r\n            <span class=\"value\">2900</span>\r\n            <span class=\"unit\">RS</span>\r\n          </div>\r\n        </div>\r\n        <div class=\"stats-block\">\r\n          <div class=\"subtitle\">Spent Amount </div>\r\n          <div>\r\n            <span class=\"value\">816</span>\r\n            <span class=\"unit\">RS</span>\r\n          </div>\r\n        </div>\r\n      </div>\r\n\r\n      <div ngbDropdown>\r\n        <button type=\"button\" ngbDropdownToggle class=\"btn\"\r\n                [ngClass]=\"{ 'btn-outline-success': currentTheme == 'default', 'btn-primary': currentTheme != 'default'}\">\r\n          {{ type }}\r\n        </button>\r\n        <ul class=\"dropdown-menu\">\r\n          <li class=\"dropdown-item\" *ngFor=\"let t of types\" (click)=\"type = t\">{{ t }}</li>\r\n        </ul>\r\n      </div>\r\n\r\n    </div>\r\n    <ngx-downloadgraph-chart></ngx-downloadgraph-chart>\r\n  </div>\r\n</nb-card>\r\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/home/homedashboard/downloadgraph/downloadgraph.component.scss":
+/***/ "../../../../../src/app/merchants/dashboard/downloadgraph/downloadgraph.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -550,7 +587,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/home/homedashboard/downloadgraph/downloadgraph.component.ts":
+/***/ "../../../../../src/app/merchants/dashboard/downloadgraph/downloadgraph.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -590,8 +627,8 @@ var DownloadGraphComponent = (function () {
 DownloadGraphComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'ngx-downloadgraph',
-        styles: [__webpack_require__("../../../../../src/app/home/homedashboard/downloadgraph/downloadgraph.component.scss")],
-        template: __webpack_require__("../../../../../src/app/home/homedashboard/downloadgraph/downloadgraph.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/merchants/dashboard/downloadgraph/downloadgraph.component.scss")],
+        template: __webpack_require__("../../../../../src/app/merchants/dashboard/downloadgraph/downloadgraph.component.html"),
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__core_data_electricity_service__["a" /* ElectricityService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_data_electricity_service__["a" /* ElectricityService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["a" /* NbThemeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["a" /* NbThemeService */]) === "function" && _b || Object])
 ], DownloadGraphComponent);
@@ -601,149 +638,7 @@ var _a, _b;
 
 /***/ }),
 
-/***/ "../../../../../src/app/home/homedashboard/homedashboard.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n        <ngb-carousel>\r\n            <ng-template ngbSlide *ngFor=\"let slider of sliders\">\r\n                <img class=\"img-fluid mx-auto d-block\" [src]=\"slider.imagePath\" alt=\"Random first slide\" width=\"100%\">\r\n                <div class=\"carousel-caption\">\r\n                    <h3>{{slider.label}}</h3>\r\n                    <p>{{slider.text}}</p>\r\n                </div>\r\n            </ng-template>\r\n        </ngb-carousel>\r\n    </div>\r\n</div>\r\n<div class=\"home-container\">\r\n    \r\n\r\n\r\n <div class=\"row\">\r\n    <div class=\"col-xxxl-4 col-md-4\">\r\n        <ngx-status-card title=\"Category\" value=\"View More\" type=\"primary\">\r\n            <i class=\"fa fa-briefcase\"></i>\r\n        </ngx-status-card>\r\n    </div>\r\n    <div class=\"col-xxxl-4 col-md-4\">\r\n        <ngx-status-card title=\"Category\" value=\"View More\" type=\"success\">\r\n            <i class=\"fa fa-briefcase\"></i>\r\n        </ngx-status-card>\r\n    </div>\r\n    <div class=\"col-xxxl-4 col-md-4\">\r\n        <ngx-status-card title=\"Category\" value=\"View More\" type=\"info\">\r\n            <i class=\"fa fa-briefcase\"></i>\r\n        </ngx-status-card>\r\n    </div>\r\n</div>\r\n <div class=\"row\">\r\n    <div class=\"col-xxxl-4 col-md-4\">\r\n        <ngx-status-card title=\"Category\" value=\"View More\" type=\"primary\">\r\n            <i class=\"fa fa-briefcase\"></i>\r\n        </ngx-status-card>\r\n    </div>\r\n    <div class=\"col-xxxl-4 col-md-4\">\r\n        <ngx-status-card title=\"Category\" value=\"View More\" type=\"success\">\r\n            <i class=\"fa fa-briefcase\"></i>\r\n        </ngx-status-card>\r\n    </div>\r\n    <div class=\"col-xxxl-4 col-md-4\">\r\n        <ngx-status-card title=\"Category\" value=\"View More\" type=\"info\">\r\n            <i class=\"fa fa-briefcase\"></i>\r\n        </ngx-status-card>\r\n    </div>\r\n</div>\r\n\r\n</div>\r\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/home/homedashboard/homedashboard.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This is a starting point where we declare the maps of themes and globally available functions/mixins\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n:host-context(.nb-theme-default) .solar-card nb-card-header {\n  border: none;\n  padding-bottom: 0; }\n\n:host-context(.nb-theme-default) .home-container {\n  padding: 2rem; }\n\n@media (max-width: 767px) {\n  :host-context(.nb-theme-default) ngx-traffic {\n    display: none; } }\n\n@media (max-width: 575px) {\n  :host-context(.nb-theme-default) /deep/ nb-card.large-card {\n    height: 456px; } }\n\n:host-context(.nb-theme-cosmic) .solar-card nb-card-header {\n  border: none;\n  padding-bottom: 0; }\n\n:host-context(.nb-theme-cosmic) .home-container {\n  padding: 2rem; }\n\n@media (max-width: 767px) {\n  :host-context(.nb-theme-cosmic) ngx-traffic {\n    display: none; } }\n\n@media (max-width: 575px) {\n  :host-context(.nb-theme-cosmic) /deep/ nb-card.large-card {\n    height: 456px; } }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/home/homedashboard/homedashboard.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeDashboardComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var HomeDashboardComponent = (function () {
-    function HomeDashboardComponent() {
-        this.sliders = [];
-        this.sliders.push({
-            imagePath: 'assets/images/camera1.jpg',
-            label: 'First slide label',
-            text: 'First'
-        }, {
-            imagePath: 'assets/images/camera2.jpg',
-            label: 'Second slide label',
-            text: 'Second'
-        }, {
-            imagePath: 'assets/images/camera3.jpg',
-            label: 'Third slide label',
-            text: 'Third'
-        });
-    }
-    HomeDashboardComponent.prototype.ngOnInit = function () {
-    };
-    return HomeDashboardComponent;
-}());
-HomeDashboardComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'ngx-dashboard',
-        styles: [__webpack_require__("../../../../../src/app/home/homedashboard/homedashboard.component.scss")],
-        template: __webpack_require__("../../../../../src/app/home/homedashboard/homedashboard.component.html"),
-    }),
-    __metadata("design:paramtypes", [])
-], HomeDashboardComponent);
-
-//# sourceMappingURL=homedashboard.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/home/homedashboard/homedashboard.module.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ngx_echarts__ = __webpack_require__("../../../../ngx-echarts/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__swimlane_ngx_charts__ = __webpack_require__("../../../../@swimlane/ngx-charts/release/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__swimlane_ngx_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__swimlane_ngx_charts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_chartjs__ = __webpack_require__("../../../../angular2-chartjs/dist/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_chartjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_chartjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__theme_theme_module__ = __webpack_require__("../../../../../src/app/@theme/theme.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__homedashboard_component__ = __webpack_require__("../../../../../src/app/home/homedashboard/homedashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__status_card_status_card_component__ = __webpack_require__("../../../../../src/app/home/homedashboard/status-card/status-card.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__dealsummary_dealsummary_component__ = __webpack_require__("../../../../../src/app/home/homedashboard/dealsummary/dealsummary.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__dealsummary_dealsummary_chart_dealsummary_chart_component__ = __webpack_require__("../../../../../src/app/home/homedashboard/dealsummary/dealsummary-chart/dealsummary-chart.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__downloadgraph_downloadgraph_component__ = __webpack_require__("../../../../../src/app/home/homedashboard/downloadgraph/downloadgraph.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__downloadgraph_downloadgraph_chart_downloadgraph_chart_component__ = __webpack_require__("../../../../../src/app/home/homedashboard/downloadgraph/downloadgraph-chart/downloadgraph-chart.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ng_bootstrap_ng_bootstrap__ = __webpack_require__("../../../../@ng-bootstrap/ng-bootstrap/index.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeDashboardModule; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-
-
-
-
-
-
-
-
-var HomeDashboardModule = (function () {
-    function HomeDashboardModule() {
-    }
-    return HomeDashboardModule;
-}());
-HomeDashboardModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_4__theme_theme_module__["a" /* ThemeModule */],
-            __WEBPACK_IMPORTED_MODULE_1_ngx_echarts__["a" /* AngularEchartsModule */],
-            __WEBPACK_IMPORTED_MODULE_2__swimlane_ngx_charts__["NgxChartsModule"],
-            __WEBPACK_IMPORTED_MODULE_3_angular2_chartjs__["ChartModule"],
-            __WEBPACK_IMPORTED_MODULE_11__ng_bootstrap_ng_bootstrap__["b" /* NgbCarouselModule */].forRoot(),
-            __WEBPACK_IMPORTED_MODULE_11__ng_bootstrap_ng_bootstrap__["c" /* NgbAlertModule */].forRoot(),
-        ],
-        declarations: [
-            __WEBPACK_IMPORTED_MODULE_5__homedashboard_component__["a" /* HomeDashboardComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__status_card_status_card_component__["a" /* StatusCardComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__dealsummary_dealsummary_component__["a" /* DealSummaryComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__downloadgraph_downloadgraph_component__["a" /* DownloadGraphComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__downloadgraph_downloadgraph_chart_downloadgraph_chart_component__["a" /* DownloadGraphChartComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__dealsummary_dealsummary_chart_dealsummary_chart_component__["a" /* DealSummarychartsPieComponent */],
-        ],
-    })
-], HomeDashboardModule);
-
-//# sourceMappingURL=homedashboard.module.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/home/homedashboard/status-card/status-card.component.scss":
+/***/ "../../../../../src/app/merchants/dashboard/status-card/status-card.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -761,7 +656,7 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/home/homedashboard/status-card/status-card.component.ts":
+/***/ "../../../../../src/app/merchants/dashboard/status-card/status-card.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -802,12 +697,216 @@ __decorate([
 StatusCardComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'ngx-status-card',
-        styles: [__webpack_require__("../../../../../src/app/home/homedashboard/status-card/status-card.component.scss")],
+        styles: [__webpack_require__("../../../../../src/app/merchants/dashboard/status-card/status-card.component.scss")],
         template: "\n    <nb-card [ngClass]=\"{'off': !on}\">\n      <div class=\"icon-container\">\n        <div class=\"icon {{ type }}\">\n          <ng-content></ng-content>\n        </div>\n      </div>\n\n      <div class=\"details\">\n        <div class=\"status\">{{ title }}</div>\n        <div class=\"title\">{{ value }}</div>        \n      </div>\n    </nb-card>\n  ",
     })
 ], StatusCardComponent);
 
 //# sourceMappingURL=status-card.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/merchants/merchants-menu.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MENU_ITEMS; });
+var MENU_ITEMS = [
+    {
+        title: 'Dashboard',
+        icon: 'nb-home',
+        link: '/merchants/dashboard',
+        home: true,
+    },
+    {
+        title: 'Merchant',
+        icon: 'nb-person',
+        link: '/merchants/merchant/tabs',
+    },
+    {
+        title: 'My Deals',
+        icon: 'ion-ios-briefcase-outline',
+        link: '/merchants/deals/list'
+    },
+    {
+        title: 'Download Deal',
+        icon: 'ion-ios-download-outline',
+        link: '/merchants/download/smart-table'
+    },
+    {
+        title: 'Settings',
+        icon: 'nb-gear',
+        children: [
+            {
+                title: 'Profile',
+                link: '/merchants/profile/edit/',
+            },
+            {
+                title: 'Change Password',
+                link: '/merchants/profile/changepwd/',
+            }
+        ],
+    },
+    {
+        title: 'Add Money',
+        icon: 'nb-plus-circled'
+    },
+];
+//# sourceMappingURL=merchants-menu.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/merchants/merchants-routing.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__merchants_component__ = __webpack_require__("../../../../../src/app/merchants/merchants.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/merchants/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__guards_index__ = __webpack_require__("../../../../../src/app/_guards/index.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MerchantsRoutingModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+var routes = [{
+        path: '',
+        component: __WEBPACK_IMPORTED_MODULE_2__merchants_component__["a" /* MerchantsComponent */],
+        children: [{
+                path: 'dashboard',
+                component: __WEBPACK_IMPORTED_MODULE_3__dashboard_dashboard_component__["a" /* DashboardComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_4__guards_index__["a" /* AuthGuard */]]
+            }, {
+                path: 'deals',
+                canActivate: [__WEBPACK_IMPORTED_MODULE_4__guards_index__["a" /* AuthGuard */]],
+                loadChildren: './deals/deals.module#DealsModule',
+            },
+            {
+                path: 'download',
+                canActivate: [__WEBPACK_IMPORTED_MODULE_4__guards_index__["a" /* AuthGuard */]],
+                loadChildren: './download/download.module#DownloadModule',
+            },
+            {
+                path: 'profile',
+                canActivate: [__WEBPACK_IMPORTED_MODULE_4__guards_index__["a" /* AuthGuard */]],
+                loadChildren: './profile/profile.module#ProfileModule',
+            },
+            {
+                path: 'merchant',
+                canActivate: [__WEBPACK_IMPORTED_MODULE_4__guards_index__["a" /* AuthGuard */]],
+                loadChildren: './merchant/merchant.module#MerchantModule',
+            },
+            {
+                path: '',
+                redirectTo: 'dashboard',
+                pathMatch: 'full',
+            }
+        ],
+    }];
+var MerchantsRoutingModule = (function () {
+    function MerchantsRoutingModule() {
+    }
+    return MerchantsRoutingModule;
+}());
+MerchantsRoutingModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+        imports: [__WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* RouterModule */].forChild(routes)],
+        exports: [__WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* RouterModule */]],
+    })
+], MerchantsRoutingModule);
+
+//# sourceMappingURL=merchants-routing.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/merchants/merchants.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__merchants_menu__ = __webpack_require__("../../../../../src/app/merchants/merchants-menu.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MerchantsComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var MerchantsComponent = (function () {
+    function MerchantsComponent() {
+        this.menu = __WEBPACK_IMPORTED_MODULE_1__merchants_menu__["a" /* MENU_ITEMS */];
+    }
+    return MerchantsComponent;
+}());
+MerchantsComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'ngx-merchants',
+        template: "\n    <ngx-sample-layout>\n      <nb-menu [items]=\"menu\"></nb-menu>\n      <router-outlet></router-outlet>\n    </ngx-sample-layout>\n  ",
+    })
+], MerchantsComponent);
+
+//# sourceMappingURL=merchants.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/merchants/merchants.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__merchants_component__ = __webpack_require__("../../../../../src/app/merchants/merchants.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dashboard_dashboard_module__ = __webpack_require__("../../../../../src/app/merchants/dashboard/dashboard.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__merchants_routing_module__ = __webpack_require__("../../../../../src/app/merchants/merchants-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__theme_theme_module__ = __webpack_require__("../../../../../src/app/@theme/theme.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__guards__ = __webpack_require__("../../../../../src/app/_guards/index.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MerchantsModule", function() { return MerchantsModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+var MERCHANTS_COMPONENTS = [
+    __WEBPACK_IMPORTED_MODULE_1__merchants_component__["a" /* MerchantsComponent */],
+];
+var MerchantsModule = (function () {
+    function MerchantsModule() {
+    }
+    return MerchantsModule;
+}());
+MerchantsModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_3__merchants_routing_module__["a" /* MerchantsRoutingModule */],
+            __WEBPACK_IMPORTED_MODULE_4__theme_theme_module__["a" /* ThemeModule */],
+            __WEBPACK_IMPORTED_MODULE_2__dashboard_dashboard_module__["a" /* DashboardModule */],
+        ],
+        declarations: [
+            MERCHANTS_COMPONENTS,
+        ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_5__guards__["a" /* AuthGuard */],
+        ]
+    })
+], MerchantsModule);
+
+//# sourceMappingURL=merchants.module.js.map
 
 /***/ })
 
