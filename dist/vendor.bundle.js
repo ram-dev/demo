@@ -1403,7 +1403,7 @@ NbMenuItemComponent = __decorate([
         selector: '[nbMenuItem]',
         template: "<span *ngIf=\"menuItem.group\"> <i class=\"menu-icon {{ menuItem.icon }}\" *ngIf=\"menuItem.icon\"></i> {{ menuItem.title }} </span> <a *ngIf=\"menuItem.link && !menuItem.url && !menuItem.children && !menuItem.group\" [routerLink]=\"menuItem.link\" [fragment]=\"menuItem.fragment\" [attr.target]=\"menuItem.target\" [attr.title]=\"menuItem.title\" [class.active]=\"menuItem.selected\" (mouseenter)=\"onHoverItem(menuItem)\" (click)=\"onSelectItem(menuItem)\"> <i class=\"menu-icon {{ menuItem.icon }}\" *ngIf=\"menuItem.icon\"></i> <span class=\"menu-title\">{{ menuItem.title }}</span> </a> <a *ngIf=\"menuItem.url && !menuItem.children && !menuItem.link && !menuItem.group\" [attr.href]=\"menuItem.url\" [attr.target]=\"menuItem.target\" [attr.title]=\"menuItem.title\" [class.active]=\"menuItem.selected\" (mouseenter)=\"onHoverItem(menuItem)\" (click)=\"onSelectItem(menuItem)\"> <i class=\"menu-icon {{ menuItem.icon }}\" *ngIf=\"menuItem.icon\"></i> <span class=\"menu-title\">{{ menuItem.title }}</span> </a> <a *ngIf=\"!menuItem.children && !menuItem.link && !menuItem.url && !menuItem.group\" [attr.target]=\"menuItem.target\" [attr.title]=\"menuItem.title\" [class.active]=\"menuItem.selected\" (mouseenter)=\"onHoverItem(menuItem)\" (click)=\"$event.preventDefault(); onItemClick(menuItem);\"> <i class=\"menu-icon {{ menuItem.icon }}\" *ngIf=\"menuItem.icon\"></i> <span class=\"menu-title\">{{ menuItem.title }}</span> </a> <a *ngIf=\"menuItem.children\" (click)=\"$event.preventDefault(); onToggleSubMenu(menuItem);\" [attr.target]=\"menuItem.target\" [attr.title]=\"menuItem.title\" [class.active]=\"menuItem.selected\" (mouseenter)=\"onHoverItem(menuItem)\" href=\"#\"> <i class=\"menu-icon {{ menuItem.icon }}\" *ngIf=\"menuItem.icon\"></i> <span class=\"menu-title\">{{ menuItem.title }}</span> <i class=\"ion chevron\" [class.ion-chevron-left]=\"!menuItem.expanded\" [class.ion-chevron-down]=\"menuItem.expanded\"></i> </a> <ul *ngIf=\"menuItem.children\" [class.collapsed]=\"!(menuItem.children && menuItem.expanded)\" [class.expanded]=\"menuItem.expanded\" class=\"menu-items\"> <li nbMenuItem *ngFor=\"let item of menuItem.children\" [menuItem]=\"item\" [class.menu-group]=\"item.group\" (hoverItem)=\"onHoverItem($event)\" (toggleSubMenu)=\"onToggleSubMenu($event)\" (selectItem)=\"onSelectItem($event)\" (itemClick)=\"onItemClick($event)\" class=\"menu-item\"></li> </ul> ",
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* Router */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]])
 ], NbMenuItemComponent);
 
 /**
@@ -1502,7 +1502,7 @@ var NbMenuComponent = (function () {
             data.listener.next({ tag: _this.tag, item: _this.getSelectedItem(_this.items) });
         });
         this.router.events.subscribe(function (event) {
-            if (event instanceof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* NavigationEnd */]) {
+            if (event instanceof __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* NavigationEnd */]) {
                 _this.menuInternalService.prepareItems(_this.items);
             }
         });
@@ -1604,7 +1604,7 @@ NbMenuComponent = __decorate([
         styles: [":host /deep/ {display:block}:host /deep/ .menu-items,:host /deep/ .menu-item>.menu-items{list-style-type:none;overflow:hidden}:host /deep/ .menu-items.collapsed,:host /deep/ .menu-item>.menu-items.collapsed{max-height:0;transition:max-height 0.15s ease-out}:host /deep/ .menu-items.expanded,:host /deep/ .menu-item>.menu-items.expanded{max-height:300px;transition:max-height 0.3s ease-in}:host /deep/ .menu-item a{display:flex;color:inherit;text-decoration:none;align-items:center}:host /deep/ .menu-item a .menu-title{flex:1} "],
         template: "\n    <ul class=\"menu-items\">\n      <li nbMenuItem *ngFor=\"let item of items\"\n                      [menuItem]=\"item\"\n                      [class.menu-group]=\"item.group\"\n                      (hoverItem)=\"onHoverItem($event)\"\n                      (toggleSubMenu)=\"onToggleSubMenu($event)\"\n                      (selectItem)=\"onSelectItem($event)\"\n                      (itemClick)=\"onItemClick($event)\"\n                      class=\"menu-item\"></li>\n    </ul>\n  ",
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__menu_service__["b" /* NbMenuInternalService */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* Router */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__menu_service__["b" /* NbMenuInternalService */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]])
 ], NbMenuComponent);
 
 //# sourceMappingURL=menu.component.js.map
@@ -1864,7 +1864,7 @@ var NbMenuInternalService = (function () {
 }());
 NbMenuInternalService = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* Router */], __WEBPACK_IMPORTED_MODULE_1__angular_common__["Location"]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */], __WEBPACK_IMPORTED_MODULE_1__angular_common__["Location"]])
 ], NbMenuInternalService);
 
 //# sourceMappingURL=menu.service.js.map
@@ -1981,7 +1981,7 @@ NbRouteTabsetComponent = __decorate([
         styles: ["ul{display:flex;flex-direction:row;list-style-type:none;margin:0}ul li{cursor:pointer;margin-bottom:-1px;text-align:center}ul li.active a::before{display:block}ul li a{position:relative;text-decoration:none;display:inline-block}ul li a::before{display:none;position:absolute;content:'';width:100%;height:6px;border-radius:3px;bottom:-2px;left:0}:host.full-width ul{justify-content:space-around} "],
         template: "\n    <ul>\n      <li *ngFor=\"let tab of tabs\"\n          (click)=\"$event.preventDefault(); selectTab(tab)\"\n          routerLink=\"{{tab.route}}\"\n          routerLinkActive=\"active\"\n          [routerLinkActiveOptions]=\"{ exact: true }\">\n        <a href>{{tab.title}}</a>\n      </li>\n    </ul>\n    <router-outlet></router-outlet>\n  ",
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["d" /* Router */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]])
 ], NbRouteTabsetComponent);
 
 //# sourceMappingURL=route-tabset.component.js.map
@@ -2305,7 +2305,7 @@ var NbSearchComponent = (function () {
     NbSearchComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.routerSubscription = this.router.events
-            .filter(function (event) { return event instanceof __WEBPACK_IMPORTED_MODULE_6__angular_router__["c" /* NavigationEnd */]; })
+            .filter(function (event) { return event instanceof __WEBPACK_IMPORTED_MODULE_6__angular_router__["d" /* NavigationEnd */]; })
             .subscribe(function (event) { return _this.searchService.deactivateSearch(_this.searchType, _this.tag); });
         this.activateSearchSubscription = this.searchService.onSearchActivate().subscribe(function (data) {
             if (!_this.tag || data.tag === _this.tag) {
@@ -2381,7 +2381,7 @@ NbSearchComponent = __decorate([
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__search_service__["a" /* NbSearchService */],
         __WEBPACK_IMPORTED_MODULE_2__services_theme_service__["a" /* NbThemeService */],
         __WEBPACK_IMPORTED_MODULE_0__angular_core__["ComponentFactoryResolver"],
-        __WEBPACK_IMPORTED_MODULE_6__angular_router__["d" /* Router */]])
+        __WEBPACK_IMPORTED_MODULE_6__angular_router__["b" /* Router */]])
 ], NbSearchComponent);
 
 var NbSearchFieldComponent_1;
@@ -2567,7 +2567,7 @@ NbSharedModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_1__angular_common__["CommonModule"],
             // TODO: probably we don't need FormsModule in SharedModule
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* RouterModule */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* RouterModule */],
         ],
     })
 ], NbSharedModule);
@@ -87369,7 +87369,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 /* unused harmony export GuardsCheckEnd */
 /* unused harmony export GuardsCheckStart */
 /* unused harmony export NavigationCancel */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return NavigationEnd; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return NavigationEnd; });
 /* unused harmony export NavigationError */
 /* unused harmony export NavigationStart */
 /* unused harmony export ResolveEnd */
@@ -87378,11 +87378,11 @@ Object.defineProperty(exports, '__esModule', { value: true });
 /* unused harmony export RouteConfigLoadStart */
 /* unused harmony export RoutesRecognized */
 /* unused harmony export RouteReuseStrategy */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return Router; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Router; });
 /* unused harmony export ROUTES */
 /* unused harmony export ROUTER_CONFIGURATION */
 /* unused harmony export ROUTER_INITIALIZER */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return RouterModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return RouterModule; });
 /* unused harmony export provideRoutes */
 /* unused harmony export ChildrenOutletContexts */
 /* unused harmony export OutletContext */

@@ -50,7 +50,7 @@ var AuthGuard = (function () {
 }());
 AuthGuard = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["d" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__auth__["f" /* NbAuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__auth__["f" /* NbAuthService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__auth__["g" /* NbTokenService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__auth__["g" /* NbTokenService */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__auth__["f" /* NbAuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__auth__["f" /* NbAuthService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__auth__["g" /* NbTokenService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__auth__["g" /* NbTokenService */]) === "function" && _c || Object])
 ], AuthGuard);
 
 var _a, _b, _c;
@@ -817,8 +817,8 @@ var MerchantsRoutingModule = (function () {
 }());
 MerchantsRoutingModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
-        imports: [__WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* RouterModule */].forChild(routes)],
-        exports: [__WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* RouterModule */]],
+        imports: [__WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* RouterModule */].forChild(routes)],
+        exports: [__WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* RouterModule */]],
     })
 ], MerchantsRoutingModule);
 

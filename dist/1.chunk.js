@@ -1,5 +1,968 @@
 webpackJsonp([1],{
 
+/***/ "../../../../../src/app/home/deals/dealdata.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mock_data_deals__ = __webpack_require__("../../../../../src/app/home/deals/mock-data-deals.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_throw__ = __webpack_require__("../../../../rxjs/add/observable/throw.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_throw__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__ = __webpack_require__("../../../../rxjs/add/operator/catch.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var DataService = (function () {
+    function DataService(http) {
+        this.http = http;
+    }
+    DataService.prototype.getData = function () {
+        return Promise.resolve(__WEBPACK_IMPORTED_MODULE_2__mock_data_deals__["a" /* DATA */]);
+    };
+    DataService.prototype.getRemoteData = function (url) {
+        return this.http.get(url)
+            .map(this.extractData)
+            .catch(this.handleError);
+    };
+    DataService.prototype.extractData = function (res) {
+        var body = res.json();
+        return body || {};
+    };
+    DataService.prototype.handleError = function (error) {
+        // In a real world app, we might use a remote logging infrastructure
+        // We'd also dig deeper into the error to get a better message
+        var errMsg = (error.message) ? error.message :
+            error.status ? error.status + " - " + error.statusText : 'Server error';
+        console.error(errMsg); // log to console instead
+        return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].throw(errMsg);
+    };
+    return DataService;
+}());
+DataService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === "function" && _a || Object])
+], DataService);
+
+var _a;
+//# sourceMappingURL=dealdata.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/deals/deals-category.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row \">\r\n    <div class=\"col-md-3 slider\">\r\n        <div class=\"filters-wrapper\">\r\n            <filters #filtersComponent [categories]='originalData.categories' [customFilters]='customFilters' [discountFilters]='discountFilters' (onFilterChange)='onFilterChange($event)'></filters>\r\n        </div>\r\n    </div>\r\n    <div class=\"col-md-9 slider\">\r\n        <ngb-carousel>\r\n            <ng-template ngbSlide *ngFor=\"let slider of sliders\">\r\n                <img class=\"img-fluid mx-auto d-block\" [src]=\"slider.imagePath\" alt=\"Random first slide\" width=\"100%\">\r\n                <div class=\"carousel-caption\">\r\n                    <h3>{{slider.label}}</h3>\r\n                    <p>{{slider.text}}</p>\r\n                </div>\r\n            </ng-template>\r\n        </ngb-carousel>\r\n        <div class=\"deal-list\">\r\n            <div class=\"main-container\">\r\n                <div class=\"container\">\r\n                    <div class=\"row\">\r\n                        <div class=\"col-12\">\r\n                            <showcase [products]='products'></showcase>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/deals/deals-category.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This is a starting point where we declare the maps of themes and globally available functions/mixins\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n:host-context(.nb-theme-default) {\n  /** Media queries **/ }\n  :host-context(.nb-theme-default) .main-container {\n    padding-top: 2rem; }\n  :host-context(.nb-theme-default) .filters-wrapper {\n    position: relative;\n    z-index: 100; }\n  :host-context(.nb-theme-default) sort-filters {\n    position: relative;\n    z-index: 20; }\n  :host-context(.nb-theme-default) cart {\n    position: absolute;\n    top: -23px;\n    right: -57px;\n    z-index: 99999999; }\n  :host-context(.nb-theme-default) search-bar {\n    position: relative;\n    top: -8px; }\n  :host-context(.nb-theme-default) showcase {\n    position: relative;\n    top: -39px;\n    z-index: 10; }\n  :host-context(.nb-theme-default) .sort-filters-wrapper {\n    position: relative; }\n  :host-context(.nb-theme-default) url-form {\n    position: absolute;\n    top: -55px; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {\n    :host-context(.nb-theme-default) url-form {\n      position: fixed;\n      bottom: 20px;\n      left: 10px; }\n    :host-context(.nb-theme-default) filters {\n      position: fixed;\n      top: 71px;\n      right: -100%;\n      width: 100%;\n      height: 100%; }\n    :host-context(.nb-theme-default) .sort-filters-wrapper {\n      position: fixed;\n      top: 44px;\n      left: 0;\n      width: 100%;\n      box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.3);\n      padding-top: 10px;\n      background: #5cb85c;\n      z-index: 200; }\n    :host-context(.nb-theme-default) .main-container {\n      padding-top: 34px; }\n    :host-context(.nb-theme-default) search-bar {\n      position: fixed;\n      top: 0;\n      width: 100%;\n      left: 0;\n      z-index: 9000; } }\n  :host-context(.nb-theme-default) .solar-card nb-card-header {\n    border: none;\n    padding-bottom: 0; }\n  :host-context(.nb-theme-default) .home-container {\n    padding: 2rem; }\n  :host-context(.nb-theme-default) .section-header {\n    color: #25b15c;\n    text-align: center;\n    padding: 1rem 0;\n    border-top: 1px solid #636c72;\n    border-bottom: 1px solid #a4abb3;\n    margin: 1% 0; }\n  :host-context(.nb-theme-default) .slider {\n    margin-top: 8.3rem; }\n    :host-context(.nb-theme-default) .slider .img-fluid {\n      max-height: 18rem; }\n  :host-context(.nb-theme-default) .cat-why-section {\n    background: url(/assets/images/category/footer2.jpg) no-repeat;\n    background-position: center;\n    background-size: cover; }\n  :host-context(.nb-theme-default) .home-category-section {\n    width: 100%;\n    padding: 0; }\n    :host-context(.nb-theme-default) .home-category-section li {\n      list-style: none; }\n      :host-context(.nb-theme-default) .home-category-section li .categoryWrapper {\n        width: calc(94% /3);\n        height: 17rem;\n        margin: 1%;\n        display: inline-block;\n        float: left;\n        position: relative; }\n        :host-context(.nb-theme-default) .home-category-section li .categoryWrapper.cat-food {\n          background: url(/assets/images/category/food.jpg) no-repeat;\n          background-position: center;\n          background-size: cover; }\n        :host-context(.nb-theme-default) .home-category-section li .categoryWrapper.cat-wellness {\n          background: url(/assets/images/category/wellness.jpg) no-repeat;\n          background-position: center;\n          background-size: cover; }\n        :host-context(.nb-theme-default) .home-category-section li .categoryWrapper.cat-spa {\n          background: url(/assets/images/category/spa.jpg) no-repeat;\n          background-position: center;\n          background-size: cover; }\n        :host-context(.nb-theme-default) .home-category-section li .categoryWrapper.cat-entertainment {\n          background: url(/assets/images/category/entertainment.png) no-repeat;\n          background-position: center;\n          background-size: cover; }\n        :host-context(.nb-theme-default) .home-category-section li .categoryWrapper.cat-travels {\n          background: url(/assets/images/category/travel.jpg) no-repeat;\n          background-position: center;\n          background-size: cover; }\n        :host-context(.nb-theme-default) .home-category-section li .categoryWrapper.cat-shopping {\n          background: url(/assets/images/category/shopping.jpg) no-repeat;\n          background-position: center;\n          background-size: cover; }\n      :host-context(.nb-theme-default) .home-category-section li .cat-section {\n        width: 100%;\n        height: 100%;\n        display: block;\n        position: relative;\n        background: rgba(93, 18, 18, 0.71); }\n      :host-context(.nb-theme-default) .home-category-section li .cat-why .cat-section {\n        background: transparent; }\n      :host-context(.nb-theme-default) .home-category-section li .cat-why .cat-icon {\n        font-size: .8em;\n        bottom: 56%;\n        background-image: linear-gradient(to right, #4cc4ff, #4ca6ff);\n        box-shadow: 0 0 0 0 #419cdb, 0 0 0 0 #4cb5ff; }\n      :host-context(.nb-theme-default) .home-category-section li .cat-why .cat-title {\n        bottom: 34%; }\n      :host-context(.nb-theme-default) .home-category-section li .cat-why .cat-sub {\n        position: absolute;\n        top: 69%;\n        text-align: center;\n        color: #fff;\n        width: 100%; }\n      :host-context(.nb-theme-default) .home-category-section li .cat-icon {\n        color: #fff;\n        position: absolute;\n        bottom: 36%;\n        right: 36%;\n        padding: .5rem 1.5rem;\n        font-size: 1.2em;\n        background-image: linear-gradient(to right, #40dcb2, #40dc7e);\n        box-shadow: 0 0 0 0 #37bd83, 0 0 0 0 #40dc98;\n        border-radius: 10%; }\n        :host-context(.nb-theme-default) .home-category-section li .cat-icon span {\n          font-size: 5em; }\n      :host-context(.nb-theme-default) .home-category-section li .cat-title {\n        color: #fff;\n        font-size: 2em;\n        bottom: 14%;\n        left: 0;\n        width: 100%;\n        text-align: center;\n        position: absolute; }\n  @media (max-width: 767px) {\n    :host-context(.nb-theme-default) ngx-traffic {\n      display: none; }\n    :host-context(.nb-theme-default) .slider {\n      margin-top: 0; }\n      :host-context(.nb-theme-default) .slider .img-fluid {\n        max-height: 24rem; }\n    :host-context(.nb-theme-default) .home-category-section li .categoryWrapper {\n      width: 100%;\n      margin-bottom: 1%; }\n    :host-context(.nb-theme-default) .home-category-section li .cat-icon {\n      bottom: 50%;\n      right: calc(90%/3); }\n      :host-context(.nb-theme-default) .home-category-section li .cat-icon span {\n        font-size: 3em; } }\n  @media (max-width: 575px) {\n    :host-context(.nb-theme-default) /deep/ nb-card.large-card {\n      height: 456px; } }\n\n:host-context(.nb-theme-cosmic) {\n  /** Media queries **/ }\n  :host-context(.nb-theme-cosmic) .main-container {\n    padding-top: 2rem; }\n  :host-context(.nb-theme-cosmic) .filters-wrapper {\n    position: relative;\n    z-index: 100; }\n  :host-context(.nb-theme-cosmic) sort-filters {\n    position: relative;\n    z-index: 20; }\n  :host-context(.nb-theme-cosmic) cart {\n    position: absolute;\n    top: -23px;\n    right: -57px;\n    z-index: 99999999; }\n  :host-context(.nb-theme-cosmic) search-bar {\n    position: relative;\n    top: -8px; }\n  :host-context(.nb-theme-cosmic) showcase {\n    position: relative;\n    top: -39px;\n    z-index: 10; }\n  :host-context(.nb-theme-cosmic) .sort-filters-wrapper {\n    position: relative; }\n  :host-context(.nb-theme-cosmic) url-form {\n    position: absolute;\n    top: -55px; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {\n    :host-context(.nb-theme-cosmic) url-form {\n      position: fixed;\n      bottom: 20px;\n      left: 10px; }\n    :host-context(.nb-theme-cosmic) filters {\n      position: fixed;\n      top: 71px;\n      right: -100%;\n      width: 100%;\n      height: 100%; }\n    :host-context(.nb-theme-cosmic) .sort-filters-wrapper {\n      position: fixed;\n      top: 44px;\n      left: 0;\n      width: 100%;\n      box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.3);\n      padding-top: 10px;\n      background: #5cb85c;\n      z-index: 200; }\n    :host-context(.nb-theme-cosmic) .main-container {\n      padding-top: 34px; }\n    :host-context(.nb-theme-cosmic) search-bar {\n      position: fixed;\n      top: 0;\n      width: 100%;\n      left: 0;\n      z-index: 9000; } }\n  :host-context(.nb-theme-cosmic) .solar-card nb-card-header {\n    border: none;\n    padding-bottom: 0; }\n  :host-context(.nb-theme-cosmic) .home-container {\n    padding: 2rem; }\n  :host-context(.nb-theme-cosmic) .section-header {\n    color: #25b15c;\n    text-align: center;\n    padding: 1rem 0;\n    border-top: 1px solid #636c72;\n    border-bottom: 1px solid #a4abb3;\n    margin: 1% 0; }\n  :host-context(.nb-theme-cosmic) .slider {\n    margin-top: 8.3rem; }\n    :host-context(.nb-theme-cosmic) .slider .img-fluid {\n      max-height: 18rem; }\n  :host-context(.nb-theme-cosmic) .cat-why-section {\n    background: url(/assets/images/category/footer2.jpg) no-repeat;\n    background-position: center;\n    background-size: cover; }\n  :host-context(.nb-theme-cosmic) .home-category-section {\n    width: 100%;\n    padding: 0; }\n    :host-context(.nb-theme-cosmic) .home-category-section li {\n      list-style: none; }\n      :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper {\n        width: calc(94% /3);\n        height: 17rem;\n        margin: 1%;\n        display: inline-block;\n        float: left;\n        position: relative; }\n        :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper.cat-food {\n          background: url(/assets/images/category/food.jpg) no-repeat;\n          background-position: center;\n          background-size: cover; }\n        :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper.cat-wellness {\n          background: url(/assets/images/category/wellness.jpg) no-repeat;\n          background-position: center;\n          background-size: cover; }\n        :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper.cat-spa {\n          background: url(/assets/images/category/spa.jpg) no-repeat;\n          background-position: center;\n          background-size: cover; }\n        :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper.cat-entertainment {\n          background: url(/assets/images/category/entertainment.png) no-repeat;\n          background-position: center;\n          background-size: cover; }\n        :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper.cat-travels {\n          background: url(/assets/images/category/travel.jpg) no-repeat;\n          background-position: center;\n          background-size: cover; }\n        :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper.cat-shopping {\n          background: url(/assets/images/category/shopping.jpg) no-repeat;\n          background-position: center;\n          background-size: cover; }\n      :host-context(.nb-theme-cosmic) .home-category-section li .cat-section {\n        width: 100%;\n        height: 100%;\n        display: block;\n        position: relative;\n        background: rgba(93, 18, 18, 0.71); }\n      :host-context(.nb-theme-cosmic) .home-category-section li .cat-why .cat-section {\n        background: transparent; }\n      :host-context(.nb-theme-cosmic) .home-category-section li .cat-why .cat-icon {\n        font-size: .8em;\n        bottom: 56%;\n        background-image: linear-gradient(to right, #4cc4ff, #4ca6ff);\n        box-shadow: 0 0 0 0 #419cdb, 0 0 0 0 #4cb5ff; }\n      :host-context(.nb-theme-cosmic) .home-category-section li .cat-why .cat-title {\n        bottom: 34%; }\n      :host-context(.nb-theme-cosmic) .home-category-section li .cat-why .cat-sub {\n        position: absolute;\n        top: 69%;\n        text-align: center;\n        color: #fff;\n        width: 100%; }\n      :host-context(.nb-theme-cosmic) .home-category-section li .cat-icon {\n        color: #fff;\n        position: absolute;\n        bottom: 36%;\n        right: 36%;\n        padding: .5rem 1.5rem;\n        font-size: 1.2em;\n        background-image: linear-gradient(to right, #40dcb2, #40dc7e);\n        box-shadow: 0 0 0 0 #37bd83, 0 0 0 0 #40dc98;\n        border-radius: 10%; }\n        :host-context(.nb-theme-cosmic) .home-category-section li .cat-icon span {\n          font-size: 5em; }\n      :host-context(.nb-theme-cosmic) .home-category-section li .cat-title {\n        color: #fff;\n        font-size: 2em;\n        bottom: 14%;\n        left: 0;\n        width: 100%;\n        text-align: center;\n        position: absolute; }\n  @media (max-width: 767px) {\n    :host-context(.nb-theme-cosmic) ngx-traffic {\n      display: none; }\n    :host-context(.nb-theme-cosmic) .slider {\n      margin-top: 0; }\n      :host-context(.nb-theme-cosmic) .slider .img-fluid {\n        max-height: 24rem; }\n    :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper {\n      width: 100%;\n      margin-bottom: 1%; }\n    :host-context(.nb-theme-cosmic) .home-category-section li .cat-icon {\n      bottom: 50%;\n      right: calc(90%/3); }\n      :host-context(.nb-theme-cosmic) .home-category-section li .cat-icon span {\n        font-size: 3em; } }\n  @media (max-width: 575px) {\n    :host-context(.nb-theme-cosmic) /deep/ nb-card.large-card {\n      height: 456px; } }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/deals/deals-category.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dealdata_service__ = __webpack_require__("../../../../../src/app/home/deals/dealdata.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__filters_filters_component__ = __webpack_require__("../../../../../src/app/home/deals/filters/filters.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DealsCategoryComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var DealsCategoryComponent = (function () {
+    function DealsCategoryComponent(dataService, route, router) {
+        var _this = this;
+        this.dataService = dataService;
+        this.route = route;
+        this.router = router;
+        this.sliders = [];
+        this.sortFilters = [
+            { name: 'Name (A to Z)', value: 'name' },
+            { name: 'Discount (low to high)', value: 'discountAsc' },
+            { name: 'Discount (high to low)', value: 'discountDes' }
+        ];
+        this.customFilters = [
+            { name: 'All', value: 'all', checked: true },
+            { name: 'Available', value: 'available', checked: false },
+            { name: 'Bestoffer', value: 'bestseller', checked: false }
+        ];
+        this.discountFilters = [
+            { name: 'All', value: 'all', checked: true },
+            { name: 'Discount > 30', value: 'more_30', checked: false },
+            { name: 'Discount < 10', value: 'less_10', checked: false }
+        ];
+        this.originalData = [];
+        this.selected = {};
+        this.sliders.push({
+            imagePath: 'assets/images/camera1.jpg',
+            label: 'First slide label',
+            text: 'First'
+        }, {
+            imagePath: 'assets/images/camera2.jpg',
+            label: 'Second slide label',
+            text: 'Second'
+        }, {
+            imagePath: 'assets/images/camera3.jpg',
+            label: 'Third slide label',
+            text: 'Third'
+        });
+        this.sub = this.route.params.subscribe(function (params) {
+            _this.catid = +params['id']; // (+) converts string 'id' to a number
+        });
+    }
+    DealsCategoryComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.dataService.getData().then(function (data) {
+            _this.originalData = data;
+            var list = [];
+            console.log(_this.catid);
+            if (_this.catid) {
+                _this.originalData.categories.forEach(function (element) {
+                    if (element.categori_id == _this.catid) {
+                        element.checked = true;
+                        list.push(element);
+                    }
+                    else {
+                        element.checked = false;
+                    }
+                });
+            }
+            else {
+                _this.originalData.categories.forEach(function (element) {
+                    element.checked = true;
+                });
+                list = _this.originalData.categories.slice(0);
+            }
+            _this.mainFilter = {
+                search: '',
+                categories: list,
+                customFilter: _this.customFilters[0],
+                discountFilter: _this.discountFilters[0]
+            };
+            //Make a deep copy of the original data to keep it immutable
+            _this.products = _this.originalData.deals.slice(0);
+            _this.sortProducts('name');
+            //this.filtersComponent.reset(this.customFilters, this.discountFilters)
+            _this.updateProducts({
+                type: 'category',
+                change: 1
+            });
+        });
+    };
+    DealsCategoryComponent.prototype.ngOnDestroy = function () {
+        if (this.sub != null) {
+            this.sub.unsubscribe();
+        }
+    };
+    DealsCategoryComponent.prototype.onURLChange = function (url) {
+        var _this = this;
+        this.dataService.getRemoteData(url).subscribe(function (data) {
+            _this.originalData = data;
+            _this.mainFilter = {
+                search: '',
+                categories: _this.originalData.categories.slice(0),
+                customFilter: _this.customFilters[0],
+                discountFilter: _this.discountFilters[0]
+            };
+            //Make a deep copy of the original data to keep it immutable
+            // this.products = this.originalData.deals.slice(0)
+            _this.sortProducts('name');
+            _this.updateProducts({
+                type: 'category',
+                change: 1
+            });
+            //this.searchComponent.reset()
+            //this.cartService.flushCart()
+        });
+    };
+    DealsCategoryComponent.prototype.onSearchChange = function (search) {
+        this.mainFilter.search = search.search;
+        this.updateProducts({
+            type: 'search',
+            change: search.change
+        });
+    };
+    DealsCategoryComponent.prototype.onFilterChange = function (data) {
+        if (data.type == 'category') {
+            if (data.isChecked) {
+                this.mainFilter.categories.push(data.filter);
+            }
+            else {
+                this.mainFilter.categories = this.mainFilter.categories.filter(function (category) { return category.categori_id != data.filter.categori_id; });
+            }
+        }
+        else if (data.type == 'custom') {
+            this.mainFilter.customFilter = data.filter;
+        }
+        else if (data.type == 'discount') {
+            this.mainFilter.discountFilter = data.filter;
+        }
+        this.updateProducts({
+            type: data.type,
+            change: data.change
+        });
+    };
+    DealsCategoryComponent.prototype.updateProducts = function (filter) {
+        var _this = this;
+        var productsSource = this.originalData.deals;
+        var prevProducts = this.products;
+        var filterAllData = true;
+        if ((filter.type == 'search' && filter.change == 1) || (filter.type == 'category' && filter.change == -1)) {
+            productsSource = this.products;
+            filterAllData = false;
+        }
+        //console.log('filtering ' + productsSource.length + ' products')
+        this.products = productsSource.filter(function (product) {
+            //Filter by search
+            if (filterAllData || filter.type == 'search') {
+                if (!product.name.match(new RegExp(_this.mainFilter.search, 'i'))) {
+                    return false;
+                }
+            }
+            //Filter by categories
+            if (filterAllData || filter.type == 'category') {
+                var passCategoryFilter_1 = false;
+                product.categories.forEach(function (product_category) {
+                    if (!passCategoryFilter_1) {
+                        passCategoryFilter_1 = _this.mainFilter.categories.reduce(function (found, category) {
+                            return found || product_category == category.categori_id;
+                        }, false);
+                    }
+                });
+                if (!passCategoryFilter_1) {
+                    return false;
+                }
+            }
+            //Filter by custom filters
+            if (filterAllData || filter.type == 'custom') {
+                var passCustomFilter = false;
+                var customFilter = _this.mainFilter.customFilter.value;
+                if (customFilter == 'all') {
+                    passCustomFilter = true;
+                }
+                else if (customFilter == 'available' && product.available) {
+                    passCustomFilter = true;
+                }
+                else if (customFilter == 'unavailable' && !product.available) {
+                    passCustomFilter = true;
+                }
+                else if (customFilter == 'bestseller' && product.best_seller) {
+                    passCustomFilter = true;
+                }
+                if (!passCustomFilter) {
+                    return false;
+                }
+            }
+            //Filter by discount filters
+            if (filterAllData || filter.type == 'discount') {
+                var passdiscountFilter = false;
+                var customFilter = _this.mainFilter.discountFilter.value;
+                var productdiscount = parseFloat(product.discount.replace(/\./g, '').replace(',', '.'));
+                if (customFilter == 'all') {
+                    passdiscountFilter = true;
+                }
+                else if (customFilter == 'more_30' && productdiscount > 30) {
+                    passdiscountFilter = true;
+                }
+                else if (customFilter == 'less_10' && productdiscount < 10) {
+                    passdiscountFilter = true;
+                }
+                if (!passdiscountFilter) {
+                    return false;
+                }
+            }
+            return true;
+        });
+        //If the number of products increased after the filter has been applied then sort again
+        //If the number of products remained equal, there's a high chance that the items have been reordered.
+        if (prevProducts.length <= this.products.length && this.products.length > 1) {
+            this.sortProducts(this.currentSorting);
+        }
+        //These two types of filters usually add new data to the products showcase so a sort is necessary
+        if (filter.type == 'custom' || filter.type == 'discount') {
+            this.sortProducts(this.currentSorting);
+        }
+    };
+    DealsCategoryComponent.prototype.sortProducts = function (criteria) {
+        //console.log('sorting ' + this.products.length + ' products')
+        this.products.sort(function (a, b) {
+            var discountComparison = parseFloat(a.discount.replace(/\./g, '').replace(',', '.')) - parseFloat(b.discount.replace(/\./g, '').replace(',', '.'));
+            if (criteria == 'discountDes') {
+                return -discountComparison;
+            }
+            else if (criteria == 'discountAsc') {
+                return discountComparison;
+            }
+            else if (criteria == 'name') {
+                var nameA = a.name.toLowerCase(), nameB = b.name.toLowerCase();
+                if (nameA < nameB)
+                    return -1;
+                if (nameA > nameB)
+                    return 1;
+                return 0;
+            }
+            else {
+                //Keep the same order in case of any unexpected sort criteria
+                return -1;
+            }
+        });
+        this.currentSorting = criteria;
+    };
+    return DealsCategoryComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('filtersComponent'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__filters_filters_component__["a" /* FiltersComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__filters_filters_component__["a" /* FiltersComponent */]) === "function" && _a || Object)
+], DealsCategoryComponent.prototype, "filtersComponent", void 0);
+DealsCategoryComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'ngx-deal-category',
+        styles: [__webpack_require__("../../../../../src/app/home/deals/deals-category.component.scss")],
+        template: __webpack_require__("../../../../../src/app/home/deals/deals-category.component.html"),
+    }),
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__dealdata_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__dealdata_service__["a" /* DataService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _d || Object])
+], DealsCategoryComponent);
+
+var _a, _b, _c, _d;
+//# sourceMappingURL=deals-category.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/deals/deals-category.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ngx_echarts__ = __webpack_require__("../../../../ngx-echarts/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__swimlane_ngx_charts__ = __webpack_require__("../../../../@swimlane/ngx-charts/release/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__swimlane_ngx_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__swimlane_ngx_charts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_chartjs__ = __webpack_require__("../../../../angular2-chartjs/dist/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_chartjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_chartjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__theme_theme_module__ = __webpack_require__("../../../../../src/app/@theme/theme.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__deals_category_component__ = __webpack_require__("../../../../../src/app/home/deals/deals-category.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__showcase_showcase_component__ = __webpack_require__("../../../../../src/app/home/deals/showcase/showcase.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__product_product_component__ = __webpack_require__("../../../../../src/app/home/deals/product/product.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__product_thumbnail_product_thumbnail_component__ = __webpack_require__("../../../../../src/app/home/deals/product-thumbnail/product-thumbnail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__filters_filters_component__ = __webpack_require__("../../../../../src/app/home/deals/filters/filters.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__sort_filters_sort_filters_component__ = __webpack_require__("../../../../../src/app/home/deals/sort-filters/sort-filters.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ng_bootstrap_ng_bootstrap__ = __webpack_require__("../../../../@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__dealdata_service__ = __webpack_require__("../../../../../src/app/home/deals/dealdata.service.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DealsCategoryModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+var DealsCategoryModule = (function () {
+    function DealsCategoryModule() {
+    }
+    return DealsCategoryModule;
+}());
+DealsCategoryModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_4__theme_theme_module__["a" /* ThemeModule */],
+            __WEBPACK_IMPORTED_MODULE_1_ngx_echarts__["a" /* AngularEchartsModule */],
+            __WEBPACK_IMPORTED_MODULE_2__swimlane_ngx_charts__["NgxChartsModule"],
+            __WEBPACK_IMPORTED_MODULE_3_angular2_chartjs__["ChartModule"],
+            __WEBPACK_IMPORTED_MODULE_11__ng_bootstrap_ng_bootstrap__["b" /* NgbCarouselModule */].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_11__ng_bootstrap_ng_bootstrap__["c" /* NgbAlertModule */].forRoot(),
+        ],
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_5__deals_category_component__["a" /* DealsCategoryComponent */],
+            __WEBPACK_IMPORTED_MODULE_6__showcase_showcase_component__["a" /* ShowcaseComponent */],
+            __WEBPACK_IMPORTED_MODULE_7__product_product_component__["a" /* ProductComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__filters_filters_component__["a" /* FiltersComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__sort_filters_sort_filters_component__["a" /* SortFiltersComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__product_thumbnail_product_thumbnail_component__["a" /* ProductThumbnailComponent */]
+        ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_12__dealdata_service__["a" /* DataService */]
+        ],
+    })
+], DealsCategoryModule);
+
+//# sourceMappingURL=deals-category.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/deals/filters/filters.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<button type=\"button\" class=\"toggle-btn\" (click)=\"sideShown = true\">Filters</button>\n<div class=\"filters\" [class.side-shown]=\"sideShown\">\n  <button type=\"button\" class=\"close-side-btn\" (click)=\"sideShown = false\">x</button>\n  <h5>Filter by categories</h5>\n  <form *ngIf = \"showFilters\">\n    <div class=\"category-filter filter-wrapper\" *ngFor = 'let filter of categories'>\n      <label class=\"fake-checkbox\">\n        <input type=\"checkbox\" [checked]='filter.checked' (change)='onInputChange($event, filter, \"category\")'>\n        <span class=\"square\"><span class=\"fill\"></span></span>\n        <span class=\"label\">{{filter.name}}</span>\n        <span></span>\n      </label>\n    </div>\n  </form>\n  <h5>Filter by discount</h5>\n  <form *ngIf = \"showFilters\">\n    <div class=\"custom-filter filter-wrapper\" *ngFor = 'let filter of discountFilters'>\n        <label class=\"fake-checkbox\">\n          <input type=\"radio\" name=\"discount\" [checked]='filter.checked' (click)='onInputChange($event, filter, \"discount\")'>\n          <span class=\"circle\"><span class=\"fill\"></span></span>\n          <span class=\"label\">{{filter.name}}</span>\n          <span></span>\n        </label>\n    </div>\n  </form>\n  <h5>Filter By Popularity</h5>\n  <form *ngIf = \"showFilters\">\n    <div class=\"custom-filter filter-wrapper\" *ngFor = 'let filter of customFilters'>\n        <label class=\"fake-checkbox\">\n          <input type=\"radio\" name=\"custom\" [checked]='filter.checked' (click)='onInputChange($event, filter, \"custom\")'>\n          <span class=\"circle\"><span class=\"fill\"></span></span>\n          <span class=\"label\">{{filter.name}}</span>\n          <span></span>\n        </label>\n    </div>\n  </form>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/deals/filters/filters.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This is a starting point where we declare the maps of themes and globally available functions/mixins\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n:host-context(.nb-theme-default) {\n  /** Media queries **/ }\n  :host-context(.nb-theme-default) .filters {\n    border: 1px solid #333333;\n    padding: 1rem;\n    width: 100%;\n    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\n    background-color: white;\n    border: none;\n    border-radius: 4px;\n    padding-top: 1rem;\n    position: relative; }\n  :host-context(.nb-theme-default) .filter {\n    width: 100%;\n    background: #999999;\n    border-radius: 3px;\n    margin-bottom: 10px;\n    height: 35px; }\n  :host-context(.nb-theme-default) .fake-checkbox {\n    position: relative; }\n  :host-context(.nb-theme-default) .filter-wrapper {\n    margin-bottom: 8px; }\n    :host-context(.nb-theme-default) .filter-wrapper label {\n      cursor: pointer; }\n    :host-context(.nb-theme-default) .filter-wrapper input[type=checkbox], :host-context(.nb-theme-default) .filter-wrapper input[type=radio] {\n      display: none; }\n      :host-context(.nb-theme-default) .filter-wrapper input[type=checkbox]:checked + .square, :host-context(.nb-theme-default) .filter-wrapper input[type=checkbox]:checked + .circle, :host-context(.nb-theme-default) .filter-wrapper input[type=radio]:checked + .square, :host-context(.nb-theme-default) .filter-wrapper input[type=radio]:checked + .circle {\n        opacity: 1; }\n      :host-context(.nb-theme-default) .filter-wrapper input[type=checkbox]:checked + .square .fill, :host-context(.nb-theme-default) .filter-wrapper input[type=checkbox]:checked + .circle .fill, :host-context(.nb-theme-default) .filter-wrapper input[type=radio]:checked + .square .fill, :host-context(.nb-theme-default) .filter-wrapper input[type=radio]:checked + .circle .fill {\n        opacity: 1; }\n      :host-context(.nb-theme-default) .filter-wrapper input[type=checkbox]:checked ~ .label, :host-context(.nb-theme-default) .filter-wrapper input[type=radio]:checked ~ .label {\n        opacity: 1; }\n    :host-context(.nb-theme-default) .filter-wrapper .square, :host-context(.nb-theme-default) .filter-wrapper .circle, :host-context(.nb-theme-default) .filter-wrapper .fill {\n      display: inline-block; }\n    :host-context(.nb-theme-default) .filter-wrapper .square, :host-context(.nb-theme-default) .filter-wrapper .circle {\n      height: 16px;\n      width: 16px;\n      border: 1px solid #5cb85c;\n      position: relative;\n      opacity: 0.4; }\n      :host-context(.nb-theme-default) .filter-wrapper .square .fill, :host-context(.nb-theme-default) .filter-wrapper .circle .fill {\n        height: 15px;\n        width: 15px;\n        background-color: #5cb85c;\n        transition: all 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);\n        position: absolute;\n        opacity: 0; }\n    :host-context(.nb-theme-default) .filter-wrapper .square {\n      border-radius: 3px; }\n      :host-context(.nb-theme-default) .filter-wrapper .square .fill {\n        border-radius: 2px; }\n    :host-context(.nb-theme-default) .filter-wrapper .circle {\n      border-radius: 50%; }\n      :host-context(.nb-theme-default) .filter-wrapper .circle .fill {\n        border-radius: 50%; }\n    :host-context(.nb-theme-default) .filter-wrapper .fill {\n      top: 0px;\n      left: 0px; }\n    :host-context(.nb-theme-default) .filter-wrapper .label {\n      text-transform: capitalize;\n      position: relative;\n      top: -4px;\n      margin-left: 7px;\n      opacity: 0.6;\n      transition: all 0.4s ease; }\n  :host-context(.nb-theme-default) h5 {\n    text-transform: uppercase;\n    color: #bababa;\n    font-size: 0.8em;\n    font-weight: 600; }\n    :host-context(.nb-theme-default) h5:after {\n      content: \"\";\n      display: block;\n      width: 100%;\n      height: 1px;\n      margin-top: 3px;\n      background-color: #e8e8e8; }\n  :host-context(.nb-theme-default) .toggle-btn {\n    display: none; }\n  :host-context(.nb-theme-default) .close-side-btn {\n    display: none;\n    background: none;\n    border: none; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {\n    :host-context(.nb-theme-default) .close-side-btn {\n      display: block;\n      position: absolute;\n      color: #aaaaaa;\n      font-size: 1.2em;\n      font-weight: 300;\n      right: 18px;\n      top: 6px;\n      opacity: 0.7; }\n    :host-context(.nb-theme-default) .toggle-btn {\n      display: inline-block;\n      position: absolute;\n      left: -69px;\n      top: 11px;\n      background: white;\n      border-radius: 3px;\n      color: #5D4EF0;\n      padding: 4px 11px;\n      border: none;\n      font-size: 0.8em;\n      font-weight: 600;\n      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4); }\n    :host-context(.nb-theme-default) .filters {\n      width: initial;\n      position: relative;\n      box-shadow: none;\n      border-radius: 0;\n      height: 100%;\n      transition: all 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86); }\n      :host-context(.nb-theme-default) .filters.side-shown {\n        -webkit-transform: translateX(-100%);\n        transform: translateX(-100%); } }\n\n:host-context(.nb-theme-cosmic) {\n  /** Media queries **/ }\n  :host-context(.nb-theme-cosmic) .filters {\n    border: 1px solid #333333;\n    padding: 1rem;\n    width: 100%;\n    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\n    background-color: white;\n    border: none;\n    border-radius: 4px;\n    padding-top: 1rem;\n    position: relative; }\n  :host-context(.nb-theme-cosmic) .filter {\n    width: 100%;\n    background: #999999;\n    border-radius: 3px;\n    margin-bottom: 10px;\n    height: 35px; }\n  :host-context(.nb-theme-cosmic) .fake-checkbox {\n    position: relative; }\n  :host-context(.nb-theme-cosmic) .filter-wrapper {\n    margin-bottom: 8px; }\n    :host-context(.nb-theme-cosmic) .filter-wrapper label {\n      cursor: pointer; }\n    :host-context(.nb-theme-cosmic) .filter-wrapper input[type=checkbox], :host-context(.nb-theme-cosmic) .filter-wrapper input[type=radio] {\n      display: none; }\n      :host-context(.nb-theme-cosmic) .filter-wrapper input[type=checkbox]:checked + .square, :host-context(.nb-theme-cosmic) .filter-wrapper input[type=checkbox]:checked + .circle, :host-context(.nb-theme-cosmic) .filter-wrapper input[type=radio]:checked + .square, :host-context(.nb-theme-cosmic) .filter-wrapper input[type=radio]:checked + .circle {\n        opacity: 1; }\n      :host-context(.nb-theme-cosmic) .filter-wrapper input[type=checkbox]:checked + .square .fill, :host-context(.nb-theme-cosmic) .filter-wrapper input[type=checkbox]:checked + .circle .fill, :host-context(.nb-theme-cosmic) .filter-wrapper input[type=radio]:checked + .square .fill, :host-context(.nb-theme-cosmic) .filter-wrapper input[type=radio]:checked + .circle .fill {\n        opacity: 1; }\n      :host-context(.nb-theme-cosmic) .filter-wrapper input[type=checkbox]:checked ~ .label, :host-context(.nb-theme-cosmic) .filter-wrapper input[type=radio]:checked ~ .label {\n        opacity: 1; }\n    :host-context(.nb-theme-cosmic) .filter-wrapper .square, :host-context(.nb-theme-cosmic) .filter-wrapper .circle, :host-context(.nb-theme-cosmic) .filter-wrapper .fill {\n      display: inline-block; }\n    :host-context(.nb-theme-cosmic) .filter-wrapper .square, :host-context(.nb-theme-cosmic) .filter-wrapper .circle {\n      height: 16px;\n      width: 16px;\n      border: 1px solid #5cb85c;\n      position: relative;\n      opacity: 0.4; }\n      :host-context(.nb-theme-cosmic) .filter-wrapper .square .fill, :host-context(.nb-theme-cosmic) .filter-wrapper .circle .fill {\n        height: 15px;\n        width: 15px;\n        background-color: #5cb85c;\n        transition: all 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);\n        position: absolute;\n        opacity: 0; }\n    :host-context(.nb-theme-cosmic) .filter-wrapper .square {\n      border-radius: 3px; }\n      :host-context(.nb-theme-cosmic) .filter-wrapper .square .fill {\n        border-radius: 2px; }\n    :host-context(.nb-theme-cosmic) .filter-wrapper .circle {\n      border-radius: 50%; }\n      :host-context(.nb-theme-cosmic) .filter-wrapper .circle .fill {\n        border-radius: 50%; }\n    :host-context(.nb-theme-cosmic) .filter-wrapper .fill {\n      top: 0px;\n      left: 0px; }\n    :host-context(.nb-theme-cosmic) .filter-wrapper .label {\n      text-transform: capitalize;\n      position: relative;\n      top: -4px;\n      margin-left: 7px;\n      opacity: 0.6;\n      transition: all 0.4s ease; }\n  :host-context(.nb-theme-cosmic) h5 {\n    text-transform: uppercase;\n    color: #bababa;\n    font-size: 0.8em;\n    font-weight: 600; }\n    :host-context(.nb-theme-cosmic) h5:after {\n      content: \"\";\n      display: block;\n      width: 100%;\n      height: 1px;\n      margin-top: 3px;\n      background-color: #e8e8e8; }\n  :host-context(.nb-theme-cosmic) .toggle-btn {\n    display: none; }\n  :host-context(.nb-theme-cosmic) .close-side-btn {\n    display: none;\n    background: none;\n    border: none; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {\n    :host-context(.nb-theme-cosmic) .close-side-btn {\n      display: block;\n      position: absolute;\n      color: #aaaaaa;\n      font-size: 1.2em;\n      font-weight: 300;\n      right: 18px;\n      top: 6px;\n      opacity: 0.7; }\n    :host-context(.nb-theme-cosmic) .toggle-btn {\n      display: inline-block;\n      position: absolute;\n      left: -69px;\n      top: 11px;\n      background: white;\n      border-radius: 3px;\n      color: #5D4EF0;\n      padding: 4px 11px;\n      border: none;\n      font-size: 0.8em;\n      font-weight: 600;\n      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4); }\n    :host-context(.nb-theme-cosmic) .filters {\n      width: initial;\n      position: relative;\n      box-shadow: none;\n      border-radius: 0;\n      height: 100%;\n      transition: all 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86); }\n      :host-context(.nb-theme-cosmic) .filters.side-shown {\n        -webkit-transform: translateX(-100%);\n        transform: translateX(-100%); } }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/deals/filters/filters.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FiltersComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var FiltersComponent = (function () {
+    function FiltersComponent() {
+        this.onFilterChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.showFilters = true;
+        this.sideShown = false;
+    }
+    FiltersComponent.prototype.ngOnInit = function () {
+    };
+    FiltersComponent.prototype.reset = function (customFilters, discountFilters) {
+        var _this = this;
+        this.customFilters = customFilters;
+        this.discountFilters = discountFilters;
+        this.showFilters = false;
+        setTimeout(function () {
+            _this.showFilters = true;
+        });
+    };
+    FiltersComponent.prototype.onInputChange = function ($event, filter, type) {
+        var change = $event.target.checked ? 1 : -1;
+        this.onFilterChange.emit({
+            type: type,
+            filter: filter,
+            isChecked: $event.target.checked,
+            change: change
+        });
+    };
+    return FiltersComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Array)
+], FiltersComponent.prototype, "categories", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Array)
+], FiltersComponent.prototype, "customFilters", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Array)
+], FiltersComponent.prototype, "discountFilters", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", Object)
+], FiltersComponent.prototype, "onFilterChange", void 0);
+FiltersComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'filters',
+        template: __webpack_require__("../../../../../src/app/home/deals/filters/filters.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/home/deals/filters/filters.component.scss")]
+    }),
+    __metadata("design:paramtypes", [])
+], FiltersComponent);
+
+//# sourceMappingURL=filters.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/deals/mock-data-deals.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DATA; });
+var DATA = {
+    "categories": [
+        {
+            "categori_id": 1,
+            "name": "Food & Beverages",
+        },
+        {
+            "categori_id": 2,
+            "name": "Wellness"
+        },
+        {
+            "categori_id": 3,
+            "name": "SPA"
+        },
+        {
+            "categori_id": 4,
+            "name": "Entertainment"
+        },
+        {
+            "categori_id": 5,
+            "name": "Travel"
+        },
+        {
+            "categori_id": 6,
+            "name": "E Shopping"
+        }
+    ],
+    "deals": [
+        {
+            "id": 1,
+            "name": "Over The Top",
+            "categories": [
+                1
+            ],
+            "outlets": [
+                {
+                    "id": 2,
+                    "address": "Defence Colony",
+                    "lat": "11.2",
+                    "lon": "12.56",
+                    "city": "Bangalore",
+                    "state": "Karnataka",
+                    "country": "India"
+                }
+            ],
+            "offertype": 1,
+            "discount": "20",
+            "offer": "Flat 20% off on the bill. Cannot be clubed with any other offer",
+            "offerdetails": "Enjoy your favourite food at Over the Top. Now Get Flat 20 % of on the bill ( Drinks and Food)",
+            "coupontodate": "25-Nov-2017",
+            "couponfromdate": "01-Nov-2017",
+            "fundallocation": 2000,
+            "daysallocation": "All days",
+            "terms": "This offer cannot be clubbed with other offers. You can download this coupon FREE of cost from dealsandyou.com. You only need to pay 28 Capri Italy as per the Offer Details.",
+            "images": ["/assets/images/cover2.jpg", "/assets/images/cover3.jpg", "/assets/images/cover1.jpg"],
+            "best_seller": false,
+            "available": true
+        },
+        {
+            "id": 2,
+            "name": "22 Capri Italy",
+            "categories": [
+                1
+            ],
+            "outlets": [
+                {
+                    "id": 1,
+                    "address": "#43 hsr layout",
+                    "lat": "11.2",
+                    "lon": "12.56",
+                    "city": "Bangalore",
+                    "state": "Karnataka",
+                    "country": "India"
+                }
+            ],
+            "offertype": 1,
+            "discount": "68",
+            "offer": "5 beer with 1 Veg or Non Veg Pizza / 1 Veg or Non Veg Pasta. Pay Rs 599 at the outlet. (Taxes and Service charges extra)",
+            "offerdetails": "Get 68% off on Beer, Pizza & More worth Rs. 1850.",
+            "coupontodate": "25-Nov-2017",
+            "couponfromdate": "01-Nov-2017",
+            "fundallocation": 2000,
+            "daysallocation": "All days",
+            "terms": "Available on all days. One Voucher per person Prior appointment Mandatory. Call the merchant for more details on the Package. T&C apply. Cannot be clubbed with any other Offer. Payment to the Merchant only. This coupon is free of cost. Prices may vary from other sites. These are the prices Shared by the merchant. Merchant can change the Deal price any time. Do call the Merchant to confirm / recheck the details.",
+            "images": ["/assets/images/cover1.jpg", "/assets/images/cover2.jpg", "/assets/images/cover3.jpg"],
+            "best_seller": true,
+            "available": true
+        },
+        {
+            "id": 3,
+            "name": "The Arabian Night at Club London on Thursdays",
+            "categories": [
+                4
+            ],
+            "outlets": [
+                {
+                    "id": 1,
+                    "address": "#43 hsr layout",
+                    "lat": "11.2",
+                    "lon": "12.56",
+                    "city": "Bangalore",
+                    "state": "Karnataka",
+                    "country": "India"
+                }
+            ],
+            "offertype": 1,
+            "discount": "8",
+            "offer": "ARABIAN NIGHT LIVE BELLY DANCE",
+            "offerdetails": "Thursaday Another energy filled episode of the amazing Arabian Nights is back this week, taking fun to another level! Drop in to witness some great belly dancing and get the party started.",
+            "coupontodate": "25-Nov-2017",
+            "couponfromdate": "01-Nov-2017",
+            "fundallocation": 2000,
+            "daysallocation": "All days",
+            "terms": "Available on all days. One Voucher per person Prior appointment Mandatory. Call the merchant for more details on the Package. T&C apply. Cannot be clubbed with any other Offer. Payment to the Merchant only. This coupon is free of cost. Prices may vary from other sites. These are the prices Shared by the merchant. Merchant can change the Deal price any time. Do call the Merchant to confirm / recheck the details.",
+            "images": ["/assets/images/cover3.jpg", "/assets/images/cover2.jpg", "/assets/images/cover1.jpg"],
+            "best_seller": true,
+            "available": true
+        },
+    ]
+};
+//# sourceMappingURL=mock-data-deals.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/deals/product-thumbnail/product-thumbnail.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"wrapper\" [class.unavailable]='!product.available'>\n  <div class=\"info\" >\n    <div class=\"img-wrapper\">\n      <img class=\"img\" [src]='product.images[0]'>\n      <div class=\"img-placeholder\"></div>\n    </div>\n    <h5 class=\"title\">{{product.name}}</h5>\n    <p class=\"price\"><span>{{product.discount}}</span> % Discount</p>\n    <div class=\"details\">\n      <div class=\"available\" *ngIf = 'product.available'>\n        \n        <div class=\"row\">\n          <div class=\"col-4-sm\">\n            <button type=\"button\" class=\"btn btn-outline-success btn-tn\" (click)='onProductClick()'><i class=\"fa fa-chevron-circle-down\" aria-hidden=\"true\"></i> View more</button>\n          </div>\n          <div class=\"col-4-sm offset-sm-1\">\n            <button type=\"button\" class=\"btn btn-outline-success btn-tn\"><i class=\"fa fa-download\" aria-hidden=\"true\"></i> Coupon</button>\n          </div>\n        </div>\n      </div>\n      <div class=\"not-available\" *ngIf = '!product.available'>\n        \n        <p>Not available</p>\n      </div>\n    </div>\n    <!--span class=\"category-name\" *ngFor='let category of product.categories'>{{category}}</span-->\n    <div class=\"detail-view\" [class.active]='detailViewActive'>\n      <div class=\"bg\" [class.shown]='detailViewActive'></div>\n      <div class=\"info-wrapper\">\n        <p class=\"d-holder d-title\">{{product.name}}</p>\n        <p class=\"d-holder d-description\">{{product.offerdetails}}</p>\n        <p class=\"d-holder d-description\">{{product.offer}}</p>\n      </div>\n      <button type=\"button\" class=\"hide-detail-btn\" (click)='onProductClick()'>Click to hide</button>\n    </div>\n  </div>\n  <div class=\"bestseller-badge\" [class.in-detailed]='detailViewActive' *ngIf = 'product.best_seller'>\n    <span class=\"star left\">&nbsp;</span>\n    <span class=\"txt\">Bestoffer</span>\n    <span class=\"star right\">&nbsp;</span>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/deals/product-thumbnail/product-thumbnail.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This is a starting point where we declare the maps of themes and globally available functions/mixins\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n:host-context(.nb-theme-default) {\n  /** Media queries **/ }\n  :host-context(.nb-theme-default) .wrapper {\n    border-radius: 5px;\n    box-shadow: 0 5px 5px;\n    position: relative;\n    text-align: center;\n    display: block;\n    background-color: white;\n    box-shadow: 0 6px 17px rgba(0, 0, 0, 0.07); }\n  :host-context(.nb-theme-default) .add-cart-wrapper, :host-context(.nb-theme-default) .view-details-wrapper {\n    margin-top: 0;\n    margin-bottom: 0; }\n  :host-context(.nb-theme-default) .view-details-wrapper {\n    position: relative; }\n    :host-context(.nb-theme-default) .view-details-wrapper:after {\n      content: \"\";\n      width: 1px;\n      display: block;\n      position: absolute;\n      height: 28px;\n      background-color: #5D4EF0;\n      right: -3px;\n      top: -4px;\n      opacity: 0.2; }\n  :host-context(.nb-theme-default) .hide-detail-btn {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    text-align: center;\n    width: 100%;\n    z-index: 20;\n    background: none;\n    border: none;\n    color: white;\n    opacity: 0.6;\n    font-size: 0.7em;\n    font-weight: 600;\n    cursor: pointer;\n    background: rgba(255, 255, 255, 0.1);\n    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);\n    -webkit-transform: translateY(15px);\n    transform: translateY(15px);\n    transition-delay: 1.2s; }\n    :host-context(.nb-theme-default) .hide-detail-btn:hover {\n      background: rgba(255, 255, 255, 0.2); }\n  :host-context(.nb-theme-default) .img-wrapper {\n    height: 12rem;\n    position: relative;\n    overflow: hidden; }\n  :host-context(.nb-theme-default) .details {\n    margin: 1rem;\n    padding: 1rem; }\n    :host-context(.nb-theme-default) .details hr {\n      width: 90%;\n      height: 0;\n      border-top: 1px solid #5cb85c; }\n    :host-context(.nb-theme-default) .details .view:hover, :host-context(.nb-theme-default) .details .cart:hover {\n      opacity: 0.8; }\n    :host-context(.nb-theme-default) .details .view {\n      text-transform: uppercase;\n      color: #5cb85c;\n      font-size: 0.85em;\n      font-weight: 500;\n      position: relative;\n      top: -1px;\n      left: -2px; }\n    :host-context(.nb-theme-default) .details .cart {\n      position: relative;\n      top: 2px; }\n    :host-context(.nb-theme-default) .details .not-available hr {\n      border-top: 1px solid #999999; }\n    :host-context(.nb-theme-default) .details .not-available p {\n      margin: 0;\n      margin-top: -7px;\n      position: relative;\n      top: 2px;\n      text-transform: uppercase;\n      font-size: 0.85em;\n      font-weight: 500;\n      padding-top: 5px;\n      padding-bottom: 3px; }\n  :host-context(.nb-theme-default) .img-placeholder, :host-context(.nb-theme-default) .img {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    border-radius: 5px 5px 0 0; }\n  :host-context(.nb-theme-default) .img-placeholder {\n    z-index: 3;\n    height: 100%;\n    background: #dddddd; }\n  :host-context(.nb-theme-default) .detail-view {\n    position: absolute;\n    z-index: 30;\n    border-radius: 5px;\n    overflow: hidden;\n    top: 0;\n    height: 100%;\n    width: 100%;\n    pointer-events: none; }\n    :host-context(.nb-theme-default) .detail-view.active {\n      pointer-events: all; }\n      :host-context(.nb-theme-default) .detail-view.active .hide-detail-btn {\n        -webkit-transform: translateY(0);\n        transform: translateY(0); }\n      :host-context(.nb-theme-default) .detail-view.active .info-wrapper {\n        opacity: 1; }\n      :host-context(.nb-theme-default) .detail-view.active .bg {\n        -webkit-transform: scale(232);\n        transform: scale(232); }\n      :host-context(.nb-theme-default) .detail-view.active .d-holder {\n        opacity: 1;\n        -webkit-transform: translate(0);\n        transform: translate(0);\n        transition: all 0.5s ease; }\n      :host-context(.nb-theme-default) .detail-view.active .d-title {\n        transition-delay: 0.4s; }\n      :host-context(.nb-theme-default) .detail-view.active .d-price {\n        transition-delay: 0.5s; }\n      :host-context(.nb-theme-default) .detail-view.active .d-description {\n        transition-delay: 0.6s; }\n    :host-context(.nb-theme-default) .detail-view .d-holder {\n      opacity: 0;\n      -webkit-transform: translateY(10px);\n      transform: translateY(10px);\n      transition: all 0.1s ease; }\n    :host-context(.nb-theme-default) .detail-view .d-title {\n      font-size: 1.3em;\n      font-weight: 600;\n      margin-bottom: 0;\n      margin-top: 5px; }\n    :host-context(.nb-theme-default) .detail-view .d-price {\n      margin-top: -7px;\n      font-size: 0.9em; }\n    :host-context(.nb-theme-default) .detail-view .d-description {\n      font-size: 0.9em;\n      line-height: 1.4em; }\n    :host-context(.nb-theme-default) .detail-view .info-wrapper {\n      position: relative;\n      z-index: 30;\n      color: white;\n      text-align: left;\n      padding-left: 14px;\n      padding-right: 14px;\n      height: 90%;\n      overflow: hidden; }\n    :host-context(.nb-theme-default) .detail-view .bg {\n      position: absolute;\n      bottom: -9px;\n      left: 43px;\n      height: 3px;\n      width: 3px;\n      border-radius: 50%;\n      z-index: 20;\n      background: #5cb85c;\n      transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86); }\n  :host-context(.nb-theme-default) .info {\n    position: relative; }\n  :host-context(.nb-theme-default) .unavailable {\n    opacity: 0.3; }\n  :host-context(.nb-theme-default) .img {\n    z-index: 5;\n    height: auto;\n    background-color: #eeeeee; }\n  :host-context(.nb-theme-default) .title {\n    font-size: 1em;\n    margin-top: 18px;\n    font-weight: 600;\n    margin-bottom: 3px;\n    text-align: center;\n    word-wrap: break-word;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    padding: 0 .4rem; }\n  :host-context(.nb-theme-default) .price {\n    margin-bottom: 10px;\n    color: #999999;\n    font-size: 18px;\n    font-weight: 300;\n    margin-top: 0; }\n  :host-context(.nb-theme-default) .bestseller-badge {\n    position: absolute;\n    top: -10px;\n    border-radius: 10px;\n    background-color: #EF364C;\n    color: white;\n    font-size: 0.7em;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    width: 70%;\n    z-index: 40;\n    text-transform: uppercase;\n    font-weight: 600;\n    letter-spacing: 0.1em;\n    overflow: hidden;\n    height: 20px;\n    transition: all 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86);\n    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.48); }\n    :host-context(.nb-theme-default) .bestseller-badge .txt, :host-context(.nb-theme-default) .bestseller-badge .star {\n      transition: all 0.35s ease; }\n    :host-context(.nb-theme-default) .bestseller-badge .txt {\n      position: relative;\n      top: 4px; }\n    :host-context(.nb-theme-default) .bestseller-badge .star {\n      position: absolute;\n      top: 2px; }\n      :host-context(.nb-theme-default) .bestseller-badge .star.left {\n        left: 8px; }\n      :host-context(.nb-theme-default) .bestseller-badge .star.right {\n        right: 14px; }\n    :host-context(.nb-theme-default) .bestseller-badge.in-detailed {\n      box-shadow: 0 2px 7px transparent;\n      width: 20px;\n      height: 20px;\n      padding: 0;\n      top: 9px;\n      right: -80%;\n      background-color: #5cb85c; }\n      :host-context(.nb-theme-default) .bestseller-badge.in-detailed .right, :host-context(.nb-theme-default) .bestseller-badge.in-detailed .txt {\n        opacity: 0; }\n      :host-context(.nb-theme-default) .bestseller-badge.in-detailed .left {\n        left: 5px;\n        top: 2px; }\n  :host-context(.nb-theme-default) .sad-face {\n    border-radius: 50%;\n    background-color: #aaaaaa;\n    height: 90px;\n    width: 90px; }\n  :host-context(.nb-theme-default) .category-name {\n    display: inline-block;\n    margin-right: 10px; }\n  :host-context(.nb-theme-default) .star:before {\n    content: \"\\2605\";\n    position: absolute;\n    color: white; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {\n    :host-context(.nb-theme-default) .detail-view.active .bg {\n      -webkit-transform: translateY(0);\n      transform: translateY(0); }\n    :host-context(.nb-theme-default) .hide-detail-btn {\n      height: 32px;\n      -webkit-transform: translateY(32px);\n      transform: translateY(32px); }\n    :host-context(.nb-theme-default) .wrapper {\n      margin-bottom: -22px; }\n    :host-context(.nb-theme-default) .img-wrapper {\n      height: 14rem; }\n    :host-context(.nb-theme-default) .detail-view .bg {\n      width: 100%;\n      height: 100%;\n      border-radius: 0;\n      left: 0;\n      bottom: 0;\n      -webkit-transform: translateY(100%);\n      transform: translateY(100%); }\n    :host-context(.nb-theme-default) .detail-view .info-wrapper {\n      padding: 10px 25px;\n      height: 78%; } }\n\n:host-context(.nb-theme-cosmic) {\n  /** Media queries **/ }\n  :host-context(.nb-theme-cosmic) .wrapper {\n    border-radius: 5px;\n    box-shadow: 0 5px 5px;\n    position: relative;\n    text-align: center;\n    display: block;\n    background-color: white;\n    box-shadow: 0 6px 17px rgba(0, 0, 0, 0.07); }\n  :host-context(.nb-theme-cosmic) .add-cart-wrapper, :host-context(.nb-theme-cosmic) .view-details-wrapper {\n    margin-top: 0;\n    margin-bottom: 0; }\n  :host-context(.nb-theme-cosmic) .view-details-wrapper {\n    position: relative; }\n    :host-context(.nb-theme-cosmic) .view-details-wrapper:after {\n      content: \"\";\n      width: 1px;\n      display: block;\n      position: absolute;\n      height: 28px;\n      background-color: #5D4EF0;\n      right: -3px;\n      top: -4px;\n      opacity: 0.2; }\n  :host-context(.nb-theme-cosmic) .hide-detail-btn {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    text-align: center;\n    width: 100%;\n    z-index: 20;\n    background: none;\n    border: none;\n    color: white;\n    opacity: 0.6;\n    font-size: 0.7em;\n    font-weight: 600;\n    cursor: pointer;\n    background: rgba(255, 255, 255, 0.1);\n    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);\n    -webkit-transform: translateY(15px);\n    transform: translateY(15px);\n    transition-delay: 1.2s; }\n    :host-context(.nb-theme-cosmic) .hide-detail-btn:hover {\n      background: rgba(255, 255, 255, 0.2); }\n  :host-context(.nb-theme-cosmic) .img-wrapper {\n    height: 12rem;\n    position: relative;\n    overflow: hidden; }\n  :host-context(.nb-theme-cosmic) .details {\n    margin: 1rem;\n    padding: 1rem; }\n    :host-context(.nb-theme-cosmic) .details hr {\n      width: 90%;\n      height: 0;\n      border-top: 1px solid #5cb85c; }\n    :host-context(.nb-theme-cosmic) .details .view:hover, :host-context(.nb-theme-cosmic) .details .cart:hover {\n      opacity: 0.8; }\n    :host-context(.nb-theme-cosmic) .details .view {\n      text-transform: uppercase;\n      color: #5cb85c;\n      font-size: 0.85em;\n      font-weight: 500;\n      position: relative;\n      top: -1px;\n      left: -2px; }\n    :host-context(.nb-theme-cosmic) .details .cart {\n      position: relative;\n      top: 2px; }\n    :host-context(.nb-theme-cosmic) .details .not-available hr {\n      border-top: 1px solid #999999; }\n    :host-context(.nb-theme-cosmic) .details .not-available p {\n      margin: 0;\n      margin-top: -7px;\n      position: relative;\n      top: 2px;\n      text-transform: uppercase;\n      font-size: 0.85em;\n      font-weight: 500;\n      padding-top: 5px;\n      padding-bottom: 3px; }\n  :host-context(.nb-theme-cosmic) .img-placeholder, :host-context(.nb-theme-cosmic) .img {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    border-radius: 5px 5px 0 0; }\n  :host-context(.nb-theme-cosmic) .img-placeholder {\n    z-index: 3;\n    height: 100%;\n    background: #dddddd; }\n  :host-context(.nb-theme-cosmic) .detail-view {\n    position: absolute;\n    z-index: 30;\n    border-radius: 5px;\n    overflow: hidden;\n    top: 0;\n    height: 100%;\n    width: 100%;\n    pointer-events: none; }\n    :host-context(.nb-theme-cosmic) .detail-view.active {\n      pointer-events: all; }\n      :host-context(.nb-theme-cosmic) .detail-view.active .hide-detail-btn {\n        -webkit-transform: translateY(0);\n        transform: translateY(0); }\n      :host-context(.nb-theme-cosmic) .detail-view.active .info-wrapper {\n        opacity: 1; }\n      :host-context(.nb-theme-cosmic) .detail-view.active .bg {\n        -webkit-transform: scale(232);\n        transform: scale(232); }\n      :host-context(.nb-theme-cosmic) .detail-view.active .d-holder {\n        opacity: 1;\n        -webkit-transform: translate(0);\n        transform: translate(0);\n        transition: all 0.5s ease; }\n      :host-context(.nb-theme-cosmic) .detail-view.active .d-title {\n        transition-delay: 0.4s; }\n      :host-context(.nb-theme-cosmic) .detail-view.active .d-price {\n        transition-delay: 0.5s; }\n      :host-context(.nb-theme-cosmic) .detail-view.active .d-description {\n        transition-delay: 0.6s; }\n    :host-context(.nb-theme-cosmic) .detail-view .d-holder {\n      opacity: 0;\n      -webkit-transform: translateY(10px);\n      transform: translateY(10px);\n      transition: all 0.1s ease; }\n    :host-context(.nb-theme-cosmic) .detail-view .d-title {\n      font-size: 1.3em;\n      font-weight: 600;\n      margin-bottom: 0;\n      margin-top: 5px; }\n    :host-context(.nb-theme-cosmic) .detail-view .d-price {\n      margin-top: -7px;\n      font-size: 0.9em; }\n    :host-context(.nb-theme-cosmic) .detail-view .d-description {\n      font-size: 0.9em;\n      line-height: 1.4em; }\n    :host-context(.nb-theme-cosmic) .detail-view .info-wrapper {\n      position: relative;\n      z-index: 30;\n      color: white;\n      text-align: left;\n      padding-left: 14px;\n      padding-right: 14px;\n      height: 90%;\n      overflow: hidden; }\n    :host-context(.nb-theme-cosmic) .detail-view .bg {\n      position: absolute;\n      bottom: -9px;\n      left: 43px;\n      height: 3px;\n      width: 3px;\n      border-radius: 50%;\n      z-index: 20;\n      background: #5cb85c;\n      transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86); }\n  :host-context(.nb-theme-cosmic) .info {\n    position: relative; }\n  :host-context(.nb-theme-cosmic) .unavailable {\n    opacity: 0.3; }\n  :host-context(.nb-theme-cosmic) .img {\n    z-index: 5;\n    height: auto;\n    background-color: #eeeeee; }\n  :host-context(.nb-theme-cosmic) .title {\n    font-size: 1em;\n    margin-top: 18px;\n    font-weight: 600;\n    margin-bottom: 3px;\n    text-align: center;\n    word-wrap: break-word;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    padding: 0 .4rem; }\n  :host-context(.nb-theme-cosmic) .price {\n    margin-bottom: 10px;\n    color: #999999;\n    font-size: 18px;\n    font-weight: 300;\n    margin-top: 0; }\n  :host-context(.nb-theme-cosmic) .bestseller-badge {\n    position: absolute;\n    top: -10px;\n    border-radius: 10px;\n    background-color: #EF364C;\n    color: white;\n    font-size: 0.7em;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    width: 70%;\n    z-index: 40;\n    text-transform: uppercase;\n    font-weight: 600;\n    letter-spacing: 0.1em;\n    overflow: hidden;\n    height: 20px;\n    transition: all 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86);\n    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.48); }\n    :host-context(.nb-theme-cosmic) .bestseller-badge .txt, :host-context(.nb-theme-cosmic) .bestseller-badge .star {\n      transition: all 0.35s ease; }\n    :host-context(.nb-theme-cosmic) .bestseller-badge .txt {\n      position: relative;\n      top: 4px; }\n    :host-context(.nb-theme-cosmic) .bestseller-badge .star {\n      position: absolute;\n      top: 2px; }\n      :host-context(.nb-theme-cosmic) .bestseller-badge .star.left {\n        left: 8px; }\n      :host-context(.nb-theme-cosmic) .bestseller-badge .star.right {\n        right: 14px; }\n    :host-context(.nb-theme-cosmic) .bestseller-badge.in-detailed {\n      box-shadow: 0 2px 7px transparent;\n      width: 20px;\n      height: 20px;\n      padding: 0;\n      top: 9px;\n      right: -80%;\n      background-color: #5cb85c; }\n      :host-context(.nb-theme-cosmic) .bestseller-badge.in-detailed .right, :host-context(.nb-theme-cosmic) .bestseller-badge.in-detailed .txt {\n        opacity: 0; }\n      :host-context(.nb-theme-cosmic) .bestseller-badge.in-detailed .left {\n        left: 5px;\n        top: 2px; }\n  :host-context(.nb-theme-cosmic) .sad-face {\n    border-radius: 50%;\n    background-color: #aaaaaa;\n    height: 90px;\n    width: 90px; }\n  :host-context(.nb-theme-cosmic) .category-name {\n    display: inline-block;\n    margin-right: 10px; }\n  :host-context(.nb-theme-cosmic) .star:before {\n    content: \"\\2605\";\n    position: absolute;\n    color: white; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {\n    :host-context(.nb-theme-cosmic) .detail-view.active .bg {\n      -webkit-transform: translateY(0);\n      transform: translateY(0); }\n    :host-context(.nb-theme-cosmic) .hide-detail-btn {\n      height: 32px;\n      -webkit-transform: translateY(32px);\n      transform: translateY(32px); }\n    :host-context(.nb-theme-cosmic) .wrapper {\n      margin-bottom: -22px; }\n    :host-context(.nb-theme-cosmic) .img-wrapper {\n      height: 14rem; }\n    :host-context(.nb-theme-cosmic) .detail-view .bg {\n      width: 100%;\n      height: 100%;\n      border-radius: 0;\n      left: 0;\n      bottom: 0;\n      -webkit-transform: translateY(100%);\n      transform: translateY(100%); }\n    :host-context(.nb-theme-cosmic) .detail-view .info-wrapper {\n      padding: 10px 25px;\n      height: 78%; } }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/deals/product-thumbnail/product-thumbnail.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_deal_model__ = __webpack_require__("../../../../../src/app/home/deals/shared/deal.model.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductThumbnailComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ProductThumbnailComponent = (function () {
+    function ProductThumbnailComponent() {
+    }
+    ProductThumbnailComponent.prototype.ngOnInit = function () {
+        this.detailViewActive = false;
+    };
+    ProductThumbnailComponent.prototype.onProductClick = function () {
+        this.detailViewActive = !this.detailViewActive;
+    };
+    ProductThumbnailComponent.prototype.onAddToCart = function () {
+        //this.cartService.addProductToCart(this.product)
+    };
+    return ProductThumbnailComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_deal_model__["a" /* Deal */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__shared_deal_model__["a" /* Deal */]) === "function" && _a || Object)
+], ProductThumbnailComponent.prototype, "product", void 0);
+ProductThumbnailComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'product-thumbnail',
+        template: __webpack_require__("../../../../../src/app/home/deals/product-thumbnail/product-thumbnail.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/home/deals/product-thumbnail/product-thumbnail.component.scss")]
+    }),
+    __metadata("design:paramtypes", [])
+], ProductThumbnailComponent);
+
+var _a;
+//# sourceMappingURL=product-thumbnail.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/deals/product/product.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  holi\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/deals/product/product.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/deals/product/product.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ProductComponent = (function () {
+    function ProductComponent() {
+    }
+    ProductComponent.prototype.ngOnInit = function () {
+    };
+    return ProductComponent;
+}());
+ProductComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'product',
+        template: __webpack_require__("../../../../../src/app/home/deals/product/product.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/home/deals/product/product.component.scss")]
+    }),
+    __metadata("design:paramtypes", [])
+], ProductComponent);
+
+//# sourceMappingURL=product.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/deals/shared/deal.model.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Deal; });
+var Deal = (function () {
+    function Deal() {
+    }
+    return Deal;
+}());
+
+//# sourceMappingURL=deal.model.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/deals/showcase/showcase.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n  <div class=\"col-md-4\" *ngFor = 'let product of products'>\n    <product-thumbnail [product] = 'product'></product-thumbnail>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/deals/showcase/showcase.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This is a starting point where we declare the maps of themes and globally available functions/mixins\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n:host-context(.nb-theme-default) product-thumbnail {\n  padding-left: 10px;\n  padding-right: 10px; }\n\n:host-context(.nb-theme-cosmic) product-thumbnail {\n  padding-left: 10px;\n  padding-right: 10px; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/deals/showcase/showcase.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShowcaseComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ShowcaseComponent = (function () {
+    function ShowcaseComponent() {
+    }
+    ShowcaseComponent.prototype.ngOnInit = function () {
+    };
+    return ShowcaseComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Array)
+], ShowcaseComponent.prototype, "products", void 0);
+ShowcaseComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'showcase',
+        template: __webpack_require__("../../../../../src/app/home/deals/showcase/showcase.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/home/deals/showcase/showcase.component.scss")]
+    }),
+    __metadata("design:paramtypes", [])
+], ShowcaseComponent);
+
+//# sourceMappingURL=showcase.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/deals/sort-filters/sort-filters.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"wrapper\">\n  <label for=\"\">Ordered by</label>\n  <select (change)='onSelectChange($event)'>\n    <option *ngFor='let filter of filters' [value]=\"filter.value\">{{filter.name}}</option>\n  </select>\n  <div class=\"triangle\"></div>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/deals/sort-filters/sort-filters.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".wrapper {\n  display: block;\n  height: 35px;\n  background: none;\n  font-size: 14px;\n  padding-left: 11px;\n  position: relative;\n  top: 4px; }\n  .wrapper label {\n    opacity: 0.8; }\n  .wrapper select {\n    color: #5cb85c;\n    background: none;\n    border: none;\n    font-size: 13px;\n    margin-left: 2px;\n    font-weight: 500;\n    cursor: pointer;\n    width: 130px; }\n  .wrapper .triangle {\n    height: 0;\n    width: 0;\n    border-top: 4px solid #5cb85c;\n    border-left: 4px solid transparent;\n    border-right: 4px solid transparent;\n    display: inline-block;\n    position: relative;\n    top: -2px;\n    right: 14px;\n    pointer-events: none;\n    opacity: 0.3; }\n\n/** Media queries **/\n@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {\n  .wrapper label {\n    color: white; }\n  .wrapper select {\n    color: white; }\n  .wrapper .triangle {\n    border-top: 4px solid white; } }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/home/deals/sort-filters/sort-filters.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SortFiltersComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SortFiltersComponent = (function () {
+    function SortFiltersComponent() {
+        this.onSortChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    SortFiltersComponent.prototype.ngOnInit = function () {
+    };
+    SortFiltersComponent.prototype.onSelectChange = function ($event) {
+        this.onSortChange.emit($event.target.value);
+    };
+    return SortFiltersComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Array)
+], SortFiltersComponent.prototype, "filters", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", Object)
+], SortFiltersComponent.prototype, "onSortChange", void 0);
+SortFiltersComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'sort-filters',
+        template: __webpack_require__("../../../../../src/app/home/deals/sort-filters/sort-filters.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/home/deals/sort-filters/sort-filters.component.scss")]
+    }),
+    __metadata("design:paramtypes", [])
+], SortFiltersComponent);
+
+//# sourceMappingURL=sort-filters.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/home/home-routing.module.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8,6 +971,7 @@ webpackJsonp([1],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__homedashboard_homedashboard_component__ = __webpack_require__("../../../../../src/app/home/homedashboard/homedashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__deals_deals_category_component__ = __webpack_require__("../../../../../src/app/home/deals/deals-category.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -19,12 +983,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [{
         path: '',
         component: __WEBPACK_IMPORTED_MODULE_2__home_component__["a" /* HomeComponent */],
-        children: [{
+        children: [
+            {
                 path: 'index',
                 component: __WEBPACK_IMPORTED_MODULE_3__homedashboard_homedashboard_component__["a" /* HomeDashboardComponent */]
+            },
+            {
+                path: 'deals',
+                component: __WEBPACK_IMPORTED_MODULE_4__deals_deals_category_component__["a" /* DealsCategoryComponent */]
+            },
+            {
+                path: 'deals-food/:id',
+                component: __WEBPACK_IMPORTED_MODULE_4__deals_deals_category_component__["a" /* DealsCategoryComponent */]
+            },
+            {
+                path: 'deals-wellness/:id',
+                component: __WEBPACK_IMPORTED_MODULE_4__deals_deals_category_component__["a" /* DealsCategoryComponent */]
+            },
+            {
+                path: 'deals-spa/:id',
+                component: __WEBPACK_IMPORTED_MODULE_4__deals_deals_category_component__["a" /* DealsCategoryComponent */]
+            },
+            {
+                path: 'deals-entertainment/:id',
+                component: __WEBPACK_IMPORTED_MODULE_4__deals_deals_category_component__["a" /* DealsCategoryComponent */]
+            },
+            {
+                path: 'deals-travel/:id',
+                component: __WEBPACK_IMPORTED_MODULE_4__deals_deals_category_component__["a" /* DealsCategoryComponent */]
+            },
+            {
+                path: 'deals-shopping/:id',
+                component: __WEBPACK_IMPORTED_MODULE_4__deals_deals_category_component__["a" /* DealsCategoryComponent */]
             },
             {
                 path: '',
@@ -40,8 +1034,8 @@ var HomeRoutingModule = (function () {
 }());
 HomeRoutingModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
-        imports: [__WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* RouterModule */].forChild(routes)],
-        exports: [__WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* RouterModule */]],
+        imports: [__WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* RouterModule */].forChild(routes)],
+        exports: [__WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* RouterModule */]],
     })
 ], HomeRoutingModule);
 
@@ -89,9 +1083,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__homedashboard_homedashboard_module__ = __webpack_require__("../../../../../src/app/home/homedashboard/homedashboard.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_routing_module__ = __webpack_require__("../../../../../src/app/home/home-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__theme_theme_module__ = __webpack_require__("../../../../../src/app/@theme/theme.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ng_bootstrap_ng_bootstrap__ = __webpack_require__("../../../../@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__deals_deals_category_module__ = __webpack_require__("../../../../../src/app/home/deals/deals-category.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_routing_module__ = __webpack_require__("../../../../../src/app/home/home-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__theme_theme_module__ = __webpack_require__("../../../../../src/app/@theme/theme.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ng_bootstrap_ng_bootstrap__ = __webpack_require__("../../../../@ng-bootstrap/ng-bootstrap/index.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeModule", function() { return HomeModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -99,6 +1094,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -116,11 +1112,12 @@ var HomeModule = (function () {
 HomeModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         imports: [
-            __WEBPACK_IMPORTED_MODULE_3__home_routing_module__["a" /* HomeRoutingModule */],
-            __WEBPACK_IMPORTED_MODULE_4__theme_theme_module__["a" /* ThemeModule */],
+            __WEBPACK_IMPORTED_MODULE_4__home_routing_module__["a" /* HomeRoutingModule */],
+            __WEBPACK_IMPORTED_MODULE_5__theme_theme_module__["a" /* ThemeModule */],
             __WEBPACK_IMPORTED_MODULE_2__homedashboard_homedashboard_module__["a" /* HomeDashboardModule */],
-            __WEBPACK_IMPORTED_MODULE_5__ng_bootstrap_ng_bootstrap__["b" /* NgbCarouselModule */].forRoot(),
-            __WEBPACK_IMPORTED_MODULE_5__ng_bootstrap_ng_bootstrap__["c" /* NgbAlertModule */].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_3__deals_deals_category_module__["a" /* DealsCategoryModule */],
+            __WEBPACK_IMPORTED_MODULE_6__ng_bootstrap_ng_bootstrap__["b" /* NgbCarouselModule */].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_6__ng_bootstrap_ng_bootstrap__["c" /* NgbAlertModule */].forRoot(),
         ],
         declarations: [
             HOME_COMPONENTS,
@@ -130,74 +1127,6 @@ HomeModule = __decorate([
 ], HomeModule);
 
 //# sourceMappingURL=home.module.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/home/homedashboard/data.service.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mock_data__ = __webpack_require__("../../../../../src/app/home/homedashboard/mock-data.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__ = __webpack_require__("../../../../rxjs/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_throw__ = __webpack_require__("../../../../rxjs/add/observable/throw.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_throw__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__ = __webpack_require__("../../../../rxjs/add/operator/catch.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DataService; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-var DataService = (function () {
-    function DataService(http) {
-        this.http = http;
-    }
-    DataService.prototype.getData = function () {
-        return Promise.resolve(__WEBPACK_IMPORTED_MODULE_2__mock_data__["a" /* DATA */]);
-    };
-    DataService.prototype.getRemoteData = function (url) {
-        return this.http.get(url)
-            .map(this.extractData)
-            .catch(this.handleError);
-    };
-    DataService.prototype.extractData = function (res) {
-        var body = res.json();
-        return body || {};
-    };
-    DataService.prototype.handleError = function (error) {
-        // In a real world app, we might use a remote logging infrastructure
-        // We'd also dig deeper into the error to get a better message
-        var errMsg = (error.message) ? error.message :
-            error.status ? error.status + " - " + error.statusText : 'Server error';
-        console.error(errMsg); // log to console instead
-        return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].throw(errMsg);
-    };
-    return DataService;
-}());
-DataService = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === "function" && _a || Object])
-], DataService);
-
-var _a;
-//# sourceMappingURL=data.service.js.map
 
 /***/ }),
 
@@ -655,7 +1584,7 @@ var _a, _b;
 /***/ "../../../../../src/app/home/homedashboard/homedashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row slider\">\r\n    <div class=\"col-md-12\">\r\n        <ngb-carousel>\r\n            <ng-template ngbSlide *ngFor=\"let slider of sliders\">\r\n                <img class=\"img-fluid mx-auto d-block\" [src]=\"slider.imagePath\" alt=\"Random first slide\" width=\"100%\">\r\n                <div class=\"carousel-caption\">\r\n                    <h3>{{slider.label}}</h3>\r\n                    <p>{{slider.text}}</p>\r\n                </div>\r\n            </ng-template>\r\n        </ngb-carousel>\r\n    </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-12\"><h2 class=\"section-header\">Our Deals</h2></div>\r\n</div>\r\n<div class=\"row home-category-section\">\r\n  <div class=\"col-md-12\">\r\n    <ul>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-food\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-cutlery\"></i></span></div><div class=\"cat-title\">Deals in Food & Beverages</div></div>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-wellness\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-heartbeat\"></i></span></div><div class=\"cat-title\">Deals in Wellness</div></div>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-spa\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-bath\"></i></span></div><div class=\"cat-title\">Deals in SPA</div></div>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-entertainment\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-film\"></i></span></div><div class=\"cat-title\">Deals in Entertainment</div></div>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-travels\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-plane\"></i></span></div><div class=\"cat-title\">Deals in Travels</div></div>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-shopping\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-shopping-bag\"></i></span></div><div class=\"cat-title\">Deals in E-Shopping</div></div>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-12\"><h2 class=\"section-header\">Other Services</h2></div>\r\n</div>\r\n<div class=\"home-container\">\r\n  <div class=\"row\">\r\n            <div class=\"col-xxxl-2 col-md-2\">\r\n                <ngx-status-card title=\"Car Wash\" value=\"\" type=\"info\">\r\n                    <i class=\"fa fa-car\"></i>\r\n                </ngx-status-card>\r\n            </div>\r\n            <div class=\"col-xxxl-2 col-md-2\">\r\n                <ngx-status-card title=\"Pest Control\" value=\"\" type=\"info\">\r\n                    <i class=\"fa fa-fire-extinguisher\"></i>\r\n                </ngx-status-card>\r\n            </div>\r\n            <div class=\"col-xxxl-2 col-md-2\">\r\n                <ngx-status-card title=\"Photography\" value=\"\" type=\"info\">\r\n                    <i class=\"fa fa-camera\"></i>\r\n                </ngx-status-card>\r\n            </div>\r\n            <div class=\"col-xxxl-2 col-md-2\">\r\n                <ngx-status-card title=\"Dance & Music Classes\" value=\"\" type=\"info\">\r\n                    <i class=\"fa fa-music\"></i>\r\n                </ngx-status-card>\r\n            </div>\r\n            <div class=\"col-xxxl-2 col-md-2\">\r\n                <ngx-status-card title=\"Flower & Cake Delivary\" value=\"\" type=\"info\">\r\n                    <i class=\"fa fa-truck\"></i>\r\n                </ngx-status-card>\r\n            </div>\r\n            <div class=\"col-xxxl-2 col-md-2\">\r\n                <ngx-status-card title=\"Coaching Classes\" value=\"\" type=\"info\">\r\n                    <i class=\"fa fa-certificate\"></i>\r\n                </ngx-status-card>\r\n            </div>\r\n        </div>\r\n   \r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-12\"><h2 class=\"section-header\">Why YofferZ.com ?</h2></div>\r\n</div>\r\n<div class=\"row home-category-section cat-why-section\">\r\n  <div class=\"col-md-12\">\r\n    <ul>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-why\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-cloud-download\"></i></span></div><div class=\"cat-title\">FREE Download!</div>\r\n          <div class=\"cat-sub\">All of our coupons are completely free to download.</div></div>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-why\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-bell\"></i></span></div><div class=\"cat-title\">Crazy Discount Offerz!</div><div class=\"cat-sub\">We work Hard to bring you exclusive discounted Offers you won't find anywhere else!</div></div>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-why\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-shopping-cart\"></i></span></div><div class=\"cat-title\">My Shops</div><div class=\"cat-sub\">Find your favorite shops online</div></div>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-why\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-sign-in\"></i></span></div><div class=\"cat-title\">Easy Registration</div><div class=\"cat-sub\">Easy registration process helps business to grow Online.</div></div>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-why\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-download\"></i></span></div><div class=\"cat-title\">Easy download</div><div class=\"cat-sub\">No hassle: Enter your mobile no and OTP to get the discount Voucher</div></div>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-why\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-user\"></i></span></div><div class=\"cat-title\">No Account Required</div><div class=\"cat-sub\">Vouchers are available for all, no membership required.</div></div>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</div>\r\n<!-- <div class=\"main-container\">\r\n    <div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"row\">\r\n                <div class=\"col-12\">\r\n                    <showcase [products]='products'></showcase>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div> -->"
+module.exports = "<div class=\"row slider\">\r\n    <div class=\"col-md-12\">\r\n        <ngb-carousel>\r\n            <ng-template ngbSlide *ngFor=\"let slider of sliders\">\r\n                <img class=\"img-fluid mx-auto d-block\" [src]=\"slider.imagePath\" alt=\"Random first slide\" width=\"100%\">\r\n                <div class=\"carousel-caption\">\r\n                    <h3>{{slider.label}}</h3>\r\n                    <p>{{slider.text}}</p>\r\n                </div>\r\n            </ng-template>\r\n        </ngb-carousel>\r\n    </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-12\"><h2 class=\"section-header\">Our Deals</h2></div>\r\n</div>\r\n<div class=\"row home-category-section\">\r\n  <div class=\"col-md-12\">\r\n    <ul>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-food\"> \r\n          <a href=\"#/home/deals-food/1\" class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-cutlery\"></i></span></div><div class=\"cat-title\">Deals in Food & Beverages</div></a>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-wellness\"> \r\n          <a href=\"#/home/deals-wellness/2\" class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-heartbeat\"></i></span></div><div class=\"cat-title\">Deals in Wellness</div></a>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-spa\"> \r\n          <a href=\"#/home/deals-spa/3\" class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-bath\"></i></span></div><div class=\"cat-title\">Deals in SPA</div></a>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-entertainment\"> \r\n          <a href=\"#/home/deals-entertainment/4\" class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-film\"></i></span></div><div class=\"cat-title\">Deals in Entertainment</div></a>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-travels\"> \r\n          <a href=\"#/home/deals-travel/5\" class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-plane\"></i></span></div><div class=\"cat-title\">Deals in Travels</div></a>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-shopping\"> \r\n          <a href=\"#/home/deals-shopping/6\" class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-shopping-bag\"></i></span></div><div class=\"cat-title\">Deals in E-Shopping</div></a>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-12\"><h2 class=\"section-header\">Other Services</h2></div>\r\n</div>\r\n<div class=\"home-container\">\r\n  <div class=\"row\">\r\n            <div class=\"col-xxxl-2 col-md-2\">\r\n                <ngx-status-card title=\"Car Wash\" value=\"\" type=\"info\">\r\n                    <i class=\"fa fa-car\"></i>\r\n                </ngx-status-card>\r\n            </div>\r\n            <div class=\"col-xxxl-2 col-md-2\">\r\n                <ngx-status-card title=\"Pest Control\" value=\"\" type=\"info\">\r\n                    <i class=\"fa fa-fire-extinguisher\"></i>\r\n                </ngx-status-card>\r\n            </div>\r\n            <div class=\"col-xxxl-2 col-md-2\">\r\n                <ngx-status-card title=\"Photography\" value=\"\" type=\"info\">\r\n                    <i class=\"fa fa-camera\"></i>\r\n                </ngx-status-card>\r\n            </div>\r\n            <div class=\"col-xxxl-2 col-md-2\">\r\n                <ngx-status-card title=\"Dance & Music Classes\" value=\"\" type=\"info\">\r\n                    <i class=\"fa fa-music\"></i>\r\n                </ngx-status-card>\r\n            </div>\r\n            <div class=\"col-xxxl-2 col-md-2\">\r\n                <ngx-status-card title=\"Flower & Cake Delivary\" value=\"\" type=\"info\">\r\n                    <i class=\"fa fa-truck\"></i>\r\n                </ngx-status-card>\r\n            </div>\r\n            <div class=\"col-xxxl-2 col-md-2\">\r\n                <ngx-status-card title=\"Coaching Classes\" value=\"\" type=\"info\">\r\n                    <i class=\"fa fa-certificate\"></i>\r\n                </ngx-status-card>\r\n            </div>\r\n        </div>\r\n   \r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-12\"><h2 class=\"section-header\">Why YofferZ.com ?</h2></div>\r\n</div>\r\n<div class=\"row home-category-section cat-why-section\">\r\n  <div class=\"col-md-12\">\r\n    <ul>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-why\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-cloud-download\"></i></span></div><div class=\"cat-title\">FREE Download!</div>\r\n          <div class=\"cat-sub\">All of our coupons are completely free to download.</div></div>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-why\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-bell\"></i></span></div><div class=\"cat-title\">Crazy Discount Offerz!</div><div class=\"cat-sub\">We work Hard to bring you exclusive discounted Offers you won't find anywhere else!</div></div>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-why\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-shopping-cart\"></i></span></div><div class=\"cat-title\">My Shops</div><div class=\"cat-sub\">Find your favorite shops online</div></div>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-why\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-sign-in\"></i></span></div><div class=\"cat-title\">Easy Registration</div><div class=\"cat-sub\">Easy registration process helps business to grow Online.</div></div>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-why\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-download\"></i></span></div><div class=\"cat-title\">Easy download</div><div class=\"cat-sub\">No hassle: Enter your mobile no and OTP to get the discount Voucher</div></div>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-why\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-user\"></i></span></div><div class=\"cat-title\">No Account Required</div><div class=\"cat-sub\">Vouchers are available for all, no membership required.</div></div>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -682,7 +1611,6 @@ module.exports = module.exports.toString();
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_service__ = __webpack_require__("../../../../../src/app/home/homedashboard/data.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeDashboardComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -694,12 +1622,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
 var HomeDashboardComponent = (function () {
-    function HomeDashboardComponent(dataService) {
-        this.dataService = dataService;
+    function HomeDashboardComponent() {
         this.sliders = [];
-        this.originalData = [];
         this.sliders.push({
             imagePath: 'assets/images/camera1.jpg',
             label: 'First slide label',
@@ -715,19 +1640,6 @@ var HomeDashboardComponent = (function () {
         });
     }
     HomeDashboardComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.dataService.getData().then(function (data) {
-            _this.originalData = data;
-            /*this.mainFilter = {
-              search: '',
-              categories: this.originalData.categories.slice(0),
-              customFilter: this.customFilters[0],
-              priceFilter: this.priceFilters[0]
-            }*/
-            //Make a deep copy of the original data to keep it immutable
-            _this.products = _this.originalData.products.slice(0);
-            //this.sortProducts('name')
-        });
     };
     return HomeDashboardComponent;
 }());
@@ -737,10 +1649,9 @@ HomeDashboardComponent = __decorate([
         styles: [__webpack_require__("../../../../../src/app/home/homedashboard/homedashboard.component.scss")],
         template: __webpack_require__("../../../../../src/app/home/homedashboard/homedashboard.component.html"),
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__data_service__["a" /* DataService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [])
 ], HomeDashboardComponent);
 
-var _a;
 //# sourceMappingURL=homedashboard.component.js.map
 
 /***/ }),
@@ -762,11 +1673,7 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__dealsummary_dealsummary_chart_dealsummary_chart_component__ = __webpack_require__("../../../../../src/app/home/homedashboard/dealsummary/dealsummary-chart/dealsummary-chart.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__downloadgraph_downloadgraph_component__ = __webpack_require__("../../../../../src/app/home/homedashboard/downloadgraph/downloadgraph.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__downloadgraph_downloadgraph_chart_downloadgraph_chart_component__ = __webpack_require__("../../../../../src/app/home/homedashboard/downloadgraph/downloadgraph-chart/downloadgraph-chart.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__showcase_showcase_component__ = __webpack_require__("../../../../../src/app/home/homedashboard/showcase/showcase.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__product_product_component__ = __webpack_require__("../../../../../src/app/home/homedashboard/product/product.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__product_thumbnail_product_thumbnail_component__ = __webpack_require__("../../../../../src/app/home/homedashboard/product-thumbnail/product-thumbnail.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ng_bootstrap_ng_bootstrap__ = __webpack_require__("../../../../@ng-bootstrap/ng-bootstrap/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__data_service__ = __webpack_require__("../../../../../src/app/home/homedashboard/data.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ng_bootstrap_ng_bootstrap__ = __webpack_require__("../../../../@ng-bootstrap/ng-bootstrap/index.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeDashboardModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -774,10 +1681,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
-
-
 
 
 
@@ -802,8 +1705,8 @@ HomeDashboardModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_1_ngx_echarts__["a" /* AngularEchartsModule */],
             __WEBPACK_IMPORTED_MODULE_2__swimlane_ngx_charts__["NgxChartsModule"],
             __WEBPACK_IMPORTED_MODULE_3_angular2_chartjs__["ChartModule"],
-            __WEBPACK_IMPORTED_MODULE_14__ng_bootstrap_ng_bootstrap__["b" /* NgbCarouselModule */].forRoot(),
-            __WEBPACK_IMPORTED_MODULE_14__ng_bootstrap_ng_bootstrap__["c" /* NgbAlertModule */].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_11__ng_bootstrap_ng_bootstrap__["b" /* NgbCarouselModule */].forRoot(),
+            __WEBPACK_IMPORTED_MODULE_11__ng_bootstrap_ng_bootstrap__["c" /* NgbAlertModule */].forRoot(),
         ],
         declarations: [
             __WEBPACK_IMPORTED_MODULE_5__homedashboard_component__["a" /* HomeDashboardComponent */],
@@ -811,394 +1714,13 @@ HomeDashboardModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_7__dealsummary_dealsummary_component__["a" /* DealSummaryComponent */],
             __WEBPACK_IMPORTED_MODULE_9__downloadgraph_downloadgraph_component__["a" /* DownloadGraphComponent */],
             __WEBPACK_IMPORTED_MODULE_10__downloadgraph_downloadgraph_chart_downloadgraph_chart_component__["a" /* DownloadGraphChartComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__dealsummary_dealsummary_chart_dealsummary_chart_component__["a" /* DealSummarychartsPieComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__showcase_showcase_component__["a" /* ShowcaseComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__product_product_component__["a" /* ProductComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__product_thumbnail_product_thumbnail_component__["a" /* ProductThumbnailComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__dealsummary_dealsummary_chart_dealsummary_chart_component__["a" /* DealSummarychartsPieComponent */]
         ],
-        providers: [
-            __WEBPACK_IMPORTED_MODULE_15__data_service__["a" /* DataService */],
-        ],
+        providers: [],
     })
 ], HomeDashboardModule);
 
 //# sourceMappingURL=homedashboard.module.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/home/homedashboard/mock-data.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DATA; });
-var DATA = {
-    "categories": [
-        {
-            "categori_id": 1,
-            "name": "drinks"
-        },
-        {
-            "categori_id": 2,
-            "name": "lunch"
-        },
-        {
-            "categori_id": 3,
-            "name": "food"
-        },
-        {
-            "categori_id": 4,
-            "name": "sea"
-        }
-    ],
-    "products": [
-        {
-            "id": 1,
-            "name": "Lorem",
-            "price": "60.000",
-            "available": true,
-            "best_seller": true,
-            "categories": [
-                1,
-                4
-            ],
-            "img": "http://lorempixel.com/200/100/food/",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
-        },
-        {
-            "id": 2,
-            "name": "ipsum",
-            "price": "20.000",
-            "available": false,
-            "best_seller": false,
-            "categories": [
-                4
-            ],
-            "img": "http://lorempixel.com/200/100/food/",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
-        },
-        {
-            "id": 3,
-            "name": "dolor",
-            "price": "10.000",
-            "available": true,
-            "best_seller": true,
-            "categories": [
-                4
-            ],
-            "img": "http://lorempixel.com/200/100/food/",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
-        },
-        {
-            "id": 4,
-            "name": "sit",
-            "price": "35.000",
-            "available": false,
-            "best_seller": false,
-            "categories": [
-                1,
-                2
-            ],
-            "img": "http://lorempixel.com/200/100/food/",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
-        },
-        {
-            "id": 5,
-            "name": "amet",
-            "price": "12.000",
-            "available": true,
-            "best_seller": true,
-            "categories": [
-                1,
-                4
-            ],
-            "img": "http://lorempixel.com/200/100/food/",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
-        },
-        {
-            "id": 6,
-            "name": "consectetur",
-            "price": "120.000",
-            "available": true,
-            "best_seller": false,
-            "categories": [
-                1,
-                4
-            ],
-            "img": "http://lorempixel.com/200/100/food/",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
-        },
-        {
-            "id": 7,
-            "name": "adipiscing",
-            "price": "50.000",
-            "available": false,
-            "best_seller": false,
-            "categories": [
-                1,
-                3
-            ],
-            "img": "http://lorempixel.com/200/100/food/",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
-        },
-        {
-            "id": 8,
-            "name": "elit",
-            "price": "2000",
-            "available": true,
-            "best_seller": false,
-            "categories": [
-                1,
-                3
-            ],
-            "img": "http://lorempixel.com/200/100/food/",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
-        },
-        {
-            "id": 9,
-            "name": "Maecenas",
-            "price": "150.000",
-            "available": true,
-            "best_seller": true,
-            "categories": [
-                2,
-                4
-            ],
-            "img": "http://lorempixel.com/200/100/food/",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
-        },
-        {
-            "id": 10,
-            "name": "eu",
-            "price": "200.000",
-            "available": false,
-            "best_seller": true,
-            "categories": [
-                2,
-                3
-            ],
-            "img": "http://lorempixel.com/200/100/food/",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu."
-        }
-    ]
-};
-//# sourceMappingURL=mock-data.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/home/homedashboard/product-thumbnail/product-thumbnail.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"wrapper\" [class.unavailable]='!product.available'>\n  <div class=\"info\" >\n    <div class=\"img-wrapper\">\n      <img class=\"img\" [src]='product.img'>\n      <div class=\"img-placeholder\"></div>\n    </div>\n    <h5 class=\"title\">{{product.name}}</h5>\n    <p class=\"price\">$<span>{{product.price}}</span></p>\n    <div class=\"details\">\n      <div class=\"available\" *ngIf = 'product.available'>\n        <hr>\n        <div class=\"row\">\n          <div class=\"col-8-sm view-details-wrapper\">\n            <button type=\"button\" class=\"view\" (click)='onProductClick()'>View details</button>\n          </div>\n          <div class=\"col-4-sm add-cart-wrapper\">\n            <button type=\"button\" class=\"cart\" (click)=\"onAddToCart()\"><img src=\"../../assets/cart_primary.svg\" alt=\"\" /></button>\n          </div>\n        </div>\n      </div>\n      <div class=\"not-available\" *ngIf = '!product.available'>\n        <hr>\n        <p>Not available</p>\n      </div>\n    </div>\n    <!--span class=\"category-name\" *ngFor='let category of product.categories'>{{category}}</span-->\n    <div class=\"detail-view\" [class.active]='detailViewActive'>\n      <div class=\"bg\" [class.shown]='detailViewActive'></div>\n      <div class=\"info-wrapper\">\n        <p class=\"d-holder d-title\">{{product.name}}</p>\n        <p class=\"d-holder d-price\">$ {{product.price}}</p>\n        <p class=\"d-holder d-description\">{{product.description}}</p>\n      </div>\n      <button type=\"button\" class=\"hide-detail-btn\" (click)='onProductClick()'>Click to hide</button>\n    </div>\n  </div>\n  <div class=\"bestseller-badge\" [class.in-detailed]='detailViewActive' *ngIf = 'product.best_seller'>\n    <span class=\"star left\">&nbsp;</span>\n    <span class=\"txt\">Bestseller</span>\n    <span class=\"star right\">&nbsp;</span>\n  </div>\n</div>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/home/homedashboard/product-thumbnail/product-thumbnail.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".wrapper {\n  border-radius: 5px;\n  box-shadow: 0 5px 5px;\n  position: relative;\n  text-align: center;\n  display: block;\n  background-color: white;\n  box-shadow: 0 6px 17px rgba(0, 0, 0, 0.07); }\n\n.add-cart-wrapper, .view-details-wrapper {\n  margin-top: 0;\n  margin-bottom: 0; }\n\n.view-details-wrapper {\n  position: relative; }\n  .view-details-wrapper:after {\n    content: \"\";\n    width: 1px;\n    display: block;\n    position: absolute;\n    height: 28px;\n    background-color: #5D4EF0;\n    right: -3px;\n    top: -4px;\n    opacity: 0.2; }\n\n.hide-detail-btn {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  text-align: center;\n  width: 100%;\n  z-index: 20;\n  background: none;\n  border: none;\n  color: white;\n  opacity: 0.6;\n  font-size: 0.7em;\n  font-weight: 600;\n  cursor: pointer;\n  background: rgba(255, 255, 255, 0.1);\n  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);\n  -webkit-transform: translateY(15px);\n  transform: translateY(15px);\n  transition-delay: 1.2s; }\n  .hide-detail-btn:hover {\n    background: rgba(255, 255, 255, 0.2); }\n\n.img-wrapper {\n  height: 85px;\n  position: relative;\n  overflow: hidden; }\n\n.details {\n  padding-bottom: 7px; }\n  .details hr {\n    width: 90%;\n    height: 0;\n    border-top: 1px solid #5D4EF0; }\n  .details button {\n    background: none;\n    border: none;\n    cursor: pointer; }\n  .details .view:hover, .details .cart:hover {\n    opacity: 0.8; }\n  .details .view {\n    text-transform: uppercase;\n    color: #5D4EF0;\n    font-size: 0.85em;\n    font-weight: 500;\n    position: relative;\n    top: -1px;\n    left: -2px; }\n  .details .cart {\n    position: relative;\n    top: 2px; }\n  .details .not-available hr {\n    border-top: 1px solid #999999; }\n  .details .not-available p {\n    margin: 0;\n    margin-top: -7px;\n    position: relative;\n    top: 2px;\n    text-transform: uppercase;\n    font-size: 0.85em;\n    font-weight: 500;\n    padding-top: 5px;\n    padding-bottom: 3px; }\n\n.img-placeholder, .img {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  border-radius: 5px 5px 0 0; }\n\n.img-placeholder {\n  z-index: 3;\n  height: 100%;\n  background: #dddddd; }\n\n.detail-view {\n  position: absolute;\n  z-index: 30;\n  border-radius: 5px;\n  overflow: hidden;\n  top: 0;\n  height: 100%;\n  width: 100%;\n  pointer-events: none; }\n  .detail-view.active {\n    pointer-events: all; }\n    .detail-view.active .hide-detail-btn {\n      -webkit-transform: translateY(0);\n      transform: translateY(0); }\n    .detail-view.active .info-wrapper {\n      opacity: 1; }\n    .detail-view.active .bg {\n      -webkit-transform: scale(232);\n      transform: scale(232); }\n    .detail-view.active .d-holder {\n      opacity: 1;\n      -webkit-transform: translate(0);\n      transform: translate(0);\n      transition: all 0.5s ease; }\n    .detail-view.active .d-title {\n      transition-delay: 0.4s; }\n    .detail-view.active .d-price {\n      transition-delay: 0.5s; }\n    .detail-view.active .d-description {\n      transition-delay: 0.6s; }\n  .detail-view .d-holder {\n    opacity: 0;\n    -webkit-transform: translateY(10px);\n    transform: translateY(10px);\n    transition: all 0.1s ease; }\n  .detail-view .d-title {\n    font-size: 1.3em;\n    font-weight: 600;\n    margin-bottom: 0;\n    margin-top: 5px; }\n  .detail-view .d-price {\n    margin-top: -7px;\n    font-size: 0.9em; }\n  .detail-view .d-description {\n    font-size: 0.9em;\n    line-height: 1.4em; }\n  .detail-view .info-wrapper {\n    position: relative;\n    z-index: 30;\n    color: white;\n    text-align: left;\n    padding-left: 14px;\n    padding-right: 14px;\n    height: 90%;\n    overflow: scroll; }\n  .detail-view .bg {\n    position: absolute;\n    bottom: -9px;\n    left: 43px;\n    height: 3px;\n    width: 3px;\n    border-radius: 50%;\n    z-index: 20;\n    background: #5D4EF0;\n    transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86); }\n\n.info {\n  position: relative; }\n\n.unavailable {\n  opacity: 0.3; }\n\n.img {\n  z-index: 5;\n  height: auto;\n  background-color: #eeeeee; }\n\n.title {\n  font-size: 1em;\n  margin-top: 18px;\n  font-weight: 600;\n  margin-bottom: 3px; }\n\n.price {\n  margin-bottom: 10px;\n  color: #999999;\n  font-size: 18px;\n  font-weight: 300;\n  margin-top: 0; }\n\n.bestseller-badge {\n  position: absolute;\n  top: -10px;\n  border-radius: 10px;\n  background-color: #EF364C;\n  color: white;\n  font-size: 0.7em;\n  left: 0;\n  right: 0;\n  margin: 0 auto;\n  width: 70%;\n  z-index: 40;\n  text-transform: uppercase;\n  font-weight: 600;\n  letter-spacing: 0.1em;\n  overflow: hidden;\n  height: 20px;\n  transition: all 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86);\n  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.48); }\n  .bestseller-badge .txt, .bestseller-badge .star {\n    transition: all 0.35s ease; }\n  .bestseller-badge .txt {\n    position: relative;\n    top: 4px; }\n  .bestseller-badge .star {\n    position: absolute;\n    top: 2px; }\n    .bestseller-badge .star.left {\n      left: 8px; }\n    .bestseller-badge .star.right {\n      right: 14px; }\n  .bestseller-badge.in-detailed {\n    box-shadow: 0 2px 7px transparent;\n    width: 20px;\n    height: 20px;\n    padding: 0;\n    top: 9px;\n    right: -80%;\n    background-color: #5D4EF0; }\n    .bestseller-badge.in-detailed .right, .bestseller-badge.in-detailed .txt {\n      opacity: 0; }\n    .bestseller-badge.in-detailed .left {\n      left: 5px;\n      top: 2px; }\n\n.sad-face {\n  border-radius: 50%;\n  background-color: #aaaaaa;\n  height: 90px;\n  width: 90px; }\n\n.category-name {\n  display: inline-block;\n  margin-right: 10px; }\n\n.star:before {\n  content: \"\\2605\";\n  position: absolute;\n  color: white; }\n\n/** Media queries **/\n@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {\n  .detail-view.active .bg {\n    -webkit-transform: translateY(0);\n    transform: translateY(0); }\n  .hide-detail-btn {\n    height: 32px;\n    -webkit-transform: translateY(32px);\n    transform: translateY(32px); }\n  .wrapper {\n    margin-bottom: -22px; }\n  .img-wrapper {\n    height: 123px; }\n  .detail-view .bg {\n    width: 100%;\n    height: 100%;\n    border-radius: 0;\n    left: 0;\n    bottom: 0;\n    -webkit-transform: translateY(100%);\n    transform: translateY(100%); }\n  .detail-view .info-wrapper {\n    padding: 10px 25px;\n    height: 78%; } }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/home/homedashboard/product-thumbnail/product-thumbnail.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__shared_product_model__ = __webpack_require__("../../../../../src/app/home/homedashboard/shared/product.model.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductThumbnailComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-//import { CartService } from '../cart.service';
-var ProductThumbnailComponent = (function () {
-    function ProductThumbnailComponent() {
-    }
-    ProductThumbnailComponent.prototype.ngOnInit = function () {
-        this.detailViewActive = false;
-    };
-    ProductThumbnailComponent.prototype.onProductClick = function () {
-        this.detailViewActive = !this.detailViewActive;
-    };
-    ProductThumbnailComponent.prototype.onAddToCart = function () {
-        //this.cartService.addProductToCart(this.product)
-    };
-    return ProductThumbnailComponent;
-}());
-__decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__shared_product_model__["a" /* Product */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__shared_product_model__["a" /* Product */]) === "function" && _a || Object)
-], ProductThumbnailComponent.prototype, "product", void 0);
-ProductThumbnailComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'product-thumbnail',
-        template: __webpack_require__("../../../../../src/app/home/homedashboard/product-thumbnail/product-thumbnail.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/home/homedashboard/product-thumbnail/product-thumbnail.component.scss")]
-    }),
-    __metadata("design:paramtypes", [])
-], ProductThumbnailComponent);
-
-var _a;
-//# sourceMappingURL=product-thumbnail.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/home/homedashboard/product/product.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  holi\n</p>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/home/homedashboard/product/product.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/home/homedashboard/product/product.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProductComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ProductComponent = (function () {
-    function ProductComponent() {
-    }
-    ProductComponent.prototype.ngOnInit = function () {
-    };
-    return ProductComponent;
-}());
-ProductComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'product',
-        template: __webpack_require__("../../../../../src/app/home/homedashboard/product/product.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/home/homedashboard/product/product.component.scss")]
-    }),
-    __metadata("design:paramtypes", [])
-], ProductComponent);
-
-//# sourceMappingURL=product.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/home/homedashboard/shared/product.model.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Product; });
-var Product = (function () {
-    function Product() {
-    }
-    return Product;
-}());
-
-//# sourceMappingURL=product.model.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/home/homedashboard/showcase/showcase.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n  <div class=\"col-xxxl-4 col-md-4\" *ngFor = 'let product of products'>\n    <product-thumbnail [product] = 'product'></product-thumbnail>\n  </div>\n</div>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/home/homedashboard/showcase/showcase.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "product-thumbnail {\n  padding-left: 10px;\n  padding-right: 10px; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/home/homedashboard/showcase/showcase.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShowcaseComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ShowcaseComponent = (function () {
-    function ShowcaseComponent() {
-    }
-    ShowcaseComponent.prototype.ngOnInit = function () {
-    };
-    return ShowcaseComponent;
-}());
-__decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-    __metadata("design:type", Array)
-], ShowcaseComponent.prototype, "products", void 0);
-ShowcaseComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'showcase',
-        template: __webpack_require__("../../../../../src/app/home/homedashboard/showcase/showcase.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/home/homedashboard/showcase/showcase.component.scss")]
-    }),
-    __metadata("design:paramtypes", [])
-], ShowcaseComponent);
-
-//# sourceMappingURL=showcase.component.js.map
 
 /***/ }),
 
