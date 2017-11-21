@@ -3723,7 +3723,7 @@ NbUserModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_spinner_service__ = __webpack_require__("../../../../@nebular/theme/services/spinner.service.js");
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_breakpoints_service__ = __webpack_require__("../../../../@nebular/theme/services/breakpoints.service.js");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "n", function() { return __WEBPACK_IMPORTED_MODULE_4__services_breakpoints_service__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "o", function() { return __WEBPACK_IMPORTED_MODULE_4__services_breakpoints_service__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_color_helper__ = __webpack_require__("../../../../@nebular/theme/services/color.helper.js");
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_card_card_module__ = __webpack_require__("../../../../@nebular/theme/components/card/card.module.js");
@@ -3733,14 +3733,14 @@ NbUserModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_menu_menu_module__ = __webpack_require__("../../../../@nebular/theme/components/menu/menu.module.js");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_8__components_menu_menu_module__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_menu_menu_service__ = __webpack_require__("../../../../@nebular/theme/components/menu/menu.service.js");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return __WEBPACK_IMPORTED_MODULE_9__components_menu_menu_service__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return __WEBPACK_IMPORTED_MODULE_9__components_menu_menu_service__["a"]; });
 /* unused harmony reexport NbMenuItem */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_route_tabset_route_tabset_module__ = __webpack_require__("../../../../@nebular/theme/components/route-tabset/route-tabset.module.js");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_10__components_route_tabset_route_tabset_module__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_sidebar_sidebar_module__ = __webpack_require__("../../../../@nebular/theme/components/sidebar/sidebar.module.js");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_11__components_sidebar_sidebar_module__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_sidebar_sidebar_service__ = __webpack_require__("../../../../@nebular/theme/components/sidebar/sidebar.service.js");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "o", function() { return __WEBPACK_IMPORTED_MODULE_12__components_sidebar_sidebar_service__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "m", function() { return __WEBPACK_IMPORTED_MODULE_12__components_sidebar_sidebar_service__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_tabset_tabset_module__ = __webpack_require__("../../../../@nebular/theme/components/tabset/tabset.module.js");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_13__components_tabset_tabset_module__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_user_user_module__ = __webpack_require__("../../../../@nebular/theme/components/user/user.module.js");

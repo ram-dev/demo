@@ -1199,7 +1199,7 @@ HeaderPublicTopComponent = __decorate([
         styles: [__webpack_require__("../../../../../src/app/@theme/components/header-public-top/header-public-top.component.scss")],
         template: __webpack_require__("../../../../../src/app/@theme/components/header-public-top/header-public-top.component.html"),
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["o" /* NbSidebarService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["o" /* NbSidebarService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["m" /* NbMenuService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["m" /* NbMenuService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__core_data_users_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_data_users_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__core_utils_analytics_service__["a" /* AnalyticsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__core_utils_analytics_service__["a" /* AnalyticsService */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["m" /* NbSidebarService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["m" /* NbSidebarService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["n" /* NbMenuService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["n" /* NbMenuService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__core_data_users_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_data_users_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__core_utils_analytics_service__["a" /* AnalyticsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__core_utils_analytics_service__["a" /* AnalyticsService */]) === "function" && _d || Object])
 ], HeaderPublicTopComponent);
 
 var _a, _b, _c, _d;
@@ -1294,7 +1294,7 @@ HeaderPublicComponent = __decorate([
         styles: [__webpack_require__("../../../../../src/app/@theme/components/header-public/header-public.component.scss")],
         template: __webpack_require__("../../../../../src/app/@theme/components/header-public/header-public.component.html"),
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["o" /* NbSidebarService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["o" /* NbSidebarService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["m" /* NbMenuService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["m" /* NbMenuService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__core_data_users_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_data_users_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__core_utils_analytics_service__["a" /* AnalyticsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__core_utils_analytics_service__["a" /* AnalyticsService */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["m" /* NbSidebarService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["m" /* NbSidebarService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["n" /* NbMenuService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["n" /* NbMenuService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__core_data_users_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_data_users_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__core_utils_analytics_service__["a" /* AnalyticsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__core_utils_analytics_service__["a" /* AnalyticsService */]) === "function" && _d || Object])
 ], HeaderPublicComponent);
 
 var _a, _b, _c, _d;
@@ -1389,7 +1389,7 @@ HeaderComponent = __decorate([
         styles: [__webpack_require__("../../../../../src/app/@theme/components/header/header.component.scss")],
         template: __webpack_require__("../../../../../src/app/@theme/components/header/header.component.html"),
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["o" /* NbSidebarService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["o" /* NbSidebarService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["m" /* NbMenuService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["m" /* NbMenuService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__core_data_users_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_data_users_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__core_utils_analytics_service__["a" /* AnalyticsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__core_utils_analytics_service__["a" /* AnalyticsService */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["m" /* NbSidebarService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["m" /* NbSidebarService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["n" /* NbMenuService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["n" /* NbMenuService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__core_data_users_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_data_users_service__["a" /* UserService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__core_utils_analytics_service__["a" /* AnalyticsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__core_utils_analytics_service__["a" /* AnalyticsService */]) === "function" && _d || Object])
 ], HeaderComponent);
 
 var _a, _b, _c, _d;
@@ -1419,6 +1419,9 @@ var _a, _b, _c, _d;
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_7__theme_settings_theme_settings_component__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__theme_switcher_theme_switcher_component__ = __webpack_require__("../../../../../src/app/@theme/components/theme-switcher/theme-switcher.component.ts");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_8__theme_switcher_theme_switcher_component__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__multiplecarousel_multiplecarousel_component__ = __webpack_require__("../../../../../src/app/@theme/components/multiplecarousel/multiplecarousel.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_9__multiplecarousel_multiplecarousel_component__["a"]; });
+
 
 
 
@@ -1429,6 +1432,183 @@ var _a, _b, _c, _d;
 
 
 //# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/@theme/components/multiplecarousel/multiplecarousel.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"multiplecarousel-container\">\r\n  <div\r\n    class=\"multiplecarousel-wrapper\"\r\n    [style.width]=\"width + 'px'\"\r\n    (mousedown)=\"onMousedown($event)\"\r\n    (touchstart)=\"onTouchdown($event)\"\r\n    (mousemove)=\"onMousemove($event, list.scrollWidth)\"\r\n    (touchmove)=\"onTouchmove($event, list.scrollWidth)\"\r\n    (mouseup)=\"onMouseup($event, list)\"\r\n    (mouseleave)=\"onMouseup($event, list)\"\r\n    (touchend)=\"onTouchup($event, list)\"\r\n  >\r\n    <div\r\n      class=\"multiplecarousel\"\r\n      [attr.startPress]=\"startPress\"\r\n      [style.transition]=\"startPress > 0 ? 'none' : '-webkit-transform 1s'\"\r\n      [style.webkitTransition]=\"startPress > 0 ? 'none' : '-webkit-transform 1s'\"\r\n      [style.transform]=\"'translateX('+amount+'px)'\"\r\n      [style.webkitTransform]=\"'translateX('+amount+'px)'\"\r\n      #list\r\n    >\r\n      <ng-template\r\n        *ngFor=\"let item of items; let i = index\"\r\n        [ngTemplateOutlet]=\"$item\"\r\n        [ngTemplateOutletContext]=\"{$implicit: item, index: i, selectedIndex: childIndex}\"\r\n      ></ng-template>\r\n    </div>\r\n  </div>\r\n  <div\r\n    class=\"controls\" *ngIf=\"$prev || $next\" >\r\n    <button type=\"button\" *ngIf=\"$prev\" (click)=\"scroll(false, list)\" [disabled]=\"amount >= 0\" >\r\n      <ng-template\r\n        [ngTemplateOutlet]=\"$prev\"\r\n      ></ng-template>\r\n    </button>\r\n    <button type=\"button\" *ngIf=\"$next\" (click)=\"scroll(true, list)\" [disabled]=\"amount <= -(list.scrollWidth-width)\" >\r\n        <ng-template\r\n          [ngTemplateOutlet]=\"$next\"\r\n        ></ng-template>\r\n    </button>\r\n  </div>\r\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/@theme/components/multiplecarousel/multiplecarousel.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This is a starting point where we declare the maps of themes and globally available functions/mixins\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n:host-context(.nb-theme-default) .multiplecarousel-container {\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center; }\n\n:host-context(.nb-theme-default) .multiplecarousel-wrapper {\n  overflow: hidden; }\n\n:host-context(.nb-theme-default) .multiplecarousel {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  transition: transform 1s, -webkit-transform 1s; }\n\n:host-context(.nb-theme-default) .controls {\n  pointer-events: none;\n  position: absolute;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  width: 100%;\n  -webkit-box-pack: justify;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  top: 50%;\n  left: 0;\n  -webkit-transform: translateY(-50%);\n  transform: translateY(-50%); }\n\n:host-context(.nb-theme-default) .controls button {\n  pointer-events: all;\n  background: transparent;\n  border: 0;\n  font-size: 2.5rem; }\n\n:host-context(.nb-theme-cosmic) .multiplecarousel-container {\n  position: relative;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center; }\n\n:host-context(.nb-theme-cosmic) .multiplecarousel-wrapper {\n  overflow: hidden; }\n\n:host-context(.nb-theme-cosmic) .multiplecarousel {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  transition: transform 1s, -webkit-transform 1s; }\n\n:host-context(.nb-theme-cosmic) .controls {\n  pointer-events: none;\n  position: absolute;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  width: 100%;\n  -webkit-box-pack: justify;\n  -ms-flex-pack: justify;\n  justify-content: space-between;\n  top: 50%;\n  left: 0;\n  -webkit-transform: translateY(-50%);\n  transform: translateY(-50%); }\n\n:host-context(.nb-theme-cosmic) .controls button {\n  pointer-events: all;\n  background: transparent;\n  border: 0;\n  font-size: 2.5rem; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/@theme/components/multiplecarousel/multiplecarousel.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MultipleCarousel; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MultipleCarousel = (function () {
+    function MultipleCarousel() {
+        this.items = [];
+        this.width = 500;
+        this.onSelectedItem = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.childIndex = 0;
+        this.amount = 0;
+        this.startPress = 0;
+        this.lastX = 0;
+    }
+    MultipleCarousel.prototype.onMousedown = function (e) {
+        if (e.which === 1) {
+            this.startPress = e.clientX;
+            this.lastX = this.amount;
+        }
+    };
+    MultipleCarousel.prototype.onTouchdown = function (e) {
+        if (navigator.userAgent.indexOf('Android') >= 0)
+            e.preventDefault();
+        this.startPress = e.targetTouches[0].clientX;
+        this.lastX = this.amount;
+    };
+    MultipleCarousel.prototype.onMousemove = function (e, maxWidth) {
+        if (e.which === 1) {
+            var amount = this.lastX - (this.startPress - e.clientX);
+            if (amount > 0 || amount < -(maxWidth - this.width))
+                return;
+            this.amount = amount;
+        }
+    };
+    MultipleCarousel.prototype.onTouchmove = function (e, maxWidth) {
+        if (navigator.userAgent.indexOf('Android') >= 0)
+            e.preventDefault();
+        var amount = this.lastX - (this.startPress - e.targetTouches[0].clientX);
+        if (amount > 0 || amount < -(maxWidth - this.width))
+            return;
+        this.amount = amount;
+    };
+    MultipleCarousel.prototype.onMouseup = function (e, elem) {
+        if (e.which === 1) {
+            this.startPress = 0;
+            this.snap(elem);
+        }
+    };
+    MultipleCarousel.prototype.onTouchup = function (e, elem) {
+        if (navigator.userAgent.indexOf('Android') >= 0)
+            e.preventDefault();
+        this.startPress = 0;
+        this.snap(elem);
+    };
+    MultipleCarousel.prototype.snap = function (elem) {
+        var counter = 0;
+        var lastVal = 0;
+        for (var i = 0; i < this.items.length; i++) {
+            var el = elem.children[i];
+            var style = el.currentStyle || window.getComputedStyle(el);
+            counter += el.offsetWidth + (parseFloat(style.marginLeft) + parseFloat(style.marginRight));
+            if (this.amount <= lastVal && this.amount >= -counter) {
+                this.amount = -lastVal;
+                this.childIndex = i;
+                this.onSelectedItem.emit({ item: this.items[this.childIndex], index: this.childIndex, first: false });
+                return;
+            }
+            lastVal = counter;
+        }
+        return counter;
+    };
+    MultipleCarousel.prototype.scroll = function (forward, elem) {
+        this.childIndex += forward ? 1 : -1;
+        this.onSelectedItem.emit({ item: this.items[this.childIndex], index: this.childIndex, first: false });
+        this.amount = -(this.calcScroll(elem));
+    };
+    MultipleCarousel.prototype.calcScroll = function (elem) {
+        var counter = 0;
+        for (var i = this.childIndex - 1; i >= 0; i--) {
+            var el = elem.children[i];
+            var style = el.currentStyle || window.getComputedStyle(el);
+            counter += el.offsetWidth + (parseFloat(style.marginLeft) + parseFloat(style.marginRight));
+        }
+        return counter;
+    };
+    MultipleCarousel.prototype.ngOnChanges = function (changes) {
+        if (changes.items && !(changes.items.previousValue === changes.items.currentValue)) {
+            if (changes.items.firstChange) {
+                this.onSelectedItem.emit({ item: this.items[this.childIndex], index: this.childIndex, first: true });
+            }
+            this.amount = 0;
+        }
+    };
+    return MultipleCarousel;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Object)
+], MultipleCarousel.prototype, "items", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Number)
+], MultipleCarousel.prototype, "width", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"]) === "function" && _a || Object)
+], MultipleCarousel.prototype, "$prev", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"]) === "function" && _b || Object)
+], MultipleCarousel.prototype, "$next", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["TemplateRef"]) === "function" && _c || Object)
+], MultipleCarousel.prototype, "$item", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]) === "function" && _d || Object)
+], MultipleCarousel.prototype, "onSelectedItem", void 0);
+MultipleCarousel = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: '[ng-multiplecarousel]',
+        styles: [__webpack_require__("../../../../../src/app/@theme/components/multiplecarousel/multiplecarousel.component.scss")],
+        template: __webpack_require__("../../../../../src/app/@theme/components/multiplecarousel/multiplecarousel.component.html")
+    })
+    /*
+      *
+      * @param() items - List of items to belong in carousel
+      * @param() width - Size of window(view) to show
+      * @param() $prev - Template for previous button
+      * @param() $next - Template for next button
+      * @param() $item - Template for the item
+    */
+], MultipleCarousel);
+
+var _a, _b, _c, _d;
+//# sourceMappingURL=multiplecarousel.component.js.map
 
 /***/ }),
 
@@ -1847,7 +2027,7 @@ HomeLayoutComponent = __decorate([
         styles: [__webpack_require__("../../../../../src/app/@theme/layouts/home/home.layout.scss")],
         template: "\n    <nb-layout [center]=\"layout.id === 'center-column'\" windowMode>\n      <nb-layout-header fixed class=\"nav-top mobilemenuInverse\">\n        <ngx-header-public-top [position]=\"sidebar.id === 'left' ? 'normal': 'inverse'\"></ngx-header-public-top>\n      </nb-layout-header>\n      <nb-layout-header fixed class=\"secondary-menu\">\n        <ngx-header-public [position]=\"sidebar.id === 'left' ? 'normal': 'inverse'\"></ngx-header-public>\n      </nb-layout-header>  \n      <nb-sidebar class=\"menu-sidebar mobilemenu\"\n                   tag=\"menu-sidebar\"\n                   responsive\n                   [right]=\"sidebar.id === 'right'\">\n        <nb-sidebar-header>         \n        </nb-sidebar-header>\n        <ng-content select=\"nb-menu\"></ng-content>\n      </nb-sidebar>\n\n      <nb-layout-column class=\"main-content\">\n        <ng-content select=\"router-outlet\"></ng-content>\n      </nb-layout-column>\n\n      <nb-layout-column left class=\"small\" *ngIf=\"layout.id === 'two-column' || layout.id === 'three-column'\">\n        <nb-menu [items]=\"subMenu\"></nb-menu>\n      </nb-layout-column>\n\n      <nb-layout-column right class=\"small\" *ngIf=\"layout.id === 'three-column'\">\n        <nb-menu [items]=\"subMenu\"></nb-menu>\n      </nb-layout-column>\n\n      <nb-layout-footer fixed>\n        <ngx-footer-public></ngx-footer-public>\n      </nb-layout-footer>      \n      \n    </nb-layout>\n  ",
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__core_data_state_service__["a" /* StateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_data_state_service__["a" /* StateService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["m" /* NbMenuService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["m" /* NbMenuService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["a" /* NbThemeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["a" /* NbThemeService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["n" /* NbMediaBreakpointsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["n" /* NbMediaBreakpointsService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["o" /* NbSidebarService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["o" /* NbSidebarService */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__core_data_state_service__["a" /* StateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_data_state_service__["a" /* StateService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["n" /* NbMenuService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["n" /* NbMenuService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["a" /* NbThemeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["a" /* NbThemeService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["o" /* NbMediaBreakpointsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["o" /* NbMediaBreakpointsService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["m" /* NbSidebarService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["m" /* NbSidebarService */]) === "function" && _e || Object])
 ], HomeLayoutComponent);
 
 var _a, _b, _c, _d, _e;
@@ -2053,7 +2233,7 @@ SampleLayoutComponent = __decorate([
         styles: [__webpack_require__("../../../../../src/app/@theme/layouts/sample/sample.layout.scss")],
         template: "\n    <nb-layout [center]=\"layout.id === 'center-column'\" windowMode>\n      <nb-layout-header fixed>\n        <ngx-header [position]=\"sidebar.id === 'left' ? 'normal': 'inverse'\"></ngx-header>\n      </nb-layout-header>\n\n      <nb-sidebar class=\"menu-sidebar\"\n                   tag=\"menu-sidebar\"\n                   responsive\n                   [right]=\"sidebar.id === 'right'\">\n        <nb-sidebar-header>\n          <a href=\"#\" class=\"btn btn-hero-success main-btn\">\n            <i class=\"ion ion-email\"></i> <span>Support Us</span>\n          </a>\n        </nb-sidebar-header>\n        <ng-content select=\"nb-menu\"></ng-content>\n      </nb-sidebar>\n\n      <nb-layout-column class=\"main-content\">\n        <ng-content select=\"router-outlet\"></ng-content>\n      </nb-layout-column>\n\n      <nb-layout-column left class=\"small\" *ngIf=\"layout.id === 'two-column' || layout.id === 'three-column'\">\n        <nb-menu [items]=\"subMenu\"></nb-menu>\n      </nb-layout-column>\n\n      <nb-layout-column right class=\"small\" *ngIf=\"layout.id === 'three-column'\">\n        <nb-menu [items]=\"subMenu\"></nb-menu>\n      </nb-layout-column>\n\n      <nb-layout-footer fixed>\n        <ngx-footer></ngx-footer>\n      </nb-layout-footer>\n\n      <nb-sidebar class=\"settings-sidebar\"\n                   tag=\"settings-sidebar\"\n                   state=\"collapsed\"\n                   fixed\n                   [right]=\"sidebar.id !== 'right'\">\n        <ngx-theme-settings></ngx-theme-settings>\n      </nb-sidebar>\n    </nb-layout>\n  ",
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__core_data_state_service__["a" /* StateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_data_state_service__["a" /* StateService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["m" /* NbMenuService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["m" /* NbMenuService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["a" /* NbThemeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["a" /* NbThemeService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["n" /* NbMediaBreakpointsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["n" /* NbMediaBreakpointsService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["o" /* NbSidebarService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["o" /* NbSidebarService */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__core_data_state_service__["a" /* StateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__core_data_state_service__["a" /* StateService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["n" /* NbMenuService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["n" /* NbMenuService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["a" /* NbThemeService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["a" /* NbThemeService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["o" /* NbMediaBreakpointsService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["o" /* NbMediaBreakpointsService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["m" /* NbSidebarService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["m" /* NbSidebarService */]) === "function" && _e || Object])
 ], SampleLayoutComponent);
 
 var _a, _b, _c, _d, _e;
@@ -2542,6 +2722,7 @@ var COMPONENTS = [
     __WEBPACK_IMPORTED_MODULE_7__layouts__["c" /* HomeLayoutComponent */],
     __WEBPACK_IMPORTED_MODULE_7__layouts__["d" /* ThreeColumnsLayoutComponent */],
     __WEBPACK_IMPORTED_MODULE_7__layouts__["e" /* TwoColumnsLayoutComponent */],
+    __WEBPACK_IMPORTED_MODULE_5__components__["j" /* MultipleCarousel */],
 ];
 var PIPES = [
     __WEBPACK_IMPORTED_MODULE_6__pipes__["a" /* CapitalizePipe */],

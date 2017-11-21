@@ -668,6 +668,456 @@ var DATA = {
             "best_seller": true,
             "available": true
         },
+        {
+            "id": 4,
+            "name": "Over The Top",
+            "categories": [
+                1
+            ],
+            "outlets": [
+                {
+                    "id": 2,
+                    "address": "Defence Colony",
+                    "lat": "11.2",
+                    "lon": "12.56",
+                    "city": "Bangalore",
+                    "state": "Karnataka",
+                    "country": "India"
+                }
+            ],
+            "offertype": 1,
+            "discount": "20",
+            "offer": "Flat 20% off on the bill. Cannot be clubed with any other offer",
+            "offerdetails": "Enjoy your favourite food at Over the Top. Now Get Flat 20 % of on the bill ( Drinks and Food)",
+            "coupontodate": "25-Nov-2017",
+            "couponfromdate": "01-Nov-2017",
+            "fundallocation": 2000,
+            "daysallocation": "All days",
+            "terms": "This offer cannot be clubbed with other offers. You can download this coupon FREE of cost from dealsandyou.com. You only need to pay 28 Capri Italy as per the Offer Details.",
+            "images": ["/assets/images/cover2.jpg", "/assets/images/cover3.jpg", "/assets/images/cover1.jpg"],
+            "best_seller": false,
+            "available": true
+        },
+        {
+            "id": 5,
+            "name": "22 Capri Italy",
+            "categories": [
+                1
+            ],
+            "outlets": [
+                {
+                    "id": 1,
+                    "address": "#43 hsr layout",
+                    "lat": "11.2",
+                    "lon": "12.56",
+                    "city": "Bangalore",
+                    "state": "Karnataka",
+                    "country": "India"
+                }
+            ],
+            "offertype": 1,
+            "discount": "68",
+            "offer": "5 beer with 1 Veg or Non Veg Pizza / 1 Veg or Non Veg Pasta. Pay Rs 599 at the outlet. (Taxes and Service charges extra)",
+            "offerdetails": "Get 68% off on Beer, Pizza & More worth Rs. 1850.",
+            "coupontodate": "25-Nov-2017",
+            "couponfromdate": "01-Nov-2017",
+            "fundallocation": 2000,
+            "daysallocation": "All days",
+            "terms": "Available on all days. One Voucher per person Prior appointment Mandatory. Call the merchant for more details on the Package. T&C apply. Cannot be clubbed with any other Offer. Payment to the Merchant only. This coupon is free of cost. Prices may vary from other sites. These are the prices Shared by the merchant. Merchant can change the Deal price any time. Do call the Merchant to confirm / recheck the details.",
+            "images": ["/assets/images/cover1.jpg", "/assets/images/cover2.jpg", "/assets/images/cover3.jpg"],
+            "best_seller": true,
+            "available": true
+        },
+        {
+            "id": 6,
+            "name": "The Arabian Night at Club London on Thursdays",
+            "categories": [
+                4
+            ],
+            "outlets": [
+                {
+                    "id": 1,
+                    "address": "#43 hsr layout",
+                    "lat": "11.2",
+                    "lon": "12.56",
+                    "city": "Bangalore",
+                    "state": "Karnataka",
+                    "country": "India"
+                }
+            ],
+            "offertype": 1,
+            "discount": "8",
+            "offer": "ARABIAN NIGHT LIVE BELLY DANCE",
+            "offerdetails": "Thursaday Another energy filled episode of the amazing Arabian Nights is back this week, taking fun to another level! Drop in to witness some great belly dancing and get the party started.",
+            "coupontodate": "25-Nov-2017",
+            "couponfromdate": "01-Nov-2017",
+            "fundallocation": 2000,
+            "daysallocation": "All days",
+            "terms": "Available on all days. One Voucher per person Prior appointment Mandatory. Call the merchant for more details on the Package. T&C apply. Cannot be clubbed with any other Offer. Payment to the Merchant only. This coupon is free of cost. Prices may vary from other sites. These are the prices Shared by the merchant. Merchant can change the Deal price any time. Do call the Merchant to confirm / recheck the details.",
+            "images": ["/assets/images/cover3.jpg", "/assets/images/cover2.jpg", "/assets/images/cover1.jpg"],
+            "best_seller": true,
+            "available": true
+        },
+        {
+            "id": 7,
+            "name": "Over The Top",
+            "categories": [
+                1
+            ],
+            "outlets": [
+                {
+                    "id": 2,
+                    "address": "Defence Colony",
+                    "lat": "11.2",
+                    "lon": "12.56",
+                    "city": "Bangalore",
+                    "state": "Karnataka",
+                    "country": "India"
+                }
+            ],
+            "offertype": 1,
+            "discount": "20",
+            "offer": "Flat 20% off on the bill. Cannot be clubed with any other offer",
+            "offerdetails": "Enjoy your favourite food at Over the Top. Now Get Flat 20 % of on the bill ( Drinks and Food)",
+            "coupontodate": "25-Nov-2017",
+            "couponfromdate": "01-Nov-2017",
+            "fundallocation": 2000,
+            "daysallocation": "All days",
+            "terms": "This offer cannot be clubbed with other offers. You can download this coupon FREE of cost from dealsandyou.com. You only need to pay 28 Capri Italy as per the Offer Details.",
+            "images": ["/assets/images/cover2.jpg", "/assets/images/cover3.jpg", "/assets/images/cover1.jpg"],
+            "best_seller": false,
+            "available": true
+        },
+        {
+            "id": 8,
+            "name": "22 Capri Italy",
+            "categories": [
+                1
+            ],
+            "outlets": [
+                {
+                    "id": 1,
+                    "address": "#43 hsr layout",
+                    "lat": "11.2",
+                    "lon": "12.56",
+                    "city": "Bangalore",
+                    "state": "Karnataka",
+                    "country": "India"
+                }
+            ],
+            "offertype": 1,
+            "discount": "68",
+            "offer": "5 beer with 1 Veg or Non Veg Pizza / 1 Veg or Non Veg Pasta. Pay Rs 599 at the outlet. (Taxes and Service charges extra)",
+            "offerdetails": "Get 68% off on Beer, Pizza & More worth Rs. 1850.",
+            "coupontodate": "25-Nov-2017",
+            "couponfromdate": "01-Nov-2017",
+            "fundallocation": 2000,
+            "daysallocation": "All days",
+            "terms": "Available on all days. One Voucher per person Prior appointment Mandatory. Call the merchant for more details on the Package. T&C apply. Cannot be clubbed with any other Offer. Payment to the Merchant only. This coupon is free of cost. Prices may vary from other sites. These are the prices Shared by the merchant. Merchant can change the Deal price any time. Do call the Merchant to confirm / recheck the details.",
+            "images": ["/assets/images/cover1.jpg", "/assets/images/cover2.jpg", "/assets/images/cover3.jpg"],
+            "best_seller": true,
+            "available": true
+        },
+        {
+            "id": 9,
+            "name": "The Arabian Night at Club London on Thursdays",
+            "categories": [
+                4
+            ],
+            "outlets": [
+                {
+                    "id": 1,
+                    "address": "#43 hsr layout",
+                    "lat": "11.2",
+                    "lon": "12.56",
+                    "city": "Bangalore",
+                    "state": "Karnataka",
+                    "country": "India"
+                }
+            ],
+            "offertype": 1,
+            "discount": "8",
+            "offer": "ARABIAN NIGHT LIVE BELLY DANCE",
+            "offerdetails": "Thursaday Another energy filled episode of the amazing Arabian Nights is back this week, taking fun to another level! Drop in to witness some great belly dancing and get the party started.",
+            "coupontodate": "25-Nov-2017",
+            "couponfromdate": "01-Nov-2017",
+            "fundallocation": 2000,
+            "daysallocation": "All days",
+            "terms": "Available on all days. One Voucher per person Prior appointment Mandatory. Call the merchant for more details on the Package. T&C apply. Cannot be clubbed with any other Offer. Payment to the Merchant only. This coupon is free of cost. Prices may vary from other sites. These are the prices Shared by the merchant. Merchant can change the Deal price any time. Do call the Merchant to confirm / recheck the details.",
+            "images": ["/assets/images/cover3.jpg", "/assets/images/cover2.jpg", "/assets/images/cover1.jpg"],
+            "best_seller": true,
+            "available": true
+        },
+        {
+            "id": 10,
+            "name": "Over The Top",
+            "categories": [
+                1
+            ],
+            "outlets": [
+                {
+                    "id": 2,
+                    "address": "Defence Colony",
+                    "lat": "11.2",
+                    "lon": "12.56",
+                    "city": "Bangalore",
+                    "state": "Karnataka",
+                    "country": "India"
+                }
+            ],
+            "offertype": 1,
+            "discount": "20",
+            "offer": "Flat 20% off on the bill. Cannot be clubed with any other offer",
+            "offerdetails": "Enjoy your favourite food at Over the Top. Now Get Flat 20 % of on the bill ( Drinks and Food)",
+            "coupontodate": "25-Nov-2017",
+            "couponfromdate": "01-Nov-2017",
+            "fundallocation": 2000,
+            "daysallocation": "All days",
+            "terms": "This offer cannot be clubbed with other offers. You can download this coupon FREE of cost from dealsandyou.com. You only need to pay 28 Capri Italy as per the Offer Details.",
+            "images": ["/assets/images/cover2.jpg", "/assets/images/cover3.jpg", "/assets/images/cover1.jpg"],
+            "best_seller": false,
+            "available": true
+        },
+        {
+            "id": 11,
+            "name": "22 Capri Italy",
+            "categories": [
+                1
+            ],
+            "outlets": [
+                {
+                    "id": 1,
+                    "address": "#43 hsr layout",
+                    "lat": "11.2",
+                    "lon": "12.56",
+                    "city": "Bangalore",
+                    "state": "Karnataka",
+                    "country": "India"
+                }
+            ],
+            "offertype": 1,
+            "discount": "68",
+            "offer": "5 beer with 1 Veg or Non Veg Pizza / 1 Veg or Non Veg Pasta. Pay Rs 599 at the outlet. (Taxes and Service charges extra)",
+            "offerdetails": "Get 68% off on Beer, Pizza & More worth Rs. 1850.",
+            "coupontodate": "25-Nov-2017",
+            "couponfromdate": "01-Nov-2017",
+            "fundallocation": 2000,
+            "daysallocation": "All days",
+            "terms": "Available on all days. One Voucher per person Prior appointment Mandatory. Call the merchant for more details on the Package. T&C apply. Cannot be clubbed with any other Offer. Payment to the Merchant only. This coupon is free of cost. Prices may vary from other sites. These are the prices Shared by the merchant. Merchant can change the Deal price any time. Do call the Merchant to confirm / recheck the details.",
+            "images": ["/assets/images/cover1.jpg", "/assets/images/cover2.jpg", "/assets/images/cover3.jpg"],
+            "best_seller": true,
+            "available": true
+        },
+        {
+            "id": 12,
+            "name": "The Arabian Night at Club London on Thursdays",
+            "categories": [
+                4
+            ],
+            "outlets": [
+                {
+                    "id": 1,
+                    "address": "#43 hsr layout",
+                    "lat": "11.2",
+                    "lon": "12.56",
+                    "city": "Bangalore",
+                    "state": "Karnataka",
+                    "country": "India"
+                }
+            ],
+            "offertype": 1,
+            "discount": "8",
+            "offer": "ARABIAN NIGHT LIVE BELLY DANCE",
+            "offerdetails": "Thursaday Another energy filled episode of the amazing Arabian Nights is back this week, taking fun to another level! Drop in to witness some great belly dancing and get the party started.",
+            "coupontodate": "25-Nov-2017",
+            "couponfromdate": "01-Nov-2017",
+            "fundallocation": 2000,
+            "daysallocation": "All days",
+            "terms": "Available on all days. One Voucher per person Prior appointment Mandatory. Call the merchant for more details on the Package. T&C apply. Cannot be clubbed with any other Offer. Payment to the Merchant only. This coupon is free of cost. Prices may vary from other sites. These are the prices Shared by the merchant. Merchant can change the Deal price any time. Do call the Merchant to confirm / recheck the details.",
+            "images": ["/assets/images/cover3.jpg", "/assets/images/cover2.jpg", "/assets/images/cover1.jpg"],
+            "best_seller": true,
+            "available": true
+        },
+        {
+            "id": 10,
+            "name": "Over The Top",
+            "categories": [
+                1
+            ],
+            "outlets": [
+                {
+                    "id": 2,
+                    "address": "Defence Colony",
+                    "lat": "11.2",
+                    "lon": "12.56",
+                    "city": "Bangalore",
+                    "state": "Karnataka",
+                    "country": "India"
+                }
+            ],
+            "offertype": 1,
+            "discount": "20",
+            "offer": "Flat 20% off on the bill. Cannot be clubed with any other offer",
+            "offerdetails": "Enjoy your favourite food at Over the Top. Now Get Flat 20 % of on the bill ( Drinks and Food)",
+            "coupontodate": "25-Nov-2017",
+            "couponfromdate": "01-Nov-2017",
+            "fundallocation": 2000,
+            "daysallocation": "All days",
+            "terms": "This offer cannot be clubbed with other offers. You can download this coupon FREE of cost from dealsandyou.com. You only need to pay 28 Capri Italy as per the Offer Details.",
+            "images": ["/assets/images/cover2.jpg", "/assets/images/cover3.jpg", "/assets/images/cover1.jpg"],
+            "best_seller": false,
+            "available": true
+        },
+        {
+            "id": 11,
+            "name": "22 Capri Italy",
+            "categories": [
+                1
+            ],
+            "outlets": [
+                {
+                    "id": 1,
+                    "address": "#43 hsr layout",
+                    "lat": "11.2",
+                    "lon": "12.56",
+                    "city": "Bangalore",
+                    "state": "Karnataka",
+                    "country": "India"
+                }
+            ],
+            "offertype": 1,
+            "discount": "68",
+            "offer": "5 beer with 1 Veg or Non Veg Pizza / 1 Veg or Non Veg Pasta. Pay Rs 599 at the outlet. (Taxes and Service charges extra)",
+            "offerdetails": "Get 68% off on Beer, Pizza & More worth Rs. 1850.",
+            "coupontodate": "25-Nov-2017",
+            "couponfromdate": "01-Nov-2017",
+            "fundallocation": 2000,
+            "daysallocation": "All days",
+            "terms": "Available on all days. One Voucher per person Prior appointment Mandatory. Call the merchant for more details on the Package. T&C apply. Cannot be clubbed with any other Offer. Payment to the Merchant only. This coupon is free of cost. Prices may vary from other sites. These are the prices Shared by the merchant. Merchant can change the Deal price any time. Do call the Merchant to confirm / recheck the details.",
+            "images": ["/assets/images/cover1.jpg", "/assets/images/cover2.jpg", "/assets/images/cover3.jpg"],
+            "best_seller": true,
+            "available": true
+        },
+        {
+            "id": 12,
+            "name": "The Arabian Night at Club London on Thursdays",
+            "categories": [
+                4
+            ],
+            "outlets": [
+                {
+                    "id": 1,
+                    "address": "#43 hsr layout",
+                    "lat": "11.2",
+                    "lon": "12.56",
+                    "city": "Bangalore",
+                    "state": "Karnataka",
+                    "country": "India"
+                }
+            ],
+            "offertype": 1,
+            "discount": "8",
+            "offer": "ARABIAN NIGHT LIVE BELLY DANCE",
+            "offerdetails": "Thursaday Another energy filled episode of the amazing Arabian Nights is back this week, taking fun to another level! Drop in to witness some great belly dancing and get the party started.",
+            "coupontodate": "25-Nov-2017",
+            "couponfromdate": "01-Nov-2017",
+            "fundallocation": 2000,
+            "daysallocation": "All days",
+            "terms": "Available on all days. One Voucher per person Prior appointment Mandatory. Call the merchant for more details on the Package. T&C apply. Cannot be clubbed with any other Offer. Payment to the Merchant only. This coupon is free of cost. Prices may vary from other sites. These are the prices Shared by the merchant. Merchant can change the Deal price any time. Do call the Merchant to confirm / recheck the details.",
+            "images": ["/assets/images/cover3.jpg", "/assets/images/cover2.jpg", "/assets/images/cover1.jpg"],
+            "best_seller": true,
+            "available": true
+        },
+        {
+            "id": 10,
+            "name": "Over The Top",
+            "categories": [
+                1
+            ],
+            "outlets": [
+                {
+                    "id": 2,
+                    "address": "Defence Colony",
+                    "lat": "11.2",
+                    "lon": "12.56",
+                    "city": "Bangalore",
+                    "state": "Karnataka",
+                    "country": "India"
+                }
+            ],
+            "offertype": 1,
+            "discount": "20",
+            "offer": "Flat 20% off on the bill. Cannot be clubed with any other offer",
+            "offerdetails": "Enjoy your favourite food at Over the Top. Now Get Flat 20 % of on the bill ( Drinks and Food)",
+            "coupontodate": "25-Nov-2017",
+            "couponfromdate": "01-Nov-2017",
+            "fundallocation": 2000,
+            "daysallocation": "All days",
+            "terms": "This offer cannot be clubbed with other offers. You can download this coupon FREE of cost from dealsandyou.com. You only need to pay 28 Capri Italy as per the Offer Details.",
+            "images": ["/assets/images/cover2.jpg", "/assets/images/cover3.jpg", "/assets/images/cover1.jpg"],
+            "best_seller": false,
+            "available": true
+        },
+        {
+            "id": 11,
+            "name": "22 Capri Italy",
+            "categories": [
+                1
+            ],
+            "outlets": [
+                {
+                    "id": 1,
+                    "address": "#43 hsr layout",
+                    "lat": "11.2",
+                    "lon": "12.56",
+                    "city": "Bangalore",
+                    "state": "Karnataka",
+                    "country": "India"
+                }
+            ],
+            "offertype": 1,
+            "discount": "68",
+            "offer": "5 beer with 1 Veg or Non Veg Pizza / 1 Veg or Non Veg Pasta. Pay Rs 599 at the outlet. (Taxes and Service charges extra)",
+            "offerdetails": "Get 68% off on Beer, Pizza & More worth Rs. 1850.",
+            "coupontodate": "25-Nov-2017",
+            "couponfromdate": "01-Nov-2017",
+            "fundallocation": 2000,
+            "daysallocation": "All days",
+            "terms": "Available on all days. One Voucher per person Prior appointment Mandatory. Call the merchant for more details on the Package. T&C apply. Cannot be clubbed with any other Offer. Payment to the Merchant only. This coupon is free of cost. Prices may vary from other sites. These are the prices Shared by the merchant. Merchant can change the Deal price any time. Do call the Merchant to confirm / recheck the details.",
+            "images": ["/assets/images/cover1.jpg", "/assets/images/cover2.jpg", "/assets/images/cover3.jpg"],
+            "best_seller": true,
+            "available": true
+        },
+        {
+            "id": 12,
+            "name": "The Arabian Night at Club London on Thursdays",
+            "categories": [
+                4
+            ],
+            "outlets": [
+                {
+                    "id": 1,
+                    "address": "#43 hsr layout",
+                    "lat": "11.2",
+                    "lon": "12.56",
+                    "city": "Bangalore",
+                    "state": "Karnataka",
+                    "country": "India"
+                }
+            ],
+            "offertype": 1,
+            "discount": "8",
+            "offer": "ARABIAN NIGHT LIVE BELLY DANCE",
+            "offerdetails": "Thursaday Another energy filled episode of the amazing Arabian Nights is back this week, taking fun to another level! Drop in to witness some great belly dancing and get the party started.",
+            "coupontodate": "25-Nov-2017",
+            "couponfromdate": "01-Nov-2017",
+            "fundallocation": 2000,
+            "daysallocation": "All days",
+            "terms": "Available on all days. One Voucher per person Prior appointment Mandatory. Call the merchant for more details on the Package. T&C apply. Cannot be clubbed with any other Offer. Payment to the Merchant only. This coupon is free of cost. Prices may vary from other sites. These are the prices Shared by the merchant. Merchant can change the Deal price any time. Do call the Merchant to confirm / recheck the details.",
+            "images": ["/assets/images/cover3.jpg", "/assets/images/cover2.jpg", "/assets/images/cover1.jpg"],
+            "best_seller": true,
+            "available": true
+        },
     ]
 };
 //# sourceMappingURL=mock-data-deals.js.map
@@ -1584,7 +2034,7 @@ var _a, _b;
 /***/ "../../../../../src/app/home/homedashboard/homedashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row slider\">\r\n    <div class=\"col-md-12\">\r\n        <ngb-carousel>\r\n            <ng-template ngbSlide *ngFor=\"let slider of sliders\">\r\n                <img class=\"img-fluid mx-auto d-block\" [src]=\"slider.imagePath\" alt=\"Random first slide\" width=\"100%\">\r\n                <div class=\"carousel-caption\">\r\n                    <h3>{{slider.label}}</h3>\r\n                    <p>{{slider.text}}</p>\r\n                </div>\r\n            </ng-template>\r\n        </ngb-carousel>\r\n    </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-12\"><h2 class=\"section-header\">Our Deals</h2></div>\r\n</div>\r\n<div class=\"row home-category-section\">\r\n  <div class=\"col-md-12\">\r\n    <ul>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-food\"> \r\n          <a href=\"#/home/deals-food/1\" class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-cutlery\"></i></span></div><div class=\"cat-title\">Deals in Food & Beverages</div></a>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-wellness\"> \r\n          <a href=\"#/home/deals-wellness/2\" class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-heartbeat\"></i></span></div><div class=\"cat-title\">Deals in Wellness</div></a>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-spa\"> \r\n          <a href=\"#/home/deals-spa/3\" class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-bath\"></i></span></div><div class=\"cat-title\">Deals in SPA</div></a>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-entertainment\"> \r\n          <a href=\"#/home/deals-entertainment/4\" class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-film\"></i></span></div><div class=\"cat-title\">Deals in Entertainment</div></a>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-travels\"> \r\n          <a href=\"#/home/deals-travel/5\" class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-plane\"></i></span></div><div class=\"cat-title\">Deals in Travels</div></a>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-shopping\"> \r\n          <a href=\"#/home/deals-shopping/6\" class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-shopping-bag\"></i></span></div><div class=\"cat-title\">Deals in E-Shopping</div></a>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-12\"><h2 class=\"section-header\">Other Services</h2></div>\r\n</div>\r\n<div class=\"home-container\">\r\n  <div class=\"row\">\r\n            <div class=\"col-xxxl-2 col-md-2\">\r\n                <ngx-status-card title=\"Car Wash\" value=\"\" type=\"info\">\r\n                    <i class=\"fa fa-car\"></i>\r\n                </ngx-status-card>\r\n            </div>\r\n            <div class=\"col-xxxl-2 col-md-2\">\r\n                <ngx-status-card title=\"Pest Control\" value=\"\" type=\"info\">\r\n                    <i class=\"fa fa-fire-extinguisher\"></i>\r\n                </ngx-status-card>\r\n            </div>\r\n            <div class=\"col-xxxl-2 col-md-2\">\r\n                <ngx-status-card title=\"Photography\" value=\"\" type=\"info\">\r\n                    <i class=\"fa fa-camera\"></i>\r\n                </ngx-status-card>\r\n            </div>\r\n            <div class=\"col-xxxl-2 col-md-2\">\r\n                <ngx-status-card title=\"Dance & Music Classes\" value=\"\" type=\"info\">\r\n                    <i class=\"fa fa-music\"></i>\r\n                </ngx-status-card>\r\n            </div>\r\n            <div class=\"col-xxxl-2 col-md-2\">\r\n                <ngx-status-card title=\"Flower & Cake Delivary\" value=\"\" type=\"info\">\r\n                    <i class=\"fa fa-truck\"></i>\r\n                </ngx-status-card>\r\n            </div>\r\n            <div class=\"col-xxxl-2 col-md-2\">\r\n                <ngx-status-card title=\"Coaching Classes\" value=\"\" type=\"info\">\r\n                    <i class=\"fa fa-certificate\"></i>\r\n                </ngx-status-card>\r\n            </div>\r\n        </div>\r\n   \r\n</div>\r\n<div class=\"row\">\r\n  <div class=\"col-md-12\"><h2 class=\"section-header\">Why YofferZ.com ?</h2></div>\r\n</div>\r\n<div class=\"row home-category-section cat-why-section\">\r\n  <div class=\"col-md-12\">\r\n    <ul>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-why\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-cloud-download\"></i></span></div><div class=\"cat-title\">FREE Download!</div>\r\n          <div class=\"cat-sub\">All of our coupons are completely free to download.</div></div>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-why\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-bell\"></i></span></div><div class=\"cat-title\">Crazy Discount Offerz!</div><div class=\"cat-sub\">We work Hard to bring you exclusive discounted Offers you won't find anywhere else!</div></div>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-why\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-shopping-cart\"></i></span></div><div class=\"cat-title\">My Shops</div><div class=\"cat-sub\">Find your favorite shops online</div></div>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-why\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-sign-in\"></i></span></div><div class=\"cat-title\">Easy Registration</div><div class=\"cat-sub\">Easy registration process helps business to grow Online.</div></div>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-why\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-download\"></i></span></div><div class=\"cat-title\">Easy download</div><div class=\"cat-sub\">No hassle: Enter your mobile no and OTP to get the discount Voucher</div></div>\r\n        </div>\r\n      </li>\r\n      <li>\r\n        <div class=\"categoryWrapper cat-why\"> \r\n          <div class=\"cat-section\"><div class=\"cat-icon\"><span><i class=\"fa fa-user\"></i></span></div><div class=\"cat-title\">No Account Required</div><div class=\"cat-sub\">Vouchers are available for all, no membership required.</div></div>\r\n        </div>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"row slider\">\r\n    <div class=\"col-md-12\">\r\n        <ngb-carousel>\r\n            <ng-template ngbSlide *ngFor=\"let slider of sliders\">\r\n                <img class=\"img-fluid mx-auto d-block\" [src]=\"slider.imagePath\" alt=\"Random first slide\" width=\"100%\">\r\n                <div class=\"carousel-caption\">\r\n                    <h3>{{slider.label}}</h3>\r\n                    <p>{{slider.text}}</p>\r\n                </div>\r\n            </ng-template>\r\n        </ngb-carousel>\r\n    </div>\r\n</div>\r\n<div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n        <h2 class=\"section-header\">Our Deals</h2></div>\r\n</div>\r\n<section class=\"food\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n        <div class=\"section-header-cat\">\r\n            <h4 class=\"float-md-left\"><a href=\"#/home/deals-food/1\"><i class=\"fa fa-cutlery\"></i> Deals in Food & Beverages</a></h4>\r\n            <a class=\"float-md-right\" href=\"#/home/deals-food/1\"><span>View all</span></a>\r\n        </div>\r\n        <hr/>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n        <div ng-multiplecarousel class=\"slides-wrapper\" [items]=\"items\" [width]=\"sliderWidth\" [$prev]=\"prev\" [$next]=\"next\" [$item]=\"item\"></div>\r\n    </div>\r\n  </div>\r\n</section>\r\n\r\n<section class=\"wellness\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n        <div class=\"section-header-cat\">\r\n            <h4 class=\"float-md-left\"><a href=\"#/home/deals-wellness/2\"><i class=\"fa fa-heartbeat\"></i> Deals in Wellness</a></h4>\r\n            <a class=\"float-md-right\" href=\"#/home/deals-wellness/2\"><span>View all</span></a>\r\n        </div>\r\n        <hr/>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n        <div ng-multiplecarousel class=\"slides-wrapper\" [items]=\"items\" [width]=\"sliderWidth\" [$prev]=\"prev\" [$next]=\"next\" [$item]=\"item\"></div>\r\n    </div>\r\n  </div>\r\n</section>\r\n\r\n<section class=\"spa\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n        <div class=\"section-header-cat\">\r\n            <h4 class=\"float-md-left\"><a href=\"#/home/deals-spa/3\"><i class=\"fa fa-bath\"></i> Deals in SPA</a></h4>\r\n            <a class=\"float-md-right\" href=\"#/home/deals-spa/3\"><span>View all</span></a>\r\n        </div>\r\n        <hr/>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n        <div ng-multiplecarousel class=\"slides-wrapper\" [items]=\"items\" [width]=\"sliderWidth\" [$prev]=\"prev\" [$next]=\"next\" [$item]=\"item\"></div>\r\n    </div>\r\n  </div>\r\n</section>\r\n\r\n<section class=\"entertainment\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n        <div class=\"section-header-cat\">\r\n            <h4 class=\"float-md-left\"><a href=\"#/home/deals-entertainment/4\"><i class=\"fa fa-film\"></i> Deals in Entertainment</a></h4>\r\n            <a class=\"float-md-right\" href=\"#/home/deals-entertainment/4\"><span>View all</span></a>\r\n        </div>\r\n        <hr/>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n        <div ng-multiplecarousel class=\"slides-wrapper\" [items]=\"items\" [width]=\"sliderWidth\" [$prev]=\"prev\" [$next]=\"next\" [$item]=\"item\"></div>\r\n    </div>\r\n  </div>\r\n</section>\r\n\r\n<section class=\"travel\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n        <div class=\"section-header-cat\">\r\n            <h4 class=\"float-md-left\"><a href=\"#/home/deals-travel/5\"><i class=\"fa fa-plane\"></i> Deals in Travels</a></h4>\r\n            <a class=\"float-md-right\" href=\"#/home/deals-travel/5\"><span>View all</span></a>\r\n        </div>\r\n        <hr/>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n        <div ng-multiplecarousel class=\"slides-wrapper\" [items]=\"items\" [width]=\"sliderWidth\" [$prev]=\"prev\" [$next]=\"next\" [$item]=\"item\"></div>\r\n    </div>\r\n  </div>\r\n</section>\r\n\r\n<section class=\"shopping\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n        <div class=\"section-header-cat\">\r\n            <h4 class=\"float-md-left\"><a href=\"#/home/deals-shopping/6\"><i class=\"fa fa-shopping-bag\"></i> Deals in E-Shopping</a></h4>\r\n            <a class=\"float-md-right\" href=\"#/home/deals-shopping/6\"><span>View all</span></a>\r\n        </div>\r\n        <hr/>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n        <div ng-multiplecarousel class=\"slides-wrapper\" [items]=\"items\" [width]=\"sliderWidth\" [$prev]=\"prev\" [$next]=\"next\" [$item]=\"item\"></div>\r\n    </div>\r\n  </div>\r\n</section>\r\n\r\n<ng-template #prev>\r\n    <i class=\"fa fa-chevron-circle-left\" aria-hidden=\"true\"></i>\r\n</ng-template>\r\n<ng-template #next>\r\n    <i class=\"fa fa-chevron-circle-right\" aria-hidden=\"true\"></i>\r\n</ng-template>\r\n<ng-template #item let-item let-i=\"index\">\r\n    <div class=\"categoryItem\">\r\n        <div class=\"wrapper\" [class.unavailable]='!item.available'>\r\n            <div class=\"info\">\r\n                <div class=\"img-wrapper\">\r\n                    <img class=\"img\" [src]='item.images[0]'>\r\n                    <div class=\"img-placeholder\"></div>\r\n                </div>\r\n                <h5 class=\"title\">{{item.name}}</h5>\r\n                <p class=\"price\"><span>{{item.discount}}</span> % Discount</p>\r\n            </div>\r\n            <div class=\"bestseller-badge\" [class.in-detailed]='detailViewActive' *ngIf='item.best_seller'>\r\n                <span class=\"star left\">&nbsp;</span>\r\n                <span class=\"txt\">Bestoffer</span>\r\n                <span class=\"star right\">&nbsp;</span>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</ng-template>\r\n<!-- <div class=\"row home-category-section\">\r\n    <div class=\"col-md-12\">\r\n        <ul>\r\n            <li>\r\n                <div class=\"categoryWrapper cat-food\">\r\n                    <a href=\"#/home/deals-food/1\" class=\"cat-section\">\r\n                        <div class=\"cat-icon\"><span><i class=\"fa fa-cutlery\"></i></span></div>\r\n                        <div class=\"cat-title\">Deals in Food & Beverages</div>\r\n                    </a>\r\n                </div>\r\n            </li>\r\n            <li>\r\n                <div class=\"categoryWrapper cat-wellness\">\r\n                    <a href=\"#/home/deals-wellness/2\" class=\"cat-section\">\r\n                        <div class=\"cat-icon\"><span><i class=\"fa fa-heartbeat\"></i></span></div>\r\n                        <div class=\"cat-title\">Deals in Wellness</div>\r\n                    </a>\r\n                </div>\r\n            </li>\r\n            <li>\r\n                <div class=\"categoryWrapper cat-spa\">\r\n                    <a href=\"#/home/deals-spa/3\" class=\"cat-section\">\r\n                        <div class=\"cat-icon\"><span><i class=\"fa fa-bath\"></i></span></div>\r\n                        <div class=\"cat-title\">Deals in SPA</div>\r\n                    </a>\r\n                </div>\r\n            </li>\r\n            <li>\r\n                <div class=\"categoryWrapper cat-entertainment\">\r\n                    <a href=\"#/home/deals-entertainment/4\" class=\"cat-section\">\r\n                        <div class=\"cat-icon\"><span><i class=\"fa fa-film\"></i></span></div>\r\n                        <div class=\"cat-title\">Deals in Entertainment</div>\r\n                    </a>\r\n                </div>\r\n            </li>\r\n            <li>\r\n                <div class=\"categoryWrapper cat-travels\">\r\n                    <a href=\"#/home/deals-travel/5\" class=\"cat-section\">\r\n                        <div class=\"cat-icon\"><span><i class=\"fa fa-plane\"></i></span></div>\r\n                        <div class=\"cat-title\">Deals in Travels</div>\r\n                    </a>\r\n                </div>\r\n            </li>\r\n            <li>\r\n                <div class=\"categoryWrapper cat-shopping\">\r\n                    <a href=\"#/home/deals-shopping/6\" class=\"cat-section\">\r\n                        <div class=\"cat-icon\"><span><i class=\"fa fa-shopping-bag\"></i></span></div>\r\n                        <div class=\"cat-title\">Deals in E-Shopping</div>\r\n                    </a>\r\n                </div>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</div> -->\r\n<div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n        <h2 class=\"section-header\">Other Services</h2></div>\r\n</div>\r\n<div class=\"home-container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-xxxl-2 col-md-2\">\r\n            <ngx-status-card title=\"Car Wash\" value=\"\" type=\"info\">\r\n                <i class=\"fa fa-car\"></i>\r\n            </ngx-status-card>\r\n        </div>\r\n        <div class=\"col-xxxl-2 col-md-2\">\r\n            <ngx-status-card title=\"Pest Control\" value=\"\" type=\"info\">\r\n                <i class=\"fa fa-fire-extinguisher\"></i>\r\n            </ngx-status-card>\r\n        </div>\r\n        <div class=\"col-xxxl-2 col-md-2\">\r\n            <ngx-status-card title=\"Photography\" value=\"\" type=\"info\">\r\n                <i class=\"fa fa-camera\"></i>\r\n            </ngx-status-card>\r\n        </div>\r\n        <div class=\"col-xxxl-2 col-md-2\">\r\n            <ngx-status-card title=\"Dance & Music Classes\" value=\"\" type=\"info\">\r\n                <i class=\"fa fa-music\"></i>\r\n            </ngx-status-card>\r\n        </div>\r\n        <div class=\"col-xxxl-2 col-md-2\">\r\n            <ngx-status-card title=\"Flower & Cake Delivary\" value=\"\" type=\"info\">\r\n                <i class=\"fa fa-truck\"></i>\r\n            </ngx-status-card>\r\n        </div>\r\n        <div class=\"col-xxxl-2 col-md-2\">\r\n            <ngx-status-card title=\"Coaching Classes\" value=\"\" type=\"info\">\r\n                <i class=\"fa fa-certificate\"></i>\r\n            </ngx-status-card>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n        <h2 class=\"section-header\">Why YofferZ.com ?</h2></div>\r\n</div>\r\n<div class=\"row home-category-section cat-why-section\">\r\n    <div class=\"col-md-12\">\r\n        <ul>\r\n            <li>\r\n                <div class=\"categoryWrapper cat-why\">\r\n                    <div class=\"cat-section\">\r\n                        <div class=\"cat-icon\"><span><i class=\"fa fa-cloud-download\"></i></span></div>\r\n                        <div class=\"cat-title\">FREE Download!</div>\r\n                        <div class=\"cat-sub\">All of our coupons are completely free to download.</div>\r\n                    </div>\r\n                </div>\r\n            </li>\r\n            <li>\r\n                <div class=\"categoryWrapper cat-why\">\r\n                    <div class=\"cat-section\">\r\n                        <div class=\"cat-icon\"><span><i class=\"fa fa-bell\"></i></span></div>\r\n                        <div class=\"cat-title\">Crazy Discount Offerz!</div>\r\n                        <div class=\"cat-sub\">We work Hard to bring you exclusive discounted Offers you won't find anywhere else!</div>\r\n                    </div>\r\n                </div>\r\n            </li>\r\n            <li>\r\n                <div class=\"categoryWrapper cat-why\">\r\n                    <div class=\"cat-section\">\r\n                        <div class=\"cat-icon\"><span><i class=\"fa fa-shopping-cart\"></i></span></div>\r\n                        <div class=\"cat-title\">My Shops</div>\r\n                        <div class=\"cat-sub\">Find your favorite shops online</div>\r\n                    </div>\r\n                </div>\r\n            </li>\r\n            <li>\r\n                <div class=\"categoryWrapper cat-why\">\r\n                    <div class=\"cat-section\">\r\n                        <div class=\"cat-icon\"><span><i class=\"fa fa-sign-in\"></i></span></div>\r\n                        <div class=\"cat-title\">Easy Registration</div>\r\n                        <div class=\"cat-sub\">Easy registration process helps business to grow Online.</div>\r\n                    </div>\r\n                </div>\r\n            </li>\r\n            <li>\r\n                <div class=\"categoryWrapper cat-why\">\r\n                    <div class=\"cat-section\">\r\n                        <div class=\"cat-icon\"><span><i class=\"fa fa-download\"></i></span></div>\r\n                        <div class=\"cat-title\">Easy download</div>\r\n                        <div class=\"cat-sub\">No hassle: Enter your mobile no and OTP to get the discount Voucher</div>\r\n                    </div>\r\n                </div>\r\n            </li>\r\n            <li>\r\n                <div class=\"categoryWrapper cat-why\">\r\n                    <div class=\"cat-section\">\r\n                        <div class=\"cat-icon\"><span><i class=\"fa fa-user\"></i></span></div>\r\n                        <div class=\"cat-title\">No Account Required</div>\r\n                        <div class=\"cat-sub\">Vouchers are available for all, no membership required.</div>\r\n                    </div>\r\n                </div>\r\n            </li>\r\n        </ul>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -1596,7 +2046,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This is a starting point where we declare the maps of themes and globally available functions/mixins\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n:host-context(.nb-theme-default) .solar-card nb-card-header {\n  border: none;\n  padding-bottom: 0; }\n\n:host-context(.nb-theme-default) .home-container {\n  padding: 2rem; }\n\n:host-context(.nb-theme-default) .section-header {\n  color: #25b15c;\n  text-align: center;\n  padding: 1rem 0;\n  border-top: 1px solid #636c72;\n  border-bottom: 1px solid #a4abb3;\n  margin: 1% 0; }\n\n:host-context(.nb-theme-default) .slider .img-fluid {\n  max-height: 34rem; }\n\n:host-context(.nb-theme-default) .cat-why-section {\n  background: url(/assets/images/category/footer2.jpg) no-repeat;\n  background-position: center;\n  background-size: cover; }\n\n:host-context(.nb-theme-default) .home-category-section {\n  width: 100%;\n  padding: 0; }\n  :host-context(.nb-theme-default) .home-category-section li {\n    list-style: none; }\n    :host-context(.nb-theme-default) .home-category-section li .categoryWrapper {\n      width: calc(94% /3);\n      height: 17rem;\n      margin: 1%;\n      display: inline-block;\n      float: left;\n      position: relative; }\n      :host-context(.nb-theme-default) .home-category-section li .categoryWrapper.cat-food {\n        background: url(/assets/images/category/food.jpg) no-repeat;\n        background-position: center;\n        background-size: cover; }\n      :host-context(.nb-theme-default) .home-category-section li .categoryWrapper.cat-wellness {\n        background: url(/assets/images/category/wellness.jpg) no-repeat;\n        background-position: center;\n        background-size: cover; }\n      :host-context(.nb-theme-default) .home-category-section li .categoryWrapper.cat-spa {\n        background: url(/assets/images/category/spa.jpg) no-repeat;\n        background-position: center;\n        background-size: cover; }\n      :host-context(.nb-theme-default) .home-category-section li .categoryWrapper.cat-entertainment {\n        background: url(/assets/images/category/entertainment.png) no-repeat;\n        background-position: center;\n        background-size: cover; }\n      :host-context(.nb-theme-default) .home-category-section li .categoryWrapper.cat-travels {\n        background: url(/assets/images/category/travel.jpg) no-repeat;\n        background-position: center;\n        background-size: cover; }\n      :host-context(.nb-theme-default) .home-category-section li .categoryWrapper.cat-shopping {\n        background: url(/assets/images/category/shopping.jpg) no-repeat;\n        background-position: center;\n        background-size: cover; }\n    :host-context(.nb-theme-default) .home-category-section li .cat-section {\n      width: 100%;\n      height: 100%;\n      display: block;\n      position: relative;\n      background: rgba(93, 18, 18, 0.71); }\n    :host-context(.nb-theme-default) .home-category-section li .cat-why .cat-section {\n      background: transparent; }\n    :host-context(.nb-theme-default) .home-category-section li .cat-why .cat-icon {\n      font-size: .8em;\n      bottom: 56%;\n      background-image: linear-gradient(to right, #4cc4ff, #4ca6ff);\n      box-shadow: 0 0 0 0 #419cdb, 0 0 0 0 #4cb5ff; }\n    :host-context(.nb-theme-default) .home-category-section li .cat-why .cat-title {\n      bottom: 34%; }\n    :host-context(.nb-theme-default) .home-category-section li .cat-why .cat-sub {\n      position: absolute;\n      top: 69%;\n      text-align: center;\n      color: #fff;\n      width: 100%; }\n    :host-context(.nb-theme-default) .home-category-section li .cat-icon {\n      color: #fff;\n      position: absolute;\n      bottom: 36%;\n      right: 36%;\n      padding: .5rem 1.5rem;\n      font-size: 1.2em;\n      background-image: linear-gradient(to right, #40dcb2, #40dc7e);\n      box-shadow: 0 0 0 0 #37bd83, 0 0 0 0 #40dc98;\n      border-radius: 10%; }\n      :host-context(.nb-theme-default) .home-category-section li .cat-icon span {\n        font-size: 5em; }\n    :host-context(.nb-theme-default) .home-category-section li .cat-title {\n      color: #fff;\n      font-size: 2em;\n      bottom: 14%;\n      left: 0;\n      width: 100%;\n      text-align: center;\n      position: absolute; }\n\n@media (max-width: 767px) {\n  :host-context(.nb-theme-default) ngx-traffic {\n    display: none; }\n  :host-context(.nb-theme-default) .slider .img-fluid {\n    max-height: 24rem; }\n  :host-context(.nb-theme-default) .home-category-section li .categoryWrapper {\n    width: 100%;\n    margin-bottom: 1%; }\n  :host-context(.nb-theme-default) .home-category-section li .cat-icon {\n    bottom: 50%;\n    right: calc(90%/3); }\n    :host-context(.nb-theme-default) .home-category-section li .cat-icon span {\n      font-size: 3em; } }\n\n@media (max-width: 575px) {\n  :host-context(.nb-theme-default) /deep/ nb-card.large-card {\n    height: 456px; } }\n\n:host-context(.nb-theme-cosmic) .solar-card nb-card-header {\n  border: none;\n  padding-bottom: 0; }\n\n:host-context(.nb-theme-cosmic) .home-container {\n  padding: 2rem; }\n\n:host-context(.nb-theme-cosmic) .section-header {\n  color: #25b15c;\n  text-align: center;\n  padding: 1rem 0;\n  border-top: 1px solid #636c72;\n  border-bottom: 1px solid #a4abb3;\n  margin: 1% 0; }\n\n:host-context(.nb-theme-cosmic) .slider .img-fluid {\n  max-height: 34rem; }\n\n:host-context(.nb-theme-cosmic) .cat-why-section {\n  background: url(/assets/images/category/footer2.jpg) no-repeat;\n  background-position: center;\n  background-size: cover; }\n\n:host-context(.nb-theme-cosmic) .home-category-section {\n  width: 100%;\n  padding: 0; }\n  :host-context(.nb-theme-cosmic) .home-category-section li {\n    list-style: none; }\n    :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper {\n      width: calc(94% /3);\n      height: 17rem;\n      margin: 1%;\n      display: inline-block;\n      float: left;\n      position: relative; }\n      :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper.cat-food {\n        background: url(/assets/images/category/food.jpg) no-repeat;\n        background-position: center;\n        background-size: cover; }\n      :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper.cat-wellness {\n        background: url(/assets/images/category/wellness.jpg) no-repeat;\n        background-position: center;\n        background-size: cover; }\n      :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper.cat-spa {\n        background: url(/assets/images/category/spa.jpg) no-repeat;\n        background-position: center;\n        background-size: cover; }\n      :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper.cat-entertainment {\n        background: url(/assets/images/category/entertainment.png) no-repeat;\n        background-position: center;\n        background-size: cover; }\n      :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper.cat-travels {\n        background: url(/assets/images/category/travel.jpg) no-repeat;\n        background-position: center;\n        background-size: cover; }\n      :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper.cat-shopping {\n        background: url(/assets/images/category/shopping.jpg) no-repeat;\n        background-position: center;\n        background-size: cover; }\n    :host-context(.nb-theme-cosmic) .home-category-section li .cat-section {\n      width: 100%;\n      height: 100%;\n      display: block;\n      position: relative;\n      background: rgba(93, 18, 18, 0.71); }\n    :host-context(.nb-theme-cosmic) .home-category-section li .cat-why .cat-section {\n      background: transparent; }\n    :host-context(.nb-theme-cosmic) .home-category-section li .cat-why .cat-icon {\n      font-size: .8em;\n      bottom: 56%;\n      background-image: linear-gradient(to right, #4cc4ff, #4ca6ff);\n      box-shadow: 0 0 0 0 #419cdb, 0 0 0 0 #4cb5ff; }\n    :host-context(.nb-theme-cosmic) .home-category-section li .cat-why .cat-title {\n      bottom: 34%; }\n    :host-context(.nb-theme-cosmic) .home-category-section li .cat-why .cat-sub {\n      position: absolute;\n      top: 69%;\n      text-align: center;\n      color: #fff;\n      width: 100%; }\n    :host-context(.nb-theme-cosmic) .home-category-section li .cat-icon {\n      color: #fff;\n      position: absolute;\n      bottom: 36%;\n      right: 36%;\n      padding: .5rem 1.5rem;\n      font-size: 1.2em;\n      background-image: linear-gradient(to right, #40dcb2, #40dc7e);\n      box-shadow: 0 0 0 0 #37bd83, 0 0 0 0 #40dc98;\n      border-radius: 10%; }\n      :host-context(.nb-theme-cosmic) .home-category-section li .cat-icon span {\n        font-size: 5em; }\n    :host-context(.nb-theme-cosmic) .home-category-section li .cat-title {\n      color: #fff;\n      font-size: 2em;\n      bottom: 14%;\n      left: 0;\n      width: 100%;\n      text-align: center;\n      position: absolute; }\n\n@media (max-width: 767px) {\n  :host-context(.nb-theme-cosmic) ngx-traffic {\n    display: none; }\n  :host-context(.nb-theme-cosmic) .slider .img-fluid {\n    max-height: 24rem; }\n  :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper {\n    width: 100%;\n    margin-bottom: 1%; }\n  :host-context(.nb-theme-cosmic) .home-category-section li .cat-icon {\n    bottom: 50%;\n    right: calc(90%/3); }\n    :host-context(.nb-theme-cosmic) .home-category-section li .cat-icon span {\n      font-size: 3em; } }\n\n@media (max-width: 575px) {\n  :host-context(.nb-theme-cosmic) /deep/ nb-card.large-card {\n    height: 456px; } }\n", ""]);
+exports.push([module.i, "/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This is a starting point where we declare the maps of themes and globally available functions/mixins\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n/**\n * This mixin generates keyfames.\n * Because of all keyframes can't be scoped,\n * we need to puts unique name in each btn-pulse call.\n */\n/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n:host-context(.nb-theme-default) {\n  /** Media queries **/ }\n  :host-context(.nb-theme-default) .categoryItem {\n    min-width: calc(100%/4);\n    padding: 1rem; }\n  :host-context(.nb-theme-default) .solar-card nb-card-header {\n    border: none;\n    padding-bottom: 0; }\n  :host-context(.nb-theme-default) .home-container {\n    padding: 2rem; }\n  :host-context(.nb-theme-default) .section-header {\n    color: #25b15c;\n    text-align: center;\n    padding: 1rem 0;\n    border-bottom: 1px solid #a4abb3;\n    margin: 1% 0; }\n  :host-context(.nb-theme-default) .section-header-cat {\n    color: #25b15c;\n    text-align: left;\n    padding: 1rem 2rem;\n    margin: 1% 0; }\n  :host-context(.nb-theme-default) .slider .img-fluid {\n    max-height: 34rem; }\n  :host-context(.nb-theme-default) .cat-why-section {\n    background: url(/assets/images/category/footer2.jpg) no-repeat;\n    background-position: center;\n    background-size: cover; }\n  :host-context(.nb-theme-default) .home-category-section {\n    width: 100%;\n    padding: 0; }\n    :host-context(.nb-theme-default) .home-category-section li {\n      list-style: none; }\n      :host-context(.nb-theme-default) .home-category-section li .categoryWrapper {\n        width: calc(94% /3);\n        height: 17rem;\n        margin: 1%;\n        display: inline-block;\n        float: left;\n        position: relative; }\n        :host-context(.nb-theme-default) .home-category-section li .categoryWrapper.cat-food {\n          background: url(/assets/images/category/food.jpg) no-repeat;\n          background-position: center;\n          background-size: cover; }\n        :host-context(.nb-theme-default) .home-category-section li .categoryWrapper.cat-wellness {\n          background: url(/assets/images/category/wellness.jpg) no-repeat;\n          background-position: center;\n          background-size: cover; }\n        :host-context(.nb-theme-default) .home-category-section li .categoryWrapper.cat-spa {\n          background: url(/assets/images/category/spa.jpg) no-repeat;\n          background-position: center;\n          background-size: cover; }\n        :host-context(.nb-theme-default) .home-category-section li .categoryWrapper.cat-entertainment {\n          background: url(/assets/images/category/entertainment.png) no-repeat;\n          background-position: center;\n          background-size: cover; }\n        :host-context(.nb-theme-default) .home-category-section li .categoryWrapper.cat-travels {\n          background: url(/assets/images/category/travel.jpg) no-repeat;\n          background-position: center;\n          background-size: cover; }\n        :host-context(.nb-theme-default) .home-category-section li .categoryWrapper.cat-shopping {\n          background: url(/assets/images/category/shopping.jpg) no-repeat;\n          background-position: center;\n          background-size: cover; }\n      :host-context(.nb-theme-default) .home-category-section li .cat-section {\n        width: 100%;\n        height: 100%;\n        display: block;\n        position: relative;\n        background: rgba(93, 18, 18, 0.71); }\n      :host-context(.nb-theme-default) .home-category-section li .cat-why .cat-section {\n        background: transparent; }\n      :host-context(.nb-theme-default) .home-category-section li .cat-why .cat-icon {\n        font-size: .8em;\n        bottom: 56%;\n        background-image: linear-gradient(to right, #4cc4ff, #4ca6ff);\n        box-shadow: 0 0 0 0 #419cdb, 0 0 0 0 #4cb5ff; }\n      :host-context(.nb-theme-default) .home-category-section li .cat-why .cat-title {\n        bottom: 34%; }\n      :host-context(.nb-theme-default) .home-category-section li .cat-why .cat-sub {\n        position: absolute;\n        top: 69%;\n        text-align: center;\n        color: #fff;\n        width: 100%; }\n      :host-context(.nb-theme-default) .home-category-section li .cat-icon {\n        color: #fff;\n        position: absolute;\n        bottom: 36%;\n        right: 36%;\n        padding: .5rem 1.5rem;\n        font-size: 1.2em;\n        background-image: linear-gradient(to right, #40dcb2, #40dc7e);\n        box-shadow: 0 0 0 0 #37bd83, 0 0 0 0 #40dc98;\n        border-radius: 10%; }\n        :host-context(.nb-theme-default) .home-category-section li .cat-icon span {\n          font-size: 5em; }\n      :host-context(.nb-theme-default) .home-category-section li .cat-title {\n        color: #fff;\n        font-size: 2em;\n        bottom: 14%;\n        left: 0;\n        width: 100%;\n        text-align: center;\n        position: absolute; }\n  @media (max-width: 767px) {\n    :host-context(.nb-theme-default) ngx-traffic {\n      display: none; }\n    :host-context(.nb-theme-default) .slider .img-fluid {\n      max-height: 24rem; }\n    :host-context(.nb-theme-default) .home-category-section li .categoryWrapper {\n      width: 100%;\n      margin-bottom: 1%; }\n    :host-context(.nb-theme-default) .home-category-section li .cat-icon {\n      bottom: 50%;\n      right: calc(90%/3); }\n      :host-context(.nb-theme-default) .home-category-section li .cat-icon span {\n        font-size: 3em; } }\n  @media (max-width: 575px) {\n    :host-context(.nb-theme-default) /deep/ nb-card.large-card {\n      height: 456px; } }\n  :host-context(.nb-theme-default) .wrapper {\n    border-radius: 5px;\n    box-shadow: 0 5px 5px;\n    position: relative;\n    text-align: center;\n    display: block;\n    background-color: white;\n    box-shadow: 0 6px 17px rgba(0, 0, 0, 0.07); }\n  :host-context(.nb-theme-default) .add-cart-wrapper, :host-context(.nb-theme-default) .view-details-wrapper {\n    margin-top: 0;\n    margin-bottom: 0; }\n  :host-context(.nb-theme-default) .view-details-wrapper {\n    position: relative; }\n    :host-context(.nb-theme-default) .view-details-wrapper:after {\n      content: \"\";\n      width: 1px;\n      display: block;\n      position: absolute;\n      height: 28px;\n      background-color: #5D4EF0;\n      right: -3px;\n      top: -4px;\n      opacity: 0.2; }\n  :host-context(.nb-theme-default) .hide-detail-btn {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    text-align: center;\n    width: 100%;\n    z-index: 20;\n    background: none;\n    border: none;\n    color: white;\n    opacity: 0.6;\n    font-size: 0.7em;\n    font-weight: 600;\n    cursor: pointer;\n    background: rgba(255, 255, 255, 0.1);\n    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);\n    -webkit-transform: translateY(15px);\n    transform: translateY(15px);\n    transition-delay: 1.2s; }\n    :host-context(.nb-theme-default) .hide-detail-btn:hover {\n      background: rgba(255, 255, 255, 0.2); }\n  :host-context(.nb-theme-default) .img-wrapper {\n    height: 12rem;\n    position: relative;\n    overflow: hidden; }\n  :host-context(.nb-theme-default) .details {\n    margin: 1rem;\n    padding: 1rem; }\n    :host-context(.nb-theme-default) .details hr {\n      width: 90%;\n      height: 0;\n      border-top: 1px solid #5cb85c; }\n    :host-context(.nb-theme-default) .details .view:hover, :host-context(.nb-theme-default) .details .cart:hover {\n      opacity: 0.8; }\n    :host-context(.nb-theme-default) .details .view {\n      text-transform: uppercase;\n      color: #5cb85c;\n      font-size: 0.85em;\n      font-weight: 500;\n      position: relative;\n      top: -1px;\n      left: -2px; }\n    :host-context(.nb-theme-default) .details .cart {\n      position: relative;\n      top: 2px; }\n    :host-context(.nb-theme-default) .details .not-available hr {\n      border-top: 1px solid #999999; }\n    :host-context(.nb-theme-default) .details .not-available p {\n      margin: 0;\n      margin-top: -7px;\n      position: relative;\n      top: 2px;\n      text-transform: uppercase;\n      font-size: 0.85em;\n      font-weight: 500;\n      padding-top: 5px;\n      padding-bottom: 3px; }\n  :host-context(.nb-theme-default) .img-placeholder, :host-context(.nb-theme-default) .img {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    border-radius: 5px 5px 0 0; }\n  :host-context(.nb-theme-default) .img-placeholder {\n    z-index: 3;\n    height: 100%;\n    background: #dddddd; }\n  :host-context(.nb-theme-default) .detail-view {\n    position: absolute;\n    z-index: 30;\n    border-radius: 5px;\n    overflow: hidden;\n    top: 0;\n    height: 100%;\n    width: 100%;\n    pointer-events: none; }\n    :host-context(.nb-theme-default) .detail-view.active {\n      pointer-events: all; }\n      :host-context(.nb-theme-default) .detail-view.active .hide-detail-btn {\n        -webkit-transform: translateY(0);\n        transform: translateY(0); }\n      :host-context(.nb-theme-default) .detail-view.active .info-wrapper {\n        opacity: 1; }\n      :host-context(.nb-theme-default) .detail-view.active .bg {\n        -webkit-transform: scale(232);\n        transform: scale(232); }\n      :host-context(.nb-theme-default) .detail-view.active .d-holder {\n        opacity: 1;\n        -webkit-transform: translate(0);\n        transform: translate(0);\n        transition: all 0.5s ease; }\n      :host-context(.nb-theme-default) .detail-view.active .d-title {\n        transition-delay: 0.4s; }\n      :host-context(.nb-theme-default) .detail-view.active .d-price {\n        transition-delay: 0.5s; }\n      :host-context(.nb-theme-default) .detail-view.active .d-description {\n        transition-delay: 0.6s; }\n    :host-context(.nb-theme-default) .detail-view .d-holder {\n      opacity: 0;\n      -webkit-transform: translateY(10px);\n      transform: translateY(10px);\n      transition: all 0.1s ease; }\n    :host-context(.nb-theme-default) .detail-view .d-title {\n      font-size: 1.3em;\n      font-weight: 600;\n      margin-bottom: 0;\n      margin-top: 5px; }\n    :host-context(.nb-theme-default) .detail-view .d-price {\n      margin-top: -7px;\n      font-size: 0.9em; }\n    :host-context(.nb-theme-default) .detail-view .d-description {\n      font-size: 0.9em;\n      line-height: 1.4em; }\n    :host-context(.nb-theme-default) .detail-view .info-wrapper {\n      position: relative;\n      z-index: 30;\n      color: white;\n      text-align: left;\n      padding-left: 14px;\n      padding-right: 14px;\n      height: 90%;\n      overflow: hidden; }\n    :host-context(.nb-theme-default) .detail-view .bg {\n      position: absolute;\n      bottom: -9px;\n      left: 43px;\n      height: 3px;\n      width: 3px;\n      border-radius: 50%;\n      z-index: 20;\n      background: #5cb85c;\n      transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86); }\n  :host-context(.nb-theme-default) .info {\n    position: relative; }\n  :host-context(.nb-theme-default) .unavailable {\n    opacity: 0.3; }\n  :host-context(.nb-theme-default) .img {\n    z-index: 5;\n    height: auto;\n    background-color: #eeeeee; }\n  :host-context(.nb-theme-default) .title {\n    font-size: 1em;\n    margin-top: 18px;\n    font-weight: 600;\n    margin-bottom: 3px;\n    text-align: center;\n    word-wrap: break-word;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    padding: 0 .4rem; }\n  :host-context(.nb-theme-default) .price {\n    margin-bottom: 10px;\n    color: #999999;\n    font-size: 18px;\n    font-weight: 300;\n    margin-top: 0; }\n  :host-context(.nb-theme-default) .bestseller-badge {\n    position: absolute;\n    top: -10px;\n    border-radius: 10px;\n    background-color: #EF364C;\n    color: white;\n    font-size: 0.7em;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    width: 70%;\n    z-index: 40;\n    text-transform: uppercase;\n    font-weight: 600;\n    letter-spacing: 0.1em;\n    overflow: hidden;\n    height: 20px;\n    transition: all 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86);\n    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.48); }\n    :host-context(.nb-theme-default) .bestseller-badge .txt, :host-context(.nb-theme-default) .bestseller-badge .star {\n      transition: all 0.35s ease; }\n    :host-context(.nb-theme-default) .bestseller-badge .txt {\n      position: relative;\n      top: 4px; }\n    :host-context(.nb-theme-default) .bestseller-badge .star {\n      position: absolute;\n      top: 2px; }\n      :host-context(.nb-theme-default) .bestseller-badge .star.left {\n        left: 8px; }\n      :host-context(.nb-theme-default) .bestseller-badge .star.right {\n        right: 14px; }\n    :host-context(.nb-theme-default) .bestseller-badge.in-detailed {\n      box-shadow: 0 2px 7px transparent;\n      width: 20px;\n      height: 20px;\n      padding: 0;\n      top: 9px;\n      right: -80%;\n      background-color: #5cb85c; }\n      :host-context(.nb-theme-default) .bestseller-badge.in-detailed .right, :host-context(.nb-theme-default) .bestseller-badge.in-detailed .txt {\n        opacity: 0; }\n      :host-context(.nb-theme-default) .bestseller-badge.in-detailed .left {\n        left: 5px;\n        top: 2px; }\n  :host-context(.nb-theme-default) .sad-face {\n    border-radius: 50%;\n    background-color: #aaaaaa;\n    height: 90px;\n    width: 90px; }\n  :host-context(.nb-theme-default) .category-name {\n    display: inline-block;\n    margin-right: 10px; }\n  :host-context(.nb-theme-default) .star:before {\n    content: \"\\2605\";\n    position: absolute;\n    color: white; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {\n    :host-context(.nb-theme-default) .categoryItem {\n      min-width: calc(100%); }\n    :host-context(.nb-theme-default) .detail-view.active .bg {\n      -webkit-transform: translateY(0);\n      transform: translateY(0); }\n    :host-context(.nb-theme-default) .hide-detail-btn {\n      height: 32px;\n      -webkit-transform: translateY(32px);\n      transform: translateY(32px); }\n    :host-context(.nb-theme-default) .wrapper {\n      margin-bottom: -22px; }\n    :host-context(.nb-theme-default) .img-wrapper {\n      height: 14rem; }\n    :host-context(.nb-theme-default) .detail-view .bg {\n      width: 100%;\n      height: 100%;\n      border-radius: 0;\n      left: 0;\n      bottom: 0;\n      -webkit-transform: translateY(100%);\n      transform: translateY(100%); }\n    :host-context(.nb-theme-default) .detail-view .info-wrapper {\n      padding: 10px 25px;\n      height: 78%; } }\n\n:host-context(.nb-theme-cosmic) {\n  /** Media queries **/ }\n  :host-context(.nb-theme-cosmic) .categoryItem {\n    min-width: calc(100%/4);\n    padding: 1rem; }\n  :host-context(.nb-theme-cosmic) .solar-card nb-card-header {\n    border: none;\n    padding-bottom: 0; }\n  :host-context(.nb-theme-cosmic) .home-container {\n    padding: 2rem; }\n  :host-context(.nb-theme-cosmic) .section-header {\n    color: #25b15c;\n    text-align: center;\n    padding: 1rem 0;\n    border-bottom: 1px solid #a4abb3;\n    margin: 1% 0; }\n  :host-context(.nb-theme-cosmic) .section-header-cat {\n    color: #25b15c;\n    text-align: left;\n    padding: 1rem 2rem;\n    margin: 1% 0; }\n  :host-context(.nb-theme-cosmic) .slider .img-fluid {\n    max-height: 34rem; }\n  :host-context(.nb-theme-cosmic) .cat-why-section {\n    background: url(/assets/images/category/footer2.jpg) no-repeat;\n    background-position: center;\n    background-size: cover; }\n  :host-context(.nb-theme-cosmic) .home-category-section {\n    width: 100%;\n    padding: 0; }\n    :host-context(.nb-theme-cosmic) .home-category-section li {\n      list-style: none; }\n      :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper {\n        width: calc(94% /3);\n        height: 17rem;\n        margin: 1%;\n        display: inline-block;\n        float: left;\n        position: relative; }\n        :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper.cat-food {\n          background: url(/assets/images/category/food.jpg) no-repeat;\n          background-position: center;\n          background-size: cover; }\n        :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper.cat-wellness {\n          background: url(/assets/images/category/wellness.jpg) no-repeat;\n          background-position: center;\n          background-size: cover; }\n        :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper.cat-spa {\n          background: url(/assets/images/category/spa.jpg) no-repeat;\n          background-position: center;\n          background-size: cover; }\n        :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper.cat-entertainment {\n          background: url(/assets/images/category/entertainment.png) no-repeat;\n          background-position: center;\n          background-size: cover; }\n        :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper.cat-travels {\n          background: url(/assets/images/category/travel.jpg) no-repeat;\n          background-position: center;\n          background-size: cover; }\n        :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper.cat-shopping {\n          background: url(/assets/images/category/shopping.jpg) no-repeat;\n          background-position: center;\n          background-size: cover; }\n      :host-context(.nb-theme-cosmic) .home-category-section li .cat-section {\n        width: 100%;\n        height: 100%;\n        display: block;\n        position: relative;\n        background: rgba(93, 18, 18, 0.71); }\n      :host-context(.nb-theme-cosmic) .home-category-section li .cat-why .cat-section {\n        background: transparent; }\n      :host-context(.nb-theme-cosmic) .home-category-section li .cat-why .cat-icon {\n        font-size: .8em;\n        bottom: 56%;\n        background-image: linear-gradient(to right, #4cc4ff, #4ca6ff);\n        box-shadow: 0 0 0 0 #419cdb, 0 0 0 0 #4cb5ff; }\n      :host-context(.nb-theme-cosmic) .home-category-section li .cat-why .cat-title {\n        bottom: 34%; }\n      :host-context(.nb-theme-cosmic) .home-category-section li .cat-why .cat-sub {\n        position: absolute;\n        top: 69%;\n        text-align: center;\n        color: #fff;\n        width: 100%; }\n      :host-context(.nb-theme-cosmic) .home-category-section li .cat-icon {\n        color: #fff;\n        position: absolute;\n        bottom: 36%;\n        right: 36%;\n        padding: .5rem 1.5rem;\n        font-size: 1.2em;\n        background-image: linear-gradient(to right, #40dcb2, #40dc7e);\n        box-shadow: 0 0 0 0 #37bd83, 0 0 0 0 #40dc98;\n        border-radius: 10%; }\n        :host-context(.nb-theme-cosmic) .home-category-section li .cat-icon span {\n          font-size: 5em; }\n      :host-context(.nb-theme-cosmic) .home-category-section li .cat-title {\n        color: #fff;\n        font-size: 2em;\n        bottom: 14%;\n        left: 0;\n        width: 100%;\n        text-align: center;\n        position: absolute; }\n  @media (max-width: 767px) {\n    :host-context(.nb-theme-cosmic) ngx-traffic {\n      display: none; }\n    :host-context(.nb-theme-cosmic) .slider .img-fluid {\n      max-height: 24rem; }\n    :host-context(.nb-theme-cosmic) .home-category-section li .categoryWrapper {\n      width: 100%;\n      margin-bottom: 1%; }\n    :host-context(.nb-theme-cosmic) .home-category-section li .cat-icon {\n      bottom: 50%;\n      right: calc(90%/3); }\n      :host-context(.nb-theme-cosmic) .home-category-section li .cat-icon span {\n        font-size: 3em; } }\n  @media (max-width: 575px) {\n    :host-context(.nb-theme-cosmic) /deep/ nb-card.large-card {\n      height: 456px; } }\n  :host-context(.nb-theme-cosmic) .wrapper {\n    border-radius: 5px;\n    box-shadow: 0 5px 5px;\n    position: relative;\n    text-align: center;\n    display: block;\n    background-color: white;\n    box-shadow: 0 6px 17px rgba(0, 0, 0, 0.07); }\n  :host-context(.nb-theme-cosmic) .add-cart-wrapper, :host-context(.nb-theme-cosmic) .view-details-wrapper {\n    margin-top: 0;\n    margin-bottom: 0; }\n  :host-context(.nb-theme-cosmic) .view-details-wrapper {\n    position: relative; }\n    :host-context(.nb-theme-cosmic) .view-details-wrapper:after {\n      content: \"\";\n      width: 1px;\n      display: block;\n      position: absolute;\n      height: 28px;\n      background-color: #5D4EF0;\n      right: -3px;\n      top: -4px;\n      opacity: 0.2; }\n  :host-context(.nb-theme-cosmic) .hide-detail-btn {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    text-align: center;\n    width: 100%;\n    z-index: 20;\n    background: none;\n    border: none;\n    color: white;\n    opacity: 0.6;\n    font-size: 0.7em;\n    font-weight: 600;\n    cursor: pointer;\n    background: rgba(255, 255, 255, 0.1);\n    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);\n    -webkit-transform: translateY(15px);\n    transform: translateY(15px);\n    transition-delay: 1.2s; }\n    :host-context(.nb-theme-cosmic) .hide-detail-btn:hover {\n      background: rgba(255, 255, 255, 0.2); }\n  :host-context(.nb-theme-cosmic) .img-wrapper {\n    height: 12rem;\n    position: relative;\n    overflow: hidden; }\n  :host-context(.nb-theme-cosmic) .details {\n    margin: 1rem;\n    padding: 1rem; }\n    :host-context(.nb-theme-cosmic) .details hr {\n      width: 90%;\n      height: 0;\n      border-top: 1px solid #5cb85c; }\n    :host-context(.nb-theme-cosmic) .details .view:hover, :host-context(.nb-theme-cosmic) .details .cart:hover {\n      opacity: 0.8; }\n    :host-context(.nb-theme-cosmic) .details .view {\n      text-transform: uppercase;\n      color: #5cb85c;\n      font-size: 0.85em;\n      font-weight: 500;\n      position: relative;\n      top: -1px;\n      left: -2px; }\n    :host-context(.nb-theme-cosmic) .details .cart {\n      position: relative;\n      top: 2px; }\n    :host-context(.nb-theme-cosmic) .details .not-available hr {\n      border-top: 1px solid #999999; }\n    :host-context(.nb-theme-cosmic) .details .not-available p {\n      margin: 0;\n      margin-top: -7px;\n      position: relative;\n      top: 2px;\n      text-transform: uppercase;\n      font-size: 0.85em;\n      font-weight: 500;\n      padding-top: 5px;\n      padding-bottom: 3px; }\n  :host-context(.nb-theme-cosmic) .img-placeholder, :host-context(.nb-theme-cosmic) .img {\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    border-radius: 5px 5px 0 0; }\n  :host-context(.nb-theme-cosmic) .img-placeholder {\n    z-index: 3;\n    height: 100%;\n    background: #dddddd; }\n  :host-context(.nb-theme-cosmic) .detail-view {\n    position: absolute;\n    z-index: 30;\n    border-radius: 5px;\n    overflow: hidden;\n    top: 0;\n    height: 100%;\n    width: 100%;\n    pointer-events: none; }\n    :host-context(.nb-theme-cosmic) .detail-view.active {\n      pointer-events: all; }\n      :host-context(.nb-theme-cosmic) .detail-view.active .hide-detail-btn {\n        -webkit-transform: translateY(0);\n        transform: translateY(0); }\n      :host-context(.nb-theme-cosmic) .detail-view.active .info-wrapper {\n        opacity: 1; }\n      :host-context(.nb-theme-cosmic) .detail-view.active .bg {\n        -webkit-transform: scale(232);\n        transform: scale(232); }\n      :host-context(.nb-theme-cosmic) .detail-view.active .d-holder {\n        opacity: 1;\n        -webkit-transform: translate(0);\n        transform: translate(0);\n        transition: all 0.5s ease; }\n      :host-context(.nb-theme-cosmic) .detail-view.active .d-title {\n        transition-delay: 0.4s; }\n      :host-context(.nb-theme-cosmic) .detail-view.active .d-price {\n        transition-delay: 0.5s; }\n      :host-context(.nb-theme-cosmic) .detail-view.active .d-description {\n        transition-delay: 0.6s; }\n    :host-context(.nb-theme-cosmic) .detail-view .d-holder {\n      opacity: 0;\n      -webkit-transform: translateY(10px);\n      transform: translateY(10px);\n      transition: all 0.1s ease; }\n    :host-context(.nb-theme-cosmic) .detail-view .d-title {\n      font-size: 1.3em;\n      font-weight: 600;\n      margin-bottom: 0;\n      margin-top: 5px; }\n    :host-context(.nb-theme-cosmic) .detail-view .d-price {\n      margin-top: -7px;\n      font-size: 0.9em; }\n    :host-context(.nb-theme-cosmic) .detail-view .d-description {\n      font-size: 0.9em;\n      line-height: 1.4em; }\n    :host-context(.nb-theme-cosmic) .detail-view .info-wrapper {\n      position: relative;\n      z-index: 30;\n      color: white;\n      text-align: left;\n      padding-left: 14px;\n      padding-right: 14px;\n      height: 90%;\n      overflow: hidden; }\n    :host-context(.nb-theme-cosmic) .detail-view .bg {\n      position: absolute;\n      bottom: -9px;\n      left: 43px;\n      height: 3px;\n      width: 3px;\n      border-radius: 50%;\n      z-index: 20;\n      background: #5cb85c;\n      transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86); }\n  :host-context(.nb-theme-cosmic) .info {\n    position: relative; }\n  :host-context(.nb-theme-cosmic) .unavailable {\n    opacity: 0.3; }\n  :host-context(.nb-theme-cosmic) .img {\n    z-index: 5;\n    height: auto;\n    background-color: #eeeeee; }\n  :host-context(.nb-theme-cosmic) .title {\n    font-size: 1em;\n    margin-top: 18px;\n    font-weight: 600;\n    margin-bottom: 3px;\n    text-align: center;\n    word-wrap: break-word;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    padding: 0 .4rem; }\n  :host-context(.nb-theme-cosmic) .price {\n    margin-bottom: 10px;\n    color: #999999;\n    font-size: 18px;\n    font-weight: 300;\n    margin-top: 0; }\n  :host-context(.nb-theme-cosmic) .bestseller-badge {\n    position: absolute;\n    top: -10px;\n    border-radius: 10px;\n    background-color: #EF364C;\n    color: white;\n    font-size: 0.7em;\n    left: 0;\n    right: 0;\n    margin: 0 auto;\n    width: 70%;\n    z-index: 40;\n    text-transform: uppercase;\n    font-weight: 600;\n    letter-spacing: 0.1em;\n    overflow: hidden;\n    height: 20px;\n    transition: all 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86);\n    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.48); }\n    :host-context(.nb-theme-cosmic) .bestseller-badge .txt, :host-context(.nb-theme-cosmic) .bestseller-badge .star {\n      transition: all 0.35s ease; }\n    :host-context(.nb-theme-cosmic) .bestseller-badge .txt {\n      position: relative;\n      top: 4px; }\n    :host-context(.nb-theme-cosmic) .bestseller-badge .star {\n      position: absolute;\n      top: 2px; }\n      :host-context(.nb-theme-cosmic) .bestseller-badge .star.left {\n        left: 8px; }\n      :host-context(.nb-theme-cosmic) .bestseller-badge .star.right {\n        right: 14px; }\n    :host-context(.nb-theme-cosmic) .bestseller-badge.in-detailed {\n      box-shadow: 0 2px 7px transparent;\n      width: 20px;\n      height: 20px;\n      padding: 0;\n      top: 9px;\n      right: -80%;\n      background-color: #5cb85c; }\n      :host-context(.nb-theme-cosmic) .bestseller-badge.in-detailed .right, :host-context(.nb-theme-cosmic) .bestseller-badge.in-detailed .txt {\n        opacity: 0; }\n      :host-context(.nb-theme-cosmic) .bestseller-badge.in-detailed .left {\n        left: 5px;\n        top: 2px; }\n  :host-context(.nb-theme-cosmic) .sad-face {\n    border-radius: 50%;\n    background-color: #aaaaaa;\n    height: 90px;\n    width: 90px; }\n  :host-context(.nb-theme-cosmic) .category-name {\n    display: inline-block;\n    margin-right: 10px; }\n  :host-context(.nb-theme-cosmic) .star:before {\n    content: \"\\2605\";\n    position: absolute;\n    color: white; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {\n    :host-context(.nb-theme-cosmic) .categoryItem {\n      min-width: calc(100%); }\n    :host-context(.nb-theme-cosmic) .detail-view.active .bg {\n      -webkit-transform: translateY(0);\n      transform: translateY(0); }\n    :host-context(.nb-theme-cosmic) .hide-detail-btn {\n      height: 32px;\n      -webkit-transform: translateY(32px);\n      transform: translateY(32px); }\n    :host-context(.nb-theme-cosmic) .wrapper {\n      margin-bottom: -22px; }\n    :host-context(.nb-theme-cosmic) .img-wrapper {\n      height: 14rem; }\n    :host-context(.nb-theme-cosmic) .detail-view .bg {\n      width: 100%;\n      height: 100%;\n      border-radius: 0;\n      left: 0;\n      bottom: 0;\n      -webkit-transform: translateY(100%);\n      transform: translateY(100%); }\n    :host-context(.nb-theme-cosmic) .detail-view .info-wrapper {\n      padding: 10px 25px;\n      height: 78%; } }\n", ""]);
 
 // exports
 
@@ -1611,6 +2061,7 @@ module.exports = module.exports.toString();
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__deals_dealdata_service__ = __webpack_require__("../../../../../src/app/home/deals/dealdata.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeDashboardComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1622,9 +2073,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var HomeDashboardComponent = (function () {
-    function HomeDashboardComponent() {
+    function HomeDashboardComponent(dataService) {
+        this.dataService = dataService;
         this.sliders = [];
+        this.items = [];
+        this.sliderWidth = outerWidth - 80;
         this.sliders.push({
             imagePath: 'assets/images/camera1.jpg',
             label: 'First slide label',
@@ -1640,6 +2095,10 @@ var HomeDashboardComponent = (function () {
         });
     }
     HomeDashboardComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.dataService.getData().then(function (data) {
+            _this.items = data.deals;
+        });
     };
     return HomeDashboardComponent;
 }());
@@ -1649,9 +2108,10 @@ HomeDashboardComponent = __decorate([
         styles: [__webpack_require__("../../../../../src/app/home/homedashboard/homedashboard.component.scss")],
         template: __webpack_require__("../../../../../src/app/home/homedashboard/homedashboard.component.html"),
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__deals_dealdata_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__deals_dealdata_service__["a" /* DataService */]) === "function" && _a || Object])
 ], HomeDashboardComponent);
 
+var _a;
 //# sourceMappingURL=homedashboard.component.js.map
 
 /***/ }),
@@ -1674,6 +2134,7 @@ HomeDashboardComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__downloadgraph_downloadgraph_component__ = __webpack_require__("../../../../../src/app/home/homedashboard/downloadgraph/downloadgraph.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__downloadgraph_downloadgraph_chart_downloadgraph_chart_component__ = __webpack_require__("../../../../../src/app/home/homedashboard/downloadgraph/downloadgraph-chart/downloadgraph-chart.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ng_bootstrap_ng_bootstrap__ = __webpack_require__("../../../../@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__deals_dealdata_service__ = __webpack_require__("../../../../../src/app/home/deals/dealdata.service.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeDashboardModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1681,6 +2142,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1716,7 +2178,9 @@ HomeDashboardModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_10__downloadgraph_downloadgraph_chart_downloadgraph_chart_component__["a" /* DownloadGraphChartComponent */],
             __WEBPACK_IMPORTED_MODULE_8__dealsummary_dealsummary_chart_dealsummary_chart_component__["a" /* DealSummarychartsPieComponent */]
         ],
-        providers: [],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_12__deals_dealdata_service__["a" /* DataService */]
+        ],
     })
 ], HomeDashboardModule);
 
