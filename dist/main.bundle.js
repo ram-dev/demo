@@ -2808,6 +2808,10 @@ var routes = [
                 path: 'reset-password/:resetpasswordtoken',
                 component: __WEBPACK_IMPORTED_MODULE_2__auth__["n" /* NbResetPasswordComponent */],
             },
+            {
+                path: 'email-verify/:verifytoken',
+                component: __WEBPACK_IMPORTED_MODULE_2__auth__["o" /* NbVerifyEmailComponent */],
+            },
         ],
     },
     { path: 'home', loadChildren: 'app/home/home.module#HomeModule' },
@@ -2988,8 +2992,9 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_logout_logout_component__ = __webpack_require__("../../../../../src/app/auth/components/logout/logout.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_request_password_request_password_component__ = __webpack_require__("../../../../../src/app/auth/components/request-password/request-password.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_reset_password_reset_password_component__ = __webpack_require__("../../../../../src/app/auth/components/reset-password/reset-password.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__auth_routes__ = __webpack_require__("../../../../../src/app/auth/auth.routes.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__helpers__ = __webpack_require__("../../../../../src/app/auth/helpers.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_verify_email_verify_email_component__ = __webpack_require__("../../../../../src/app/auth/components/verify-email/verify-email.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__auth_routes__ = __webpack_require__("../../../../../src/app/auth/auth.routes.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__helpers__ = __webpack_require__("../../../../../src/app/auth/helpers.ts");
 /* unused harmony export nbAuthServiceFactory */
 /* unused harmony export nbOptionsFactory */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NbAuthModule; });
@@ -2999,6 +3004,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -3032,7 +3038,7 @@ function nbAuthServiceFactory(config, tokenService, injector) {
     return new __WEBPACK_IMPORTED_MODULE_6__services_auth_service__["b" /* NbAuthService */](tokenService, injector, providers);
 }
 function nbOptionsFactory(options) {
-    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_20__helpers__["c" /* deepExtend */])(__WEBPACK_IMPORTED_MODULE_10__auth_options__["e" /* defaultSettings */], options);
+    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_21__helpers__["c" /* deepExtend */])(__WEBPACK_IMPORTED_MODULE_10__auth_options__["e" /* defaultSettings */], options);
 }
 var NbAuthModule = NbAuthModule_1 = (function () {
     function NbAuthModule() {
@@ -3066,7 +3072,7 @@ NbAuthModule = NbAuthModule_1 = __decorate([
             __WEBPACK_IMPORTED_MODULE_5__nebular_theme__["b" /* NbLayoutModule */],
             __WEBPACK_IMPORTED_MODULE_5__nebular_theme__["c" /* NbCardModule */],
             __WEBPACK_IMPORTED_MODULE_5__nebular_theme__["d" /* NbCheckboxModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */].forChild(__WEBPACK_IMPORTED_MODULE_19__auth_routes__["a" /* routes */]),
+            __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */].forChild(__WEBPACK_IMPORTED_MODULE_20__auth_routes__["a" /* routes */]),
             __WEBPACK_IMPORTED_MODULE_3__angular_forms__["b" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["HttpClientModule"],
             __WEBPACK_IMPORTED_MODULE_9__theme_theme_module__["a" /* ThemeModule */]
@@ -3078,6 +3084,7 @@ NbAuthModule = NbAuthModule_1 = __decorate([
             __WEBPACK_IMPORTED_MODULE_15__components_register_register_component__["a" /* NbRegisterComponent */],
             __WEBPACK_IMPORTED_MODULE_17__components_request_password_request_password_component__["a" /* NbRequestPasswordComponent */],
             __WEBPACK_IMPORTED_MODULE_18__components_reset_password_reset_password_component__["a" /* NbResetPasswordComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__components_verify_email_verify_email_component__["a" /* NbVerifyEmailComponent */],
             __WEBPACK_IMPORTED_MODULE_16__components_logout_logout_component__["a" /* NbLogoutComponent */],
         ],
         exports: [
@@ -3087,6 +3094,7 @@ NbAuthModule = NbAuthModule_1 = __decorate([
             __WEBPACK_IMPORTED_MODULE_15__components_register_register_component__["a" /* NbRegisterComponent */],
             __WEBPACK_IMPORTED_MODULE_17__components_request_password_request_password_component__["a" /* NbRequestPasswordComponent */],
             __WEBPACK_IMPORTED_MODULE_18__components_reset_password_reset_password_component__["a" /* NbResetPasswordComponent */],
+            __WEBPACK_IMPORTED_MODULE_19__components_verify_email_verify_email_component__["a" /* NbVerifyEmailComponent */],
             __WEBPACK_IMPORTED_MODULE_16__components_logout_logout_component__["a" /* NbLogoutComponent */],
         ],
     })
@@ -3209,7 +3217,9 @@ var NB_AUTH_INTERCEPTOR_HEADER = new __WEBPACK_IMPORTED_MODULE_0__angular_core__
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_logout_logout_component__ = __webpack_require__("../../../../../src/app/auth/components/logout/logout.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_request_password_request_password_component__ = __webpack_require__("../../../../../src/app/auth/components/request-password/request-password.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_reset_password_reset_password_component__ = __webpack_require__("../../../../../src/app/auth/components/reset-password/reset-password.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_verify_email_verify_email_component__ = __webpack_require__("../../../../../src/app/auth/components/verify-email/verify-email.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return routes; });
+
 
 
 
@@ -3244,6 +3254,10 @@ var routes = [
             {
                 path: 'reset-password',
                 component: __WEBPACK_IMPORTED_MODULE_5__components_reset_password_reset_password_component__["a" /* NbResetPasswordComponent */],
+            },
+            {
+                path: 'email-verify',
+                component: __WEBPACK_IMPORTED_MODULE_6__components_verify_email_verify_email_component__["a" /* NbVerifyEmailComponent */],
             },
         ],
     }
@@ -3393,6 +3407,9 @@ var _a;
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_5__request_password_request_password_component__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__reset_password_reset_password_component__ = __webpack_require__("../../../../../src/app/auth/components/reset-password/reset-password.component.ts");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_6__reset_password_reset_password_component__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__verify_email_verify_email_component__ = __webpack_require__("../../../../../src/app/auth/components/verify-email/verify-email.component.ts");
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_7__verify_email_verify_email_component__["a"]; });
+
 
 
 
@@ -3893,6 +3910,121 @@ var _a, _b, _c;
 
 /***/ }),
 
+/***/ "../../../../../src/app/auth/components/verify-email/verify-email.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/**\n * @license\n * Copyright Akveo. All Rights Reserved.\n * Licensed under the MIT License. See License.txt in the project root for license information.\n */\n:host .links {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n\n:host .form-group:last-of-type {\n  margin-bottom: 3rem; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/auth/components/verify-email/verify-email.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__auth_options__ = __webpack_require__("../../../../../src/app/auth/auth.options.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__helpers__ = __webpack_require__("../../../../../src/app/auth/helpers.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_auth_service__ = __webpack_require__("../../../../../src/app/auth/services/auth.service.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NbVerifyEmailComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+/**
+ * @license
+ * Copyright Akveo. All Rights Reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ */
+
+
+
+
+
+var NbVerifyEmailComponent = (function () {
+    function NbVerifyEmailComponent(service, config, router, activatedRoute) {
+        if (config === void 0) { config = {}; }
+        this.service = service;
+        this.config = config;
+        this.router = router;
+        this.activatedRoute = activatedRoute;
+        this.redirectDelay = 0;
+        this.showMessages = {};
+        this.provider = '';
+        this.submitted = false;
+        this.errors = [];
+        this.messages = [];
+        this.user = {};
+        this.params = this.activatedRoute.snapshot.params;
+        this.redirectDelay = this.getConfigValue('forms.resetPassword.redirectDelay');
+        this.showMessages = this.getConfigValue('forms.resetPassword.showMessages');
+        this.provider = this.getConfigValue('forms.resetPassword.provider');
+    }
+    NbVerifyEmailComponent.prototype.ngOnInit = function () {
+        if (this.params.verifytoken) {
+            this.resetPass();
+        }
+    };
+    NbVerifyEmailComponent.prototype.resetPass = function () {
+        var _this = this;
+        this.errors = this.messages = [];
+        this.submitted = true;
+        this.user.token = this.params.verifytoken;
+        this.service.verifyEmail(this.provider, this.user).subscribe(function (result) {
+            _this.submitted = false;
+            if (result.isSuccess()) {
+                _this.messages = result.getMessages();
+            }
+            else {
+                _this.errors = result.getErrors();
+            }
+            var redirect = result.getRedirect();
+            if (redirect) {
+                setTimeout(function () {
+                    return _this.router.navigateByUrl(redirect);
+                }, _this.redirectDelay);
+            }
+        });
+    };
+    NbVerifyEmailComponent.prototype.getConfigValue = function (key) {
+        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__helpers__["a" /* getDeepFromObject */])(this.config, key, null);
+    };
+    return NbVerifyEmailComponent;
+}());
+NbVerifyEmailComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'nb-verify-email-page',
+        styles: [__webpack_require__("../../../../../src/app/auth/components/verify-email/verify-email.component.scss")],
+        template: "\n    <nb-auth-block>\n     <nb-card>\n          <nb-card-body>\n            <div class=\"col-xl-4 col-lg-6 col-md-8 col-sm-12\">\n      <h2 class=\"title\">Email Verify</h2>\n      \n        <div *ngIf=\"errors && errors.length > 0 && !submitted\" class=\"alert alert-danger\" role=\"alert\">\n          <div><strong>Oh snap!</strong></div>\n          <div *ngFor=\"let error of errors\">{{ error }}</div>\n        </div>\n        <div *ngIf=\"messages && messages.length > 0 && !submitted\" class=\"alert alert-success\" role=\"alert\">\n          <div><strong>Hooray!</strong></div>\n          <div *ngFor=\"let message of messages\">{{ message }}</div>\n        </div>\n\n      <div class=\"links col-sm-12\">\n        <small class=\"form-text\">\n          Already have an account? <a routerLink=\"../login\"><strong>Sign In</strong></a>\n        </small>\n        <small class=\"form-text\">\n          <a routerLink=\"../register\"><strong>Sign Up</strong></a>\n        </small>\n      </div>\n      </div>\n          </nb-card-body>\n        </nb-card>\n    </nb-auth-block>\n  ",
+    }),
+    __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_2__auth_options__["c" /* NB_AUTH_OPTIONS_TOKEN */])),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["b" /* NbAuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["b" /* NbAuthService */]) === "function" && _a || Object, Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object])
+], NbVerifyEmailComponent);
+
+var _a, _b, _c;
+//# sourceMappingURL=verify-email.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/auth/helpers.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -4099,6 +4231,7 @@ function b64DecodeUnicode(str) {
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "l", function() { return __WEBPACK_IMPORTED_MODULE_2__components__["d"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "m", function() { return __WEBPACK_IMPORTED_MODULE_2__components__["e"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "n", function() { return __WEBPACK_IMPORTED_MODULE_2__components__["f"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "o", function() { return __WEBPACK_IMPORTED_MODULE_2__components__["g"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services__ = __webpack_require__("../../../../../src/app/auth/services/index.ts");
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_3__services__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_3__services__["b"]; });
@@ -4210,6 +4343,10 @@ var NbDummyAuthProvider = (function (_super) {
             .delay(this.getConfigValue('delay'));
     };
     NbDummyAuthProvider.prototype.resetPassword = function (data) {
+        return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].of(this.createDummyResult(data))
+            .delay(this.getConfigValue('delay'));
+    };
+    NbDummyAuthProvider.prototype.verifyEmail = function (data) {
         return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].of(this.createDummyResult(data))
             .delay(this.getConfigValue('delay'));
     };
@@ -4438,6 +4575,16 @@ var NbEmailPassAuthProvider = (function (_super) {
                 defaultErrors: ['Something went wrong, please try again.'],
                 defaultMessages: ['Your password has been successfully changed.'],
             },
+            verifyEmail: {
+                endpoint: 'verifyemail',
+                method: 'get',
+                redirect: {
+                    success: '/auth/email-verify/',
+                    failure: '/auth/email-verify/',
+                },
+                defaultErrors: ['Something went wrong, please try again.'],
+                defaultMessages: ['Your email verification has been successfully verified.'],
+            },
             token: {
                 key: 'data.token',
                 getter: function (module, res) { return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_9__helpers__["a" /* getDeepFromObject */])(res.body, _this.getConfigValue('token.key')); },
@@ -4542,7 +4689,6 @@ var NbEmailPassAuthProvider = (function (_super) {
         var tokenKey = data.token;
         var method = this.getConfigValue('resetPass.method');
         var url = this.getActionEndpoint('resetPass') + '/' + tokenKey;
-        console.log(this.config.resetPass);
         return this.http.request(method, url, { body: data, observe: 'response' })
             .map(function (res) {
             if (_this.getConfigValue('resetPass.alwaysFail')) {
@@ -4563,6 +4709,37 @@ var NbEmailPassAuthProvider = (function (_super) {
                 errors.push('Something went wrong.');
             }
             return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].of(new __WEBPACK_IMPORTED_MODULE_7__services_auth_service__["a" /* NbAuthResult */](false, res, _this.getConfigValue('resetPass.redirect.failure'), errors));
+        });
+    };
+    NbEmailPassAuthProvider.prototype.verifyEmail = function (data) {
+        var _this = this;
+        if (data === void 0) { data = {}; }
+        this.config.verifyEmail.redirect.failure += data.token;
+        this.config.verifyEmail.redirect.success += data.token;
+        this.config.verifyEmail.resetPasswordTokenKey = data.token;
+        var tokenKey = data.token;
+        var method = this.getConfigValue('verifyEmail.method');
+        var url = this.getActionEndpoint('verifyEmail') + '/' + tokenKey;
+        return this.http.request(method, url, { body: data, observe: 'response' })
+            .map(function (res) {
+            if (_this.getConfigValue('verifyEmail.alwaysFail')) {
+                throw _this.createFailResponse();
+            }
+            return res;
+        })
+            .map(function (res) {
+            return new __WEBPACK_IMPORTED_MODULE_7__services_auth_service__["a" /* NbAuthResult */](true, res, _this.getConfigValue('verifyEmail.redirect.success'), [], _this.getConfigValue('messages.getter')('verifyEmail', res));
+        })
+            .catch(function (res) {
+            var errors = [];
+            if (res instanceof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["HttpErrorResponse"]) {
+                errors = _this.getConfigValue('errors.getter')('verifyEmail', res);
+                errors.push(res.error.error);
+            }
+            else {
+                errors.push('Something went wrong.');
+            }
+            return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].of(new __WEBPACK_IMPORTED_MODULE_7__services_auth_service__["a" /* NbAuthResult */](false, res, _this.getConfigValue('verifyEmail.redirect.failure'), errors));
         });
     };
     NbEmailPassAuthProvider.prototype.logout = function (data) {
@@ -4858,6 +5035,19 @@ var NbAuthService = (function () {
      */
     NbAuthService.prototype.resetPassword = function (provider, data) {
         return this.getProvider(provider).resetPassword(data);
+    };
+    /**
+    * Tries to verify email with the selected provider
+    *
+    * Example:
+    * verifyEmail('email', {token: 'test'})
+    *
+    * @param provider
+    * @param data
+    * @returns {Observable<NbAuthResult>}
+    */
+    NbAuthService.prototype.verifyEmail = function (provider, data) {
+        return this.getProvider(provider).verifyEmail(data);
     };
     NbAuthService.prototype.getProvider = function (provider) {
         if (!this.providers[provider]) {
