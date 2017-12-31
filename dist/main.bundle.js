@@ -2805,7 +2805,7 @@ var routes = [
                 component: __WEBPACK_IMPORTED_MODULE_2__auth__["m" /* NbRequestPasswordComponent */],
             },
             {
-                path: 'reset-password',
+                path: 'reset-password/:resetpasswordtoken',
                 component: __WEBPACK_IMPORTED_MODULE_2__auth__["n" /* NbResetPasswordComponent */],
             },
         ],
@@ -3834,11 +3834,12 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 
 var NbResetPasswordComponent = (function () {
-    function NbResetPasswordComponent(service, config, router) {
+    function NbResetPasswordComponent(service, config, router, activatedRoute) {
         if (config === void 0) { config = {}; }
         this.service = service;
         this.config = config;
         this.router = router;
+        this.activatedRoute = activatedRoute;
         this.redirectDelay = 0;
         this.showMessages = {};
         this.provider = '';
@@ -3846,6 +3847,7 @@ var NbResetPasswordComponent = (function () {
         this.errors = [];
         this.messages = [];
         this.user = {};
+        this.params = this.activatedRoute.snapshot.params;
         this.redirectDelay = this.getConfigValue('forms.resetPassword.redirectDelay');
         this.showMessages = this.getConfigValue('forms.resetPassword.showMessages');
         this.provider = this.getConfigValue('forms.resetPassword.provider');
@@ -3854,6 +3856,7 @@ var NbResetPasswordComponent = (function () {
         var _this = this;
         this.errors = this.messages = [];
         this.submitted = true;
+        this.user.token = this.params.resetpasswordtoken;
         this.service.resetPassword(this.provider, this.user).subscribe(function (result) {
             _this.submitted = false;
             if (result.isSuccess()) {
@@ -3882,10 +3885,10 @@ NbResetPasswordComponent = __decorate([
         template: "\n    <nb-auth-block>\n     <nb-card>\n          <nb-card-body>\n            <div class=\"col-xl-4 col-lg-6 col-md-8 col-sm-12\">\n      <h2 class=\"title\">Change password</h2>\n      <small class=\"form-text sub-title\">Please enter a new password</small>\n      <form (ngSubmit)=\"resetPass()\" #resetPassForm=\"ngForm\">\n\n        <div *ngIf=\"errors && errors.length > 0 && !submitted\" class=\"alert alert-danger\" role=\"alert\">\n          <div><strong>Oh snap!</strong></div>\n          <div *ngFor=\"let error of errors\">{{ error }}</div>\n        </div>\n        <div *ngIf=\"messages && messages.length > 0 && !submitted\" class=\"alert alert-success\" role=\"alert\">\n          <div><strong>Hooray!</strong></div>\n          <div *ngFor=\"let message of messages\">{{ message }}</div>\n        </div>\n\n        <div class=\"form-group\">\n          <label for=\"input-password\" class=\"sr-only\">New Password</label>\n          <input name=\"password\" [(ngModel)]=\"user.password\" type=\"password\" id=\"input-password\"\n                 class=\"form-control form-control-lg first\" placeholder=\"New Password\" #password=\"ngModel\"\n                 [class.form-control-danger]=\"password.invalid && password.touched\"\n                 [required]=\"getConfigValue('forms.validation.password.required')\"\n                 [minlength]=\"getConfigValue('forms.validation.password.minLength')\"\n                 [maxlength]=\"getConfigValue('forms.validation.password.maxLength')\"\n                 autofocus>\n          <small class=\"form-text error\" *ngIf=\"password.invalid && password.touched && password.errors?.required\">\n            Password is required!\n          </small>\n          <small\n            class=\"form-text error\"\n            *ngIf=\"password.invalid && password.touched && (password.errors?.minlength || password.errors?.maxlength)\">\n            Password should contains\n            from {{getConfigValue('forms.validation.password.minLength')}}\n            to {{getConfigValue('forms.validation.password.maxLength')}}\n            characters\n          </small>\n        </div>\n\n        <div class=\"form-group\">\n          <label for=\"input-re-password\" class=\"sr-only\">Confirm Password</label>\n          <input\n            name=\"rePass\" [(ngModel)]=\"user.confirmPassword\" type=\"password\" id=\"input-re-password\"\n            class=\"form-control form-control-lg last\" placeholder=\"Confirm Password\" #rePass=\"ngModel\"\n            [class.form-control-danger]=\"(rePass.invalid || password.value != rePass.value) && rePass.touched\"\n            [required]=\"getConfigValue('forms.validation.password.required')\">\n          <small class=\"form-text error\"\n                 *ngIf=\"rePass.invalid && rePass.touched && rePass.errors?.required\">\n            Password confirmation is required!\n          </small>\n          <small\n            class=\"form-text error\"\n            *ngIf=\"rePass.touched && password.value != rePass.value && !rePass.errors?.required\">\n            Password does not match the confirm password.\n          </small>\n        </div>\n\n        <button [disabled]=\"submitted || !resetPassForm.form.valid\" class=\"btn btn-hero-success btn-block\"\n                [class.btn-pulse]=\"submitted\">\n          Change password\n        </button>\n      </form>\n\n      <div class=\"links col-sm-12\">\n        <small class=\"form-text\">\n          Already have an account? <a routerLink=\"../login\"><strong>Sign In</strong></a>\n        </small>\n        <small class=\"form-text\">\n          <a routerLink=\"../register\"><strong>Sign Up</strong></a>\n        </small>\n      </div>\n      </div>\n          </nb-card-body>\n        </nb-card>\n    </nb-auth-block>\n  ",
     }),
     __param(1, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"])(__WEBPACK_IMPORTED_MODULE_2__auth_options__["c" /* NB_AUTH_OPTIONS_TOKEN */])),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["b" /* NbAuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["b" /* NbAuthService */]) === "function" && _a || Object, Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["b" /* NbAuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["b" /* NbAuthService */]) === "function" && _a || Object, Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object])
 ], NbResetPasswordComponent);
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=reset-password.component.js.map
 
 /***/ }),
@@ -4409,27 +4412,27 @@ var NbEmailPassAuthProvider = (function (_super) {
                 method: 'post',
                 redirect: {
                     success: '/auth/login',
-                    failure: '/',
+                    failure: '/auth/logout',
                 },
                 defaultErrors: ['Something went wrong, please try again.'],
                 defaultMessages: ['You have been successfully logged out.'],
             },
             requestPass: {
-                endpoint: 'request-pass',
+                endpoint: 'forgot',
                 method: 'post',
                 redirect: {
-                    success: '/',
-                    failure: null,
+                    success: '/auth/request-password',
+                    failure: '/auth/request-password',
                 },
                 defaultErrors: ['Something went wrong, please try again.'],
                 defaultMessages: ['Reset password instructions have been sent to your email.'],
             },
             resetPass: {
-                endpoint: 'reset-pass',
-                method: 'put',
+                endpoint: 'reset',
+                method: 'post',
                 redirect: {
-                    success: '/',
-                    failure: null,
+                    success: '/auth/reset-password/',
+                    failure: '/auth/reset-password/',
                 },
                 resetPasswordTokenKey: 'reset_password_token',
                 defaultErrors: ['Something went wrong, please try again.'],
@@ -4520,6 +4523,7 @@ var NbEmailPassAuthProvider = (function (_super) {
             var errors = [];
             if (res instanceof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["HttpErrorResponse"]) {
                 errors = _this.getConfigValue('errors.getter')('requestPass', res);
+                errors.push(res.error.error);
             }
             else {
                 errors.push('Something went wrong.');
@@ -4530,10 +4534,15 @@ var NbEmailPassAuthProvider = (function (_super) {
     NbEmailPassAuthProvider.prototype.resetPassword = function (data) {
         var _this = this;
         if (data === void 0) { data = {}; }
-        var tokenKey = this.getConfigValue('resetPass.resetPasswordTokenKey');
-        data[tokenKey] = this.route.snapshot.queryParams[tokenKey];
+        /* const tokenKey = this.getConfigValue('resetPass.resetPasswordTokenKey');
+         data[tokenKey] = this.route.snapshot.queryParams[tokenKey];*/
+        this.config.resetPass.redirect.failure += data.token;
+        this.config.resetPass.redirect.success += data.token;
+        this.config.resetPass.resetPasswordTokenKey = data.token;
+        var tokenKey = data.token;
         var method = this.getConfigValue('resetPass.method');
-        var url = this.getActionEndpoint('resetPass');
+        var url = this.getActionEndpoint('resetPass') + '/' + tokenKey;
+        console.log(this.config.resetPass);
         return this.http.request(method, url, { body: data, observe: 'response' })
             .map(function (res) {
             if (_this.getConfigValue('resetPass.alwaysFail')) {
@@ -4548,6 +4557,7 @@ var NbEmailPassAuthProvider = (function (_super) {
             var errors = [];
             if (res instanceof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["HttpErrorResponse"]) {
                 errors = _this.getConfigValue('errors.getter')('resetPass', res);
+                errors.push(res.error.error);
             }
             else {
                 errors.push('Something went wrong.');
@@ -4582,6 +4592,7 @@ var NbEmailPassAuthProvider = (function (_super) {
             var errors = [];
             if (res instanceof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["HttpErrorResponse"]) {
                 errors = _this.getConfigValue('errors.getter')('logout', res);
+                errors.push(res.error.error);
             }
             else {
                 errors.push('Something went wrong.');
